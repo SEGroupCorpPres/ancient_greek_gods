@@ -1,0 +1,8 @@
+import 'package:ancient_greek_gods/app/app.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+
