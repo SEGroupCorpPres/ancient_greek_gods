@@ -1,18 +1,19 @@
-import 'package:ancient_greek_gods/features/presentation/pages/quiz_screen.dart';
+import 'package:ancient_greek_gods/core/constants/colors.dart';
 import 'package:ancient_greek_gods/features/presentation/widgets/main_button.dart';
+import 'package:ancient_greek_gods/features/presentation/widgets/quiz_answer_btns.dart';
 import 'package:ancient_greek_gods/generated/assets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class FactsScreen extends StatefulWidget {
-  const FactsScreen({super.key});
+class QuizScreen extends StatefulWidget {
+  const QuizScreen({super.key});
 
   @override
-  State<FactsScreen> createState() => _FactsScreenState();
+  State<QuizScreen> createState() => _QuizScreenState();
 }
 
-class _FactsScreenState extends State<FactsScreen> {
+class _QuizScreenState extends State<QuizScreen> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.sizeOf(context);
@@ -57,36 +58,38 @@ class _FactsScreenState extends State<FactsScreen> {
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               width: size.width,
-              height: size.height * .45,
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        '3 facts'.toUpperCase(),
-                        style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontSize: 30.sp),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          SizedBox(
+                            width: size.width * .7,
+                            child: Text(
+                              'Choose the correct answer'.toUpperCase(),
+                              style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontSize: 25.sp),
+                            ),
+                          ),
+                          CupertinoButton(
+                            color: AppColors.primaryColor,
+                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
+                            minSize: 20.r,
+                            child: Text(
+                              '50/50',
+                              style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontSize: 12.sp, fontWeight: FontWeight.w800),
+                            ),
+                            onPressed: () {},
+                          ),
+                        ],
                       ),
-                      SizedBox(height: 10.h),
-                      Text(
-                        softWrap: true,
-                        'asd; lfhb pwreg fhwe jglh ;vero gewn fiowehr',
-                        style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontSize: 16.sp, fontWeight: FontWeight.w500),
-                      ),
+                      QuizAnswerButtons(size: size),
                     ],
                   ),
-                  SizedBox(height: 20.h),
-                  MainButton(
-                    title: 'I Agree',
-                    onPressed: () => Navigator.push(
-                      context,
-                      CupertinoPageRoute(
-                        builder: (context) => QuizScreen(),
-                      ),
-                    ),
-                  ),
+                  MainButton(title: 'Continue', onPressed: () {}),
                 ],
               ),
             ),
