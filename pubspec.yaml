@@ -132,4 +132,6 @@ flutter:
     - assets/images/
     - assets/sounds/
     - assets/fonts/
+    - assets/icons/symbol/
+    - assets/images/gods/
 

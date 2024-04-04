@@ -1,31 +1,55 @@
-import 'package:ancient_greek_gods/features/presentation/pages/not_found_facts_screen.dart';
-import 'package:ancient_greek_gods/features/presentation/pages/quiz_screen.dart';
+import 'dart:math';
+
+import 'package:ancient_greek_gods/features/data/local/data_sources/list_of_symbols.dart';
+import 'package:ancient_greek_gods/features/data/local/models/symbol_model.dart';
+import 'package:ancient_greek_gods/features/presentation/pages/home_page.dart';
 import 'package:ancient_greek_gods/features/presentation/widgets/main_button.dart';
 import 'package:ancient_greek_gods/generated/assets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class FactsScreen extends StatefulWidget {
-  final bool isWrongAnswer;
-  final int retryCount;
-
-  const FactsScreen({super.key, required this.isWrongAnswer, required this.retryCount});
+class QuizSymbolScreen extends StatefulWidget {
+  const QuizSymbolScreen({super.key});
 
   @override
-  State<FactsScreen> createState() => _FactsScreenState();
+  State<QuizSymbolScreen> createState() => _QuizSymbolScreenState();
 }
 
-class _FactsScreenState extends State<FactsScreen> {
+class _QuizSymbolScreenState extends State<QuizSymbolScreen> {
+  int random = Random().nextInt(9);
+  int newRandom = Random().nextInt(9);
+  List<SymbolModel> symbolList = [];
+
   @override
   void initState() {
     // TODO: implement initState
+    addSymbolToList();
+    checkOldRandom();
     super.initState();
+  }
+
+  void checkOldRandom() {
+    newRandom = random;
+    if (newRandom == random) {
+      newRandom = Random().nextInt(9);
+      checkOldRandom();
+    }
+  }
+
+  void addSymbolToList() {
+    for (var symbol in listOfSymbols) {
+      SymbolModel symbolModel = SymbolModel.fromJson(symbol);
+      symbolList.add(symbolModel);
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.sizeOf(context);
+
+    print(listOfSymbols);
+    print(symbolList);
     return CupertinoPageScaffold(
       child: Stack(
         alignment: Alignment.bottomCenter,
@@ -76,29 +100,25 @@ class _FactsScreenState extends State<FactsScreen> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        !widget.isWrongAnswer
-                            ? Container()
-                            : Column(
-                                children: [
-                                  Text(
-                                    'unfortunately you are wrong'.toUpperCase(),
-                                    style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontSize: 30.sp, fontWeight: FontWeight.w800),
-                                  ),
-                                  SizedBox(
-                                    height: 20.h,
-                                  ),
-                                ],
-                              ),
-                        Text(
-                          !widget.isWrongAnswer ? '3 facts'.toUpperCase() : 'new fact'.toUpperCase(),
-                          style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontSize: !widget.isWrongAnswer ? 30.sp : 18.sp),
+                        SizedBox(
+                          width: size.width * .8,
+                          child: Text(
+                            'You are correct, now select the symbol of this god'.toUpperCase(),
+                            style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontSize: 30.sp, fontWeight: FontWeight.w800),
+                          ),
                         ),
-                        SizedBox(height: 10.h),
-                        Text(
-                          softWrap: true,
-                          'asd; lfhb pwreg fhwe jglh ;vero gewn fiowehr',
-                          style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontSize: 16.sp, fontWeight: FontWeight.w500),
+                      ],
+                    ),
+                    SizedBox(height: 20.h),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Image.asset(
+                          symbolList[0].image,
+                          color: CupertinoColors.white,
                         ),
+                        Image.asset(symbolList[random].image),
+                        Image.asset(symbolList[newRandom].image),
                       ],
                     ),
                     SizedBox(height: 20.h),
@@ -107,7 +127,7 @@ class _FactsScreenState extends State<FactsScreen> {
                       onPressed: () => Navigator.push(
                         context,
                         CupertinoPageRoute(
-                          builder: (context) => !widget.isWrongAnswer ? QuizScreen() : NotFoundFactsScreen(),
+                          builder: (context) => HomePage(),
                         ),
                       ),
                     ),

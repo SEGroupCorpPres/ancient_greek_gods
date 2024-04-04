@@ -2,7 +2,6 @@ import 'package:ancient_greek_gods/core/constants/colors.dart';
 import 'package:ancient_greek_gods/features/presentation/widgets/settings_list_tile.dart';
 import 'package:ancient_greek_gods/generated/assets.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -22,7 +21,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       navigationBar: CupertinoNavigationBar(
         automaticallyImplyLeading: false,
         automaticallyImplyMiddle: false,
-        border: Border(),
+        border: const Border(),
         middle: Text(
           'Settings'.toUpperCase(),
           style: CupertinoTheme.of(context).textTheme.navTitleTextStyle,
@@ -41,7 +40,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   borderRadius: BorderRadius.circular(14.r),
                   color: AppColors.selectedBtnColor,
                   image: const DecorationImage(
-                    image: AssetImage(Assets.imagesDionis),
+                    image: AssetImage(Assets.godsDionis),
                     fit: BoxFit.cover,
                     alignment: Alignment.topCenter,
                   ),
@@ -75,7 +74,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               height: 10.h,
             ),
             ListView(
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               padding: EdgeInsets.symmetric(horizontal: 5.w),
               children: [

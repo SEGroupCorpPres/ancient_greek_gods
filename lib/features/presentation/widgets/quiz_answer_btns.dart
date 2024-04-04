@@ -38,7 +38,7 @@ class _QuizAnswerButtonsState extends State<QuizAnswerButtons> {
               ),
               QuizAnswerBtn(
                 size: widget.size,
-                title: 'paseidon',
+                title: 'poseidon',
                 onPressed: () {
                   setState(() {
                     isSelected = false;
@@ -67,7 +67,7 @@ class _QuizAnswerButtonsState extends State<QuizAnswerButtons> {
               ),
               QuizAnswerBtn(
                 size: widget.size,
-                title: 'paseidon',
+                title: 'poseidon',
                 onPressed: () {
                   setState(() {
                     isSelected = false;

@@ -52,7 +52,10 @@ class _GameLevelsScreenState extends State<GameLevelsScreen> {
               title: '1',
               onPressed: () => navigatorState(context).push(
                 CupertinoPageRoute(
-                  builder: (context) => FactsScreen(),
+                  builder: (context) => FactsScreen(
+                    isWrongAnswer: false,
+                    retryCount: 3,
+                  ),
                 ),
               ),
               isCompleted: false,

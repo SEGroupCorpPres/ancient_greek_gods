@@ -1,4 +1,5 @@
 import 'package:ancient_greek_gods/core/constants/colors.dart';
+import 'package:ancient_greek_gods/features/presentation/pages/quiz_symbol_screen.dart';
 import 'package:ancient_greek_gods/features/presentation/widgets/main_button.dart';
 import 'package:ancient_greek_gods/features/presentation/widgets/quiz_answer_btns.dart';
 import 'package:ancient_greek_gods/generated/assets.dart';
@@ -35,7 +36,7 @@ class _QuizScreenState extends State<QuizScreen> {
             top: 130,
             right: 0,
             child: Image.asset(
-              Assets.imagesApollo,
+              Assets.godsApollo,
               width: 150.w,
             ),
           ),
@@ -89,7 +90,15 @@ class _QuizScreenState extends State<QuizScreen> {
                       QuizAnswerButtons(size: size),
                     ],
                   ),
-                  MainButton(title: 'Continue', onPressed: () {}),
+                  MainButton(
+                    title: 'Continue',
+                    onPressed: () => Navigator.pushAndRemoveUntil(
+                        context,
+                        CupertinoPageRoute(
+                          builder: (_) => QuizSymbolScreen(),
+                        ),
+                        (route) => false),
+                  ),
                 ],
               ),
             ),

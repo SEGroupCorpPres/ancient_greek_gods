@@ -2,12 +2,12 @@ import 'package:ancient_greek_gods/core/constants/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class MainButton extends StatelessWidget {
+class BuyButton extends StatelessWidget {
   final Color? bgColor;
   final String title;
   final VoidCallback onPressed;
 
-  const MainButton({
+  const BuyButton({
     super.key,
     this.bgColor = AppColors.primaryColor,
     required this.title,
@@ -21,10 +21,11 @@ class MainButton extends StatelessWidget {
       pressedOpacity: .8,
       alignment: Alignment.center,
       onPressed: onPressed,
+      padding: EdgeInsets.zero,
       child: Center(
         child: Text(
           title.toUpperCase(),
-          style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontSize: 20.sp),
+          style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontSize: 16.sp),
         ),
       ),
     );
