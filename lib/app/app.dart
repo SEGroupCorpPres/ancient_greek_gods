@@ -1,8 +1,5 @@
-import 'package:ancient_greek_gods/app/app/presentation/pages/splash_screen.dart';
 import 'package:ancient_greek_gods/core/constants/colors.dart';
-import 'package:ancient_greek_gods/features/presentation/pages/enter_name_screen.dart';
 import 'package:ancient_greek_gods/features/presentation/pages/home_page.dart';
-import 'package:ancient_greek_gods/features/presentation/pages/start_game_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -23,7 +20,19 @@ class MyApp extends StatelessWidget {
                 fontSize: 24.sp,
                 fontFamily: 'Proxima',
                 color: CupertinoColors.white,
-                fontWeight: FontWeight.bold
+                fontWeight: FontWeight.bold,
+              ),
+              navTitleTextStyle: TextStyle(
+                fontSize: 16.sp,
+                fontFamily: 'Proxima',
+                color: CupertinoColors.white,
+                fontWeight: FontWeight.w800,
+              ),
+              actionTextStyle: TextStyle(
+                fontSize: 15.sp,
+                fontFamily: 'Proxima',
+                color: CupertinoColors.white,
+                fontWeight: FontWeight.w700,
               ),
             ),
             primaryColor: AppColors.primaryColor,
@@ -38,6 +47,7 @@ class MyApp extends StatelessWidget {
       // child: EnterNameScreen(),
       // child: StartGameScreen(),
       child: HomePage(),
+      // child: SettingsScreen(),
     );
   }
 }

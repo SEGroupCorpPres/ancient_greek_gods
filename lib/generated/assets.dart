@@ -57,6 +57,7 @@ class Assets {
   static const String imagesLevelLine = 'assets/images/level_line.png';
   static const String imagesLoginBg = 'assets/images/login_bg.png';
   static const String imagesPaseidon = 'assets/images/paseidon.png';
+  static const String imagesSeparator = 'assets/images/separator.png';
   static const String imagesSplashBg = 'assets/images/splash_bg.png';
   static const String imagesStartPageBg = 'assets/images/start_page_bg.png';
   static const String imagesZeus = 'assets/images/zeus.png';
