@@ -33,9 +33,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
           children: [
             Center(
               child: Container(
-                margin: EdgeInsets.symmetric(vertical: 20.h),
-                width: size.width * .3,
-                height: size.width * .3,
+                margin: EdgeInsets.symmetric(vertical: 15.h),
+                width: size.width * .25,
+                height: size.width * .25,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(14.r),
                   color: AppColors.selectedBtnColor,
@@ -55,7 +55,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             ),
             SizedBox(height: 10.h),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20.w),
+              padding: EdgeInsets.symmetric(horizontal: 22.w),
               child: CupertinoButton(
                 color: AppColors.secondaryBtnBgColor,
                 pressedOpacity: .8,
@@ -70,9 +70,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 ),
               ),
             ),
-            SizedBox(
-              height: 10.h,
-            ),
+            SizedBox(height: 15.h),
             ListView(
               physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
@@ -82,10 +80,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   size: size,
                   title: 'Notifications',
                   trailing: Container(
-                    height: 25.h,
+                    height: 30.h,
                     width: 45.w,
                     margin: EdgeInsets.only(right: 5.w),
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(35.r), border: Border.all(color: CupertinoColors.white.withOpacity(isSwitched ? .0 : 1))),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(35.r),
+                      border: Border.all(
+                        color: CupertinoColors.white.withOpacity(isSwitched ? .0 : 1),
+                      ),
+                    ),
                     child: CupertinoSwitch(
                       activeColor: AppColors.primaryColor,
                       value: isSwitched,
@@ -101,10 +104,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   size: size,
                   title: 'Music',
                   trailing: Container(
-                    height: 25.h,
+                    height: 30.h,
                     width: 45.w,
                     margin: EdgeInsets.only(right: 5.w),
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(35.r), border: Border.all(color: CupertinoColors.white.withOpacity(isSwitched ? .0 : 1))),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(35.r),
+                      border: Border.all(
+                        color: CupertinoColors.white.withOpacity(isSwitched ? .0 : 1),
+                      ),
+                    ),
                     child: CupertinoSwitch(
                       activeColor: AppColors.primaryColor,
                       value: isSwitched,

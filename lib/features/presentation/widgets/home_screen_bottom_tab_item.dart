@@ -25,10 +25,10 @@ class BottomTabItem extends StatelessWidget {
         pressedOpacity: 1,
         onPressed: onPressed,
         child: AnimatedContainer(
-          duration: Duration(milliseconds: 200),
+          duration: const Duration(milliseconds: 200),
           width: double.infinity,
           padding: EdgeInsets.only(top: 10.h),
-          height: MediaQuery.sizeOf(context).height * .09 + 10.h,
+          height: MediaQuery.sizeOf(context).height * .1 + 10.h,
           color: bgColor,
           child: Column(
             children: [

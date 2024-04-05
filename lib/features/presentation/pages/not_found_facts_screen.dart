@@ -11,6 +11,10 @@ class NotFoundFactsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.sizeOf(context);
+    MediaQueryData mediaQueryData = MediaQuery.of(context);
+    double homeIndicatorSize = mediaQueryData.padding.bottom;
+    double top= MediaQuery.of(context).padding.top;
+    bool isHomeIndicator = homeIndicatorSize != 0 ? true : false;
     return CupertinoPageScaffold(
       child: Stack(
         alignment: Alignment.bottomCenter,
@@ -19,23 +23,23 @@ class NotFoundFactsScreen extends StatelessWidget {
             children: [
               Image.asset(
                 width: size.width,
-                height: 370.h,
+                height: isHomeIndicator ?  370.h : 440.h,
                 Assets.images3FactsScreenBg,
-                fit: BoxFit.cover,
+                fit: BoxFit.fill,
               ),
             ],
           ),
           Positioned(
-            top: 130,
-            right: 0,
+            top: top + 120.h,
+            right: -10.w,
             child: Image.asset(
               Assets.godsApollo,
-              width: 150.w,
+              width: 130.w,
             ),
           ),
           Positioned(
-            top: 100,
-            left: 30,
+            top: top + 20.h,
+            left: 30.w,
             child: CupertinoButton(
               pressedOpacity: 1,
               padding: EdgeInsets.zero,

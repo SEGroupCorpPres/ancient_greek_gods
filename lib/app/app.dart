@@ -1,11 +1,17 @@
+import 'package:ancient_greek_gods/app/app/presentation/pages/splash_screen.dart';
 import 'package:ancient_greek_gods/core/constants/colors.dart';
+import 'package:ancient_greek_gods/features/presentation/pages/facts_screen.dart';
 import 'package:ancient_greek_gods/features/presentation/pages/home_page.dart';
+import 'package:ancient_greek_gods/features/presentation/pages/not_found_facts_screen.dart';
+import 'package:ancient_greek_gods/features/presentation/pages/quiz_screen.dart';
+import 'package:ancient_greek_gods/features/presentation/pages/quiz_symbol_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../features/presentation/pages/enter_name_screen.dart';
+import '../features/presentation/pages/start_game_screen.dart';
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -77,7 +83,11 @@ class _MyAppState extends State<MyApp> {
       // child: SplashScreen(),
       // child: EnterNameScreen(),
       // child: StartGameScreen(),
-      child: HomePage(),
+      // child: HomePage(),
+      // child: QuizScreen(),
+      // child: FactsScreen(isWrongAnswer: true, retryCount: 3),
+      // child: NotFoundFactsScreen(),
+      child: QuizSymbolScreen(),
       // child: SettingsScreen(),
     );
   }

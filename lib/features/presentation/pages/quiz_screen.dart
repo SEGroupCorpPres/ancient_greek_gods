@@ -17,6 +17,11 @@ class QuizScreen extends StatefulWidget {
 class _QuizScreenState extends State<QuizScreen> {
   @override
   Widget build(BuildContext context) {
+    MediaQueryData mediaQueryData = MediaQuery.of(context);
+    double homeIndicatorSize = mediaQueryData.padding.bottom;
+    double top= MediaQuery.of(context).padding.top;
+    bool isHomeIndicator = homeIndicatorSize != 0 ? true : false;
+
     final Size size = MediaQuery.sizeOf(context);
     return CupertinoPageScaffold(
       child: Stack(
@@ -26,23 +31,23 @@ class _QuizScreenState extends State<QuizScreen> {
             children: [
               Image.asset(
                 width: size.width,
-                height: 370.h,
+                height: isHomeIndicator ?  400.h : 440.h,
                 Assets.images3FactsScreenBg,
                 fit: BoxFit.cover,
               ),
             ],
           ),
           Positioned(
-            top: 130,
-            right: 0,
+            top: top + 120.h,
+            right: -10.w,
             child: Image.asset(
               Assets.godsApollo,
-              width: 150.w,
+              width: 130.w,
             ),
           ),
           Positioned(
-            top: 100,
-            left: 30,
+            top: top + 20.h,
+            left: 30.w,
             child: CupertinoButton(
               pressedOpacity: 1,
               padding: EdgeInsets.zero,

@@ -3,109 +3,109 @@ List<Map<String, dynamic>> quiz = [
     'level': 1,
     "questions": [
       {
-        "question": "Who is known as the King of the gods?",
-        "options": ["Zeus", "Ares", "Poseidon", "Apollo"],
-        "correct_answer": "Zeus"
+        "question": "Who were famous for their work in the field of philosophy: Socrates, Plato, and Aristotle?",
+        "options": ["Physics", "Mathematics", "Philosophy", "Chemistry"],
+        "correct_answer": "Philosophy"
       },
       {
-        "question": "Who is the god of the sea?",
-        "options": ["Hades", "Ares", "Poseidon", "Dionysus"],
+        "question": "How often did the Greeks hold the Olympic Games?",
+        "options": ["Every year", "Every two years", "Every four years", "Once every four years"],
+        "correct_answer": "Once every four years"
+      },
+      {
+        "question": "Which Greek god was feared for his wrath over Odysseus' perilous journey and eventually helped him return home after several years?",
+        "options": ["Poseidon", "Zeus", "Hades", "Apollo"],
         "correct_answer": "Poseidon"
       },
       {
-        "question": "Who is the god of the underworld?",
-        "options": ["Hera", "Demeter", "Athena", "Hades"],
-        "correct_answer": "Hades"
+        "question": "What is the 'Acropolis' known as in Ancient Greece?",
+        "options": ["Marketplace", "Fortress", "Library", "Observatory"],
+        "correct_answer": "Fortress"
       },
       {
-        "question": "Who is the god of war?",
-        "options": ["Hephaestus", "Ares", "Apollo", "Dionysus"],
-        "correct_answer": "Ares"
+        "question": "What type of literature were the Greeks known for?",
+        "options": ["Scientific texts", "Political treaties", "Literary works", "Basic knowledge"],
+        "correct_answer": "Literary works"
       },
       {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hermes", "Hades", "Athena", "Hephaestus"],
-        "correct_answer": "Hephaestus"
+        "question": "What element is Artemis associated with?",
+        "options": ["Fire", "Water", "Earth", "Hunt"],
+        "correct_answer": "Hunt"
       },
       {
-        "question": "Who is the goddess of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
-        "correct_answer": "Aphrodite"
+        "question": "What crops are associated with Demeter?",
+        "options": ["Fruits and vegetables", "Fire", "Cattle", "Grains"],
+        "correct_answer": "Fruits and vegetables"
       },
       {
-        "question": "Who is the god of music, poetry, and prophecy?",
-        "options": ["Dionysus", "Hermes", "Apollo", "Hephaestus"],
-        "correct_answer": "Apollo"
+        "question": "Which musical instrument is often depicted with Dionysus?",
+        "options": ["Keyboard", "Trumpet", "Lantern", "Historical marketplace"],
+        "correct_answer": "Trumpet"
       },
       {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Ares", "Dionysus", "Hades", "Poseidon"],
-        "correct_answer": "Dionysus"
+        "question": "What term did the Greeks use to refer to 'good news'?",
+        "options": ["Helot", "Spartan", "Athenian", "Myrmidon"],
+        "correct_answer": "Helot"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Athena", "Aphrodite", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
-      },
-      {
-        "question": "Who is the god of the sun, light, music, and prophecy?",
-        "options": ["Hermes", "Apollo", "Dionysus", "Ares"],
-        "correct_answer": "Apollo"
+        "question": "What did the Greeks use frozen yogurt and honey for?",
+        "options": ["Tea", "Water", "Food preservation", "Consumption"],
+        "correct_answer": "Consumption"
       }
-    ],
+    ]
   },
   {
     'level': 2,
     "questions": [
       {
-        "question": "Who is the goddess of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
-        "correct_answer": "Aphrodite"
+        "question": "Which work did Homer write?",
+        "options": ["The Odyssey", "The Iliad", "Antigone", "Oedipus Rex"],
+        "correct_answer": "The Iliad"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "What communication methods existed in Ancient Greece?",
+        "options": ["Telephone", "Email", "News service", "Runners"],
+        "correct_answer": "Runners"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
+        "question": "Pythagoras is known for his work in which field?",
+        "options": ["Sacred geometry", "Naturalism", "Medieval philosophy", "Geometry"],
+        "correct_answer": "Geometry"
       },
       {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
+        "question": "For how long did Pericles lead Athens?",
+        "options": ["10 years", "20 years", "30 years", "40 years"],
+        "correct_answer": "30 years"
       },
       {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
-        "correct_answer": "Demeter"
+        "question": "What was the programming language of Ancient Greece?",
+        "options": ["Greek", "Latin", "Greekish", "Code"],
+        "correct_answer": "Greek"
       },
       {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
+        "question": "When did the Olympic Games begin?",
+        "options": ["10 years ago", "100 years ago", "1000 years ago", "2000 years ago"],
+        "correct_answer": "1000 years ago"
       },
       {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
-        "correct_answer": "Dionysus"
+        "question": "What was an 'amphora' used for in Greek civilization?",
+        "options": ["Storage", "Medicine", "Culture", "Water supply"],
+        "correct_answer": "Storage"
       },
       {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
-        "correct_answer": "Hephaestus"
+        "question": "In Ancient Greece, what was the 'agora' used for?",
+        "options": ["Commerce", "Medicine", "Culture", "Spirituality"],
+        "correct_answer": "Commerce"
       },
       {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
+        "question": "What was a 'caryatid' in Ancient Greece?",
+        "options": ["Architectural element", "Decorative pattern", "Earring", "Columns"],
+        "correct_answer": "Architectural element"
       },
       {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
+        "question": "In which era did 'Hellenism' emerge?",
+        "options": ["Previous era", "2nd century", "3rd century", "4th century"],
+        "correct_answer": "2nd century"
       }
     ]
   },
@@ -113,54 +113,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 3,
     "questions": [
       {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Dionysus", "Hades", "Apollo", "Hephaestus"],
-        "correct_answer": "Dionysus"
+        "question": "Who was the famous playwright known for 'Oedipus Rex'?",
+        "options": ["Euripides", "Sophocles", "Aeschylus", "Herodotus"],
+        "correct_answer": "Sophocles"
       },
       {
-        "question": "Who is the god of the sun, light, music, and prophecy?",
-        "options": ["Zeus", "Athena", "Apollo", "Poseidon"],
-        "correct_answer": "Apollo"
+        "question": "Which Greek city-state was known for its military prowess?",
+        "options": ["Sparta", "Athens", "Thebes", "Corinth"],
+        "correct_answer": "Sparta"
       },
       {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Ares", "Hephaestus", "Aphrodite", "Dionysus"],
-        "correct_answer": "Hephaestus"
+        "question": "Who was the famous Greek physician known as the 'Father of Medicine'?",
+        "options": ["Pythagoras", "Hippocrates", "Plato", "Aristotle"],
+        "correct_answer": "Hippocrates"
       },
       {
-        "question": "Who is known as the goddess of love and beauty?",
-        "options": ["Demeter", "Athena", "Aphrodite", "Poseidon"],
-        "correct_answer": "Aphrodite"
+        "question": "Which event led to the defeat of the Persian Empire by the Greeks?",
+        "options": ["Battle of Thermopylae", "Battle of Marathon", "Battle of Salamis", "Battle of Troy"],
+        "correct_answer": "Battle of Marathon"
       },
       {
-        "question": "Who is associated with wisdom, arts, and crafts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
+        "question": "Who was the legendary king of Ithaca, known for his cunning and resourcefulness?",
+        "options": ["Agamemnon", "Perseus", "Heracles", "Odysseus"],
+        "correct_answer": "Odysseus"
+      },
+      {
+        "question": "Which Greek philosopher is credited with the concept of the 'Golden Mean'?",
+        "options": ["Socrates", "Plato", "Aristotle", "Pythagoras"],
+        "correct_answer": "Aristotle"
+      },
+      {
+        "question": "Who was the patron goddess of wisdom, craft, and warfare?",
+        "options": ["Athena", "Hera", "Artemis", "Persephone"],
         "correct_answer": "Athena"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
+        "question": "What type of government did Ancient Athens have?",
+        "options": ["Monarchy", "Oligarchy", "Democracy", "Dictatorship"],
+        "correct_answer": "Democracy"
       },
       {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Zeus", "Dionysus", "Ares", "Hephaestus"],
-        "correct_answer": "Zeus"
+        "question": "Which Greek philosopher is known for the saying 'Know thyself'?",
+        "options": ["Plato", "Aristotle", "Socrates", "Pythagoras"],
+        "correct_answer": "Socrates"
       },
       {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Demeter", "Athena", "Aphrodite", "Hades"],
-        "correct_answer": "Demeter"
-      },
-      {
-        "question": "Who is the god of war?",
-        "options": ["Ares", "Dionysus", "Apollo", "Hephaestus"],
-        "correct_answer": "Ares"
-      },
-      {
-        "question": "Who is the god of the sun, light, music, and prophecy?",
-        "options": ["Hades", "Athena", "Apollo", "Dionysus"],
-        "correct_answer": "Apollo"
+        "question": "Which of the following is a Greek architectural order characterized by its simplicity?",
+        "options": ["Doric", "Ionic", "Corinthian", "Tuscan"],
+        "correct_answer": "Doric"
       }
     ]
   },
@@ -168,54 +168,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 4,
     "questions": [
       {
-        "question": "Who is known as the goddess of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
+        "question": "Who was the famous Greek mathematician known for his theorem about right triangles?",
+        "options": ["Euclid", "Pythagoras", "Archimedes", "Eudoxus"],
+        "correct_answer": "Pythagoras"
+      },
+      {
+        "question": "Which Greek goddess was the protector of marriage and family?",
+        "options": ["Aphrodite", "Hera", "Artemis", "Demeter"],
+        "correct_answer": "Hera"
+      },
+      {
+        "question": "Who was the god of the underworld and the ruler of the dead?",
+        "options": ["Zeus", "Hades", "Poseidon", "Apollo"],
+        "correct_answer": "Hades"
+      },
+      {
+        "question": "Which Greek hero was known for his incredible strength?",
+        "options": ["Heracles", "Perseus", "Achilles", "Theseus"],
+        "correct_answer": "Heracles"
+      },
+      {
+        "question": "Which Greek playwright wrote 'The Persians'?",
+        "options": ["Sophocles", "Euripides", "Aeschylus", "Aristophanes"],
+        "correct_answer": "Aeschylus"
+      },
+      {
+        "question": "Which battle marked the end of the Peloponnesian War?",
+        "options": ["Battle of Thermopylae", "Battle of Salamis", "Battle of Plataea", "Battle of Amphipolis"],
+        "correct_answer": "Battle of Amphipolis"
+      },
+      {
+        "question": "Who was the patron god of music, poetry, and the sun?",
+        "options": ["Apollo", "Dionysus", "Hephaestus", "Hermes"],
+        "correct_answer": "Apollo"
+      },
+      {
+        "question": "Which Greek goddess was born fully grown and armored from Zeus' forehead?",
+        "options": ["Athena", "Artemis", "Persephone", "Hera"],
+        "correct_answer": "Athena"
+      },
+      {
+        "question": "Who was the goddess of love, beauty, and desire?",
+        "options": ["Athena", "Artemis", "Aphrodite", "Hestia"],
         "correct_answer": "Aphrodite"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
-      },
-      {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
-      },
-      {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
-      },
-      {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
-        "correct_answer": "Demeter"
-      },
-      {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
-      },
-      {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
-        "correct_answer": "Dionysus"
-      },
-      {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
-        "correct_answer": "Hephaestus"
-      },
-      {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
-      },
-      {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
+        "question": "Which ancient Greek historian is often referred to as the 'Father of History'?",
+        "options": ["Herodotus", "Thucydides", "Xenophon", "Polybius"],
+        "correct_answer": "Herodotus"
       }
     ]
   },
@@ -223,54 +223,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 5,
     "questions": [
       {
-        "question": "Who is the goddess of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
-        "correct_answer": "Aphrodite"
+        "question": "Who was the founder of the Academy in Athens and the teacher of Aristotle?",
+        "options": ["Plato", "Socrates", "Pythagoras", "Aristotle"],
+        "correct_answer": "Plato"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "Which Greek city-state was known for its cultural and intellectual achievements?",
+        "options": ["Athens", "Sparta", "Corinth", "Thebes"],
+        "correct_answer": "Athens"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
+        "question": "Who was the famous Greek mathematician known for his work on geometry?",
+        "options": ["Euclid", "Archimedes", "Eudoxus", "Pythagoras"],
+        "correct_answer": "Euclid"
       },
       {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
+        "question": "What was the name of the famous Greek temple dedicated to Athena on the Acropolis of Athens?",
+        "options": ["Parthenon", "Pantheon", "Acropolis", "Temple of Zeus"],
+        "correct_answer": "Parthenon"
       },
       {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
-        "correct_answer": "Demeter"
-      },
-      {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
-      },
-      {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
+        "question": "Who was the Greek god of wine, fertility, and theater?",
+        "options": ["Apollo", "Dionysus", "Hermes", "Hephaestus"],
         "correct_answer": "Dionysus"
       },
       {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
+        "question": "Which famous Greek philosopher was condemned to death by drinking hemlock?",
+        "options": ["Aristotle", "Plato", "Pythagoras", "Socrates"],
+        "correct_answer": "Socrates"
+      },
+      {
+        "question": "Who was the goddess of hunting, wilderness, and childbirth?",
+        "options": ["Artemis", "Athena", "Hera", "Demeter"],
+        "correct_answer": "Artemis"
+      },
+      {
+        "question": "What event marked the beginning of the Persian Wars?",
+        "options": ["Battle of Thermopylae", "Battle of Marathon", "Battle of Salamis", "Battle of Plataea"],
+        "correct_answer": "Battle of Marathon"
+      },
+      {
+        "question": "Which Greek city-state was known for its militaristic society?",
+        "options": ["Sparta", "Athens", "Thebes", "Corinth"],
+        "correct_answer": "Sparta"
+      },
+      {
+        "question": "Who was the patron god of blacksmiths, craftsmen, and volcanoes?",
+        "options": ["Apollo", "Hephaestus", "Dionysus", "Hermes"],
         "correct_answer": "Hephaestus"
-      },
-      {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
-      },
-      {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
       }
     ]
   },
@@ -278,54 +278,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 6,
     "questions": [
       {
-        "question": "Who is the goddess of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
-        "correct_answer": "Aphrodite"
+        "question": "Who was the famous Greek philosopher known for his dialogues and the Socratic method?",
+        "options": ["Plato", "Aristotle", "Pythagoras", "Socrates"],
+        "correct_answer": "Socrates"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "Which Greek playwright wrote the tragedies 'Medea' and 'The Trojan Women'?",
+        "options": ["Sophocles", "Aeschylus", "Euripides", "Aristophanes"],
+        "correct_answer": "Euripides"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous Greek physician known for his work on anatomy?",
+        "options": ["Hippocrates", "Galen", "Herophilus", "Aristotle"],
+        "correct_answer": "Herophilus"
       },
       {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
+        "question": "Which Greek mathematician calculated the value of pi and invented the screw pump?",
+        "options": ["Euclid", "Archimedes", "Pythagoras", "Eudoxus"],
+        "correct_answer": "Archimedes"
+      },
+      {
+        "question": "Who was the hero of the 'Iliad', known for his invulnerability?",
+        "options": ["Heracles", "Perseus", "Achilles", "Theseus"],
+        "correct_answer": "Achilles"
+      },
+      {
+        "question": "Which Greek philosopher founded the Academy in Athens?",
+        "options": ["Socrates", "Plato", "Aristotle", "Pythagoras"],
+        "correct_answer": "Plato"
+      },
+      {
+        "question": "Who was the god of the sky and thunder?",
+        "options": ["Poseidon", "Hades", "Zeus", "Apollo"],
         "correct_answer": "Zeus"
       },
       {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
-        "correct_answer": "Demeter"
+        "question": "What was the name of the famous temple dedicated to Apollo at Delphi?",
+        "options": ["Parthenon", "Temple of Artemis", "Acropolis", "Temple of Apollo"],
+        "correct_answer": "Temple of Apollo"
       },
       {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
-      },
-      {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
-        "correct_answer": "Dionysus"
-      },
-      {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
-        "correct_answer": "Hephaestus"
-      },
-      {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
+        "question": "Who was the Greek goddess of wisdom, craft, and warfare?",
+        "options": ["Athena", "Hera", "Artemis", "Persephone"],
         "correct_answer": "Athena"
       },
       {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the sacred oracle of Apollo in Ancient Greece?",
+        "options": ["Delphi", "Olympia", "Athens", "Sparta"],
+        "correct_answer": "Delphi"
       }
     ]
   },
@@ -333,54 +333,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 7,
     "questions": [
       {
-        "question": "Who is the goddess of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
-        "correct_answer": "Aphrodite"
+        "question": "Which Greek philosopher is known for his works 'The Republic' and 'The Symposium'?",
+        "options": ["Socrates", "Aristotle", "Pythagoras", "Plato"],
+        "correct_answer": "Plato"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "Who was the famous Greek mathematician known for his work on conic sections?",
+        "options": ["Euclid", "Pythagoras", "Apollonius", "Eudoxus"],
+        "correct_answer": "Apollonius"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous temple dedicated to Artemis in Ephesus?",
+        "options": ["Parthenon", "Temple of Apollo", "Acropolis", "Temple of Artemis"],
+        "correct_answer": "Temple of Artemis"
       },
       {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
+        "question": "Who was the goddess of the hearth, home, and family?",
+        "options": ["Hestia", "Demeter", "Athena", "Aphrodite"],
+        "correct_answer": "Hestia"
       },
       {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
-        "correct_answer": "Demeter"
+        "question": "Which Greek historian chronicled the history of the Peloponnesian War?",
+        "options": ["Herodotus", "Thucydides", "Xenophon", "Polybius"],
+        "correct_answer": "Thucydides"
       },
       {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
+        "question": "Who was the famous Greek philosopher known as the 'Father of Western Philosophy'?",
+        "options": ["Socrates", "Aristotle", "Pythagoras", "Plato"],
+        "correct_answer": "Socrates"
       },
       {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
-        "correct_answer": "Dionysus"
+        "question": "What was the name of the famous Greek poet known for his epic poems 'The Iliad' and 'The Odyssey'?",
+        "options": ["Homer", "Hesiod", "Aesop", "Pindar"],
+        "correct_answer": "Homer"
       },
       {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
-        "correct_answer": "Hephaestus"
+        "question": "Which Greek city-state was known for its powerful navy?",
+        "options": ["Athens", "Sparta", "Corinth", "Thebes"],
+        "correct_answer": "Athens"
       },
       {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
+        "question": "Who was the famous Greek playwright known for his comedies such as 'Lysistrata' and 'The Clouds'?",
+        "options": ["Sophocles", "Euripides", "Aeschylus", "Aristophanes"],
+        "correct_answer": "Aristophanes"
       },
       {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous Greek temple dedicated to Zeus in Olympia?",
+        "options": ["Parthenon", "Temple of Artemis", "Acropolis", "Temple of Zeus"],
+        "correct_answer": "Temple of Zeus"
       }
     ]
   },
@@ -388,54 +388,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 8,
     "questions": [
       {
-        "question": "Who is the goddess of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
-        "correct_answer": "Aphrodite"
+        "question": "Who was the famous Greek philosopher known as the 'Father of Metaphysics'?",
+        "options": ["Socrates", "Aristotle", "Pythagoras", "Plato"],
+        "correct_answer": "Aristotle"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "What was the name of the famous battle in which the Greeks defeated the Persians?",
+        "options": ["Battle of Thermopylae", "Battle of Marathon", "Battle of Salamis", "Battle of Plataea"],
+        "correct_answer": "Battle of Salamis"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
-      },
-      {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
-      },
-      {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
+        "question": "Who was the goddess of agriculture, fertility, and the harvest?",
+        "options": ["Aphrodite", "Hera", "Artemis", "Demeter"],
         "correct_answer": "Demeter"
       },
       {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
+        "question": "Which Greek god was known as the god of the sea and earthquakes?",
+        "options": ["Zeus", "Poseidon", "Hades", "Apollo"],
+        "correct_answer": "Poseidon"
       },
       {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
-        "correct_answer": "Dionysus"
+        "question": "What was the name of the famous school of philosophy founded by Plato?",
+        "options": ["Epicureanism", "Stoicism", "Cynicism", "Academy"],
+        "correct_answer": "Academy"
       },
       {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
+        "question": "Who was the famous Greek sculptor known for his statue of 'Athena Parthenos'?",
+        "options": ["Phidias", "Praxiteles", "Polykleitos", "Lysippos"],
+        "correct_answer": "Phidias"
+      },
+      {
+        "question": "Which Greek goddess was known as the protector of women and marriage?",
+        "options": ["Athena", "Hera", "Artemis", "Demeter"],
+        "correct_answer": "Hera"
+      },
+      {
+        "question": "What was the name of the famous Greek battle in which the outnumbered Spartans held off the Persian army?",
+        "options": ["Battle of Thermopylae", "Battle of Marathon", "Battle of Salamis", "Battle of Plataea"],
+        "correct_answer": "Battle of Thermopylae"
+      },
+      {
+        "question": "Who was the Greek god of fire, metalworking, and craftsmanship?",
+        "options": ["Apollo", "Dionysus", "Hephaestus", "Hermes"],
         "correct_answer": "Hephaestus"
       },
       {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
-      },
-      {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous Greek mathematician known for his work on geometry?",
+        "options": ["Euclid", "Archimedes", "Eudoxus", "Pythagoras"],
+        "correct_answer": "Euclid"
       }
     ]
   },
@@ -443,54 +443,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 9,
     "questions": [
       {
-        "question": "Who is the goddess of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
-        "correct_answer": "Aphrodite"
+        "question": "Who was the famous Greek philosopher known for his concept of atomism?",
+        "options": ["Socrates", "Aristotle", "Pythagoras", "Democritus"],
+        "correct_answer": "Democritus"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "What was the name of the famous Greek physician known for his work on anatomy?",
+        "options": ["Hippocrates", "Galen", "Herophilus", "Aristotle"],
+        "correct_answer": "Herophilus"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
-      },
-      {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
-      },
-      {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
-        "correct_answer": "Demeter"
-      },
-      {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
-      },
-      {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
+        "question": "Who was the god of wine, fertility, and theater?",
+        "options": ["Apollo", "Dionysus", "Hermes", "Hephaestus"],
         "correct_answer": "Dionysus"
       },
       {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
-        "correct_answer": "Hephaestus"
+        "question": "What was the name of the famous temple dedicated to Athena on the Acropolis of Athens?",
+        "options": ["Parthenon", "Pantheon", "Acropolis", "Temple of Zeus"],
+        "correct_answer": "Parthenon"
       },
       {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
+        "question": "Who was the famous Greek mathematician known for his theorem about right triangles?",
+        "options": ["Euclid", "Pythagoras", "Archimedes", "Eudoxus"],
+        "correct_answer": "Pythagoras"
       },
       {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
+        "question": "Which Greek god was the protector of marriage and family?",
+        "options": ["Aphrodite", "Hera", "Artemis", "Demeter"],
+        "correct_answer": "Hera"
+      },
+      {
+        "question": "Who was the god of the underworld and the ruler of the dead?",
+        "options": ["Zeus", "Hades", "Poseidon", "Apollo"],
+        "correct_answer": "Hades"
+      },
+      {
+        "question": "Which Greek hero was known for his incredible strength?",
+        "options": ["Heracles", "Perseus", "Achilles", "Theseus"],
+        "correct_answer": "Heracles"
+      },
+      {
+        "question": "Which Greek playwright wrote 'The Persians'?",
+        "options": ["Sophocles", "Euripides", "Aeschylus", "Aristophanes"],
+        "correct_answer": "Aeschylus"
+      },
+      {
+        "question": "Which battle marked the end of the Peloponnesian War?",
+        "options": ["Battle of Thermopylae", "Battle of Salamis", "Battle of Plataea", "Battle of Amphipolis"],
+        "correct_answer": "Battle of Amphipolis"
       }
     ]
   },
@@ -498,54 +498,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 10,
     "questions": [
       {
-        "question": "Who is the goddess of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
-        "correct_answer": "Aphrodite"
+        "question": "Who was the founder of the Academy in Athens and the teacher of Aristotle?",
+        "options": ["Plato", "Socrates", "Pythagoras", "Aristotle"],
+        "correct_answer": "Plato"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "Which Greek city-state was known for its cultural and intellectual achievements?",
+        "options": ["Athens", "Sparta", "Corinth", "Thebes"],
+        "correct_answer": "Athens"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
+        "question": "Who was the famous Greek mathematician known for his work on geometry?",
+        "options": ["Euclid", "Archimedes", "Eudoxus", "Pythagoras"],
+        "correct_answer": "Euclid"
       },
       {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
+        "question": "What was the name of the famous temple dedicated to Artemis in Ephesus?",
+        "options": ["Parthenon", "Temple of Apollo", "Acropolis", "Temple of Artemis"],
+        "correct_answer": "Temple of Artemis"
       },
       {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
-        "correct_answer": "Demeter"
+        "question": "Who was the goddess of the hearth, home, and family?",
+        "options": ["Hestia", "Demeter", "Athena", "Aphrodite"],
+        "correct_answer": "Hestia"
       },
       {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
+        "question": "Which Greek historian chronicled the history of the Peloponnesian War?",
+        "options": ["Herodotus", "Thucydides", "Xenophon", "Polybius"],
+        "correct_answer": "Thucydides"
       },
       {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
-        "correct_answer": "Dionysus"
+        "question": "Who was the famous Greek philosopher known as the 'Father of Western Philosophy'?",
+        "options": ["Socrates", "Aristotle", "Pythagoras", "Plato"],
+        "correct_answer": "Socrates"
       },
       {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
-        "correct_answer": "Hephaestus"
+        "question": "What was the name of the famous Greek poet known for his epic poems 'The Iliad' and 'The Odyssey'?",
+        "options": ["Homer", "Hesiod", "Aesop", "Pindar"],
+        "correct_answer": "Homer"
       },
       {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
+        "question": "Which Greek city-state was known for its powerful navy?",
+        "options": ["Athens", "Sparta", "Corinth", "Thebes"],
+        "correct_answer": "Athens"
       },
       {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
+        "question": "Who was the famous Greek playwright known for his comedies such as 'Lysistrata' and 'The Clouds'?",
+        "options": ["Sophocles", "Euripides", "Aeschylus", "Aristophanes"],
+        "correct_answer": "Aristophanes"
       }
     ]
   },
@@ -553,54 +553,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 11,
     "questions": [
       {
-        "question": "Who is the goddess of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
-        "correct_answer": "Aphrodite"
+        "question": "Who was the famous Greek philosopher known for his dialogues and the Socratic method?",
+        "options": ["Plato", "Aristotle", "Pythagoras", "Socrates"],
+        "correct_answer": "Socrates"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "Which Greek playwright wrote the tragedies 'Medea' and 'The Trojan Women'?",
+        "options": ["Sophocles", "Aeschylus", "Euripides", "Aristophanes"],
+        "correct_answer": "Euripides"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous Greek physician known for his work on anatomy?",
+        "options": ["Hippocrates", "Galen", "Herophilus", "Aristotle"],
+        "correct_answer": "Herophilus"
       },
       {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
+        "question": "Which Greek mathematician calculated the value of pi and invented the screw pump?",
+        "options": ["Euclid", "Archimedes", "Pythagoras", "Eudoxus"],
+        "correct_answer": "Archimedes"
+      },
+      {
+        "question": "Who was the hero of the 'Iliad', known for his invulnerability?",
+        "options": ["Heracles", "Perseus", "Achilles", "Theseus"],
+        "correct_answer": "Achilles"
+      },
+      {
+        "question": "Which Greek philosopher founded the Academy in Athens?",
+        "options": ["Socrates", "Plato", "Aristotle", "Pythagoras"],
+        "correct_answer": "Plato"
+      },
+      {
+        "question": "Who was the god of the sky and thunder?",
+        "options": ["Poseidon", "Hades", "Zeus", "Apollo"],
         "correct_answer": "Zeus"
       },
       {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
-        "correct_answer": "Demeter"
+        "question": "What was the name of the famous temple dedicated to Apollo at Delphi?",
+        "options": ["Parthenon", "Temple of Artemis", "Acropolis", "Temple of Apollo"],
+        "correct_answer": "Temple of Apollo"
       },
       {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
-      },
-      {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
-        "correct_answer": "Dionysus"
-      },
-      {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
-        "correct_answer": "Hephaestus"
-      },
-      {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
+        "question": "Who was the Greek goddess of wisdom, craft, and warfare?",
+        "options": ["Athena", "Hera", "Artemis", "Persephone"],
         "correct_answer": "Athena"
       },
       {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the sacred oracle of Apollo in Ancient Greece?",
+        "options": ["Delphi", "Olympia", "Athens", "Sparta"],
+        "correct_answer": "Delphi"
       }
     ]
   },
@@ -608,54 +608,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 12,
     "questions": [
       {
-        "question": "Who is the goddess of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
-        "correct_answer": "Aphrodite"
+        "question": "Who was the famous Greek philosopher known for his concept of atomism?",
+        "options": ["Socrates", "Aristotle", "Pythagoras", "Democritus"],
+        "correct_answer": "Democritus"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "What was the name of the famous Greek physician known for his work on anatomy?",
+        "options": ["Hippocrates", "Galen", "Herophilus", "Aristotle"],
+        "correct_answer": "Herophilus"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
-      },
-      {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
-      },
-      {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
-        "correct_answer": "Demeter"
-      },
-      {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
-      },
-      {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
+        "question": "Who was the god of wine, fertility, and theater?",
+        "options": ["Apollo", "Dionysus", "Hermes", "Hephaestus"],
         "correct_answer": "Dionysus"
       },
       {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
-        "correct_answer": "Hephaestus"
+        "question": "What was the name of the famous temple dedicated to Athena on the Acropolis of Athens?",
+        "options": ["Parthenon", "Pantheon", "Acropolis", "Temple of Zeus"],
+        "correct_answer": "Parthenon"
       },
       {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
+        "question": "Who was the goddess of the hearth, home, and family?",
+        "options": ["Hestia", "Demeter", "Athena", "Aphrodite"],
+        "correct_answer": "Hestia"
       },
       {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
+        "question": "Which Greek historian chronicled the history of the Peloponnesian War?",
+        "options": ["Herodotus", "Thucydides", "Xenophon", "Polybius"],
+        "correct_answer": "Thucydides"
+      },
+      {
+        "question": "Who was the famous Greek philosopher known as the 'Father of Western Philosophy'?",
+        "options": ["Socrates", "Aristotle", "Pythagoras", "Plato"],
+        "correct_answer": "Socrates"
+      },
+      {
+        "question": "What was the name of the famous Greek poet known for his epic poems 'The Iliad' and 'The Odyssey'?",
+        "options": ["Homer", "Hesiod", "Aesop", "Pindar"],
+        "correct_answer": "Homer"
+      },
+      {
+        "question": "Which Greek city-state was known for its powerful navy?",
+        "options": ["Athens", "Sparta", "Corinth", "Thebes"],
+        "correct_answer": "Athens"
+      },
+      {
+        "question": "Who was the famous Greek playwright known for his comedies such as 'Lysistrata' and 'The Clouds'?",
+        "options": ["Sophocles", "Euripides", "Aeschylus", "Aristophanes"],
+        "correct_answer": "Aristophanes"
       }
     ]
   },
@@ -663,54 +663,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 13,
     "questions": [
       {
-        "question": "Who is the goddess of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
+        "question": "Who was the famous Greek philosopher known for his work on ethics and virtue?",
+        "options": ["Socrates", "Aristotle", "Plato", "Pythagoras"],
+        "correct_answer": "Aristotle"
+      },
+      {
+        "question": "What was the name of the famous temple dedicated to Hera in Olympia?",
+        "options": ["Parthenon", "Temple of Artemis", "Acropolis", "Temple of Hera"],
+        "correct_answer": "Temple of Hera"
+      },
+      {
+        "question": "Who was the goddess of love, beauty, and desire?",
+        "options": ["Hestia", "Athena", "Hera", "Aphrodite"],
         "correct_answer": "Aphrodite"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "Which Greek hero was known for his slaying of the Gorgon Medusa?",
+        "options": ["Heracles", "Perseus", "Achilles", "Theseus"],
+        "correct_answer": "Perseus"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous school of philosophy founded by Aristotle?",
+        "options": ["Epicureanism", "Stoicism", "Cynicism", "Lyceum"],
+        "correct_answer": "Lyceum"
       },
       {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
+        "question": "Who was the famous Greek playwright known for his tragedies such as 'Oedipus Rex'?",
+        "options": ["Sophocles", "Euripides", "Aeschylus", "Aristophanes"],
+        "correct_answer": "Sophocles"
       },
       {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
+        "question": "What was the name of the famous battle in which the Greeks defeated the Persians?",
+        "options": ["Battle of Thermopylae", "Battle of Marathon", "Battle of Salamis", "Battle of Plataea"],
+        "correct_answer": "Battle of Marathon"
+      },
+      {
+        "question": "Who was the god of the underworld and the ruler of the dead?",
+        "options": ["Zeus", "Hades", "Poseidon", "Apollo"],
+        "correct_answer": "Hades"
+      },
+      {
+        "question": "Which Greek mathematician calculated the value of pi and invented the screw pump?",
+        "options": ["Euclid", "Archimedes", "Pythagoras", "Eudoxus"],
+        "correct_answer": "Archimedes"
+      },
+      {
+        "question": "Who was the goddess of agriculture, fertility, and the harvest?",
+        "options": ["Aphrodite", "Hera", "Artemis", "Demeter"],
         "correct_answer": "Demeter"
-      },
-      {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
-      },
-      {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
-        "correct_answer": "Dionysus"
-      },
-      {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
-        "correct_answer": "Hephaestus"
-      },
-      {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
-      },
-      {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
       }
     ]
   },
@@ -718,54 +718,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 14,
     "questions": [
       {
-        "question": "Who is the goddess of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
-        "correct_answer": "Aphrodite"
+        "question": "Who was the famous Greek historian known for his detailed account of the Peloponnesian War?",
+        "options": ["Herodotus", "Thucydides", "Xenophon", "Polybius"],
+        "correct_answer": "Thucydides"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "What was the name of the famous temple dedicated to Athena in Athens?",
+        "options": ["Parthenon", "Pantheon", "Acropolis", "Temple of Zeus"],
+        "correct_answer": "Parthenon"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
+        "question": "Who was the god of the sea and earthquakes?",
+        "options": ["Zeus", "Poseidon", "Hades", "Apollo"],
         "correct_answer": "Poseidon"
       },
       {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
+        "question": "Which Greek city-state was known for its military prowess and discipline?",
+        "options": ["Athens", "Sparta", "Corinth", "Thebes"],
+        "correct_answer": "Sparta"
       },
       {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
-        "correct_answer": "Demeter"
+        "question": "What was the name of the famous school of philosophy founded by Plato?",
+        "options": ["Epicureanism", "Stoicism", "Cynicism", "Academy"],
+        "correct_answer": "Academy"
       },
       {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
+        "question": "Who was the famous Greek sculptor known for his statue of 'Athena Parthenos'?",
+        "options": ["Phidias", "Praxiteles", "Polykleitos", "Lysippos"],
+        "correct_answer": "Phidias"
       },
       {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
-        "correct_answer": "Dionysus"
+        "question": "Which Greek goddess was known as the protector of women and marriage?",
+        "options": ["Athena", "Hera", "Artemis", "Demeter"],
+        "correct_answer": "Hera"
       },
       {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
+        "question": "What was the name of the famous Greek battle in which the outnumbered Spartans held off the Persian army?",
+        "options": ["Battle of Thermopylae", "Battle of Marathon", "Battle of Salamis", "Battle of Plataea"],
+        "correct_answer": "Battle of Thermopylae"
+      },
+      {
+        "question": "Who was the Greek god of fire, metalworking, and craftsmanship?",
+        "options": ["Apollo", "Dionysus", "Hephaestus", "Hermes"],
         "correct_answer": "Hephaestus"
       },
       {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
-      },
-      {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous Greek mathematician known for his work on geometry?",
+        "options": ["Euclid", "Archimedes", "Eudoxus", "Pythagoras"],
+        "correct_answer": "Euclid"
       }
     ]
   },
@@ -773,54 +773,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 15,
     "questions": [
       {
-        "question": "Who is the goddess of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
+        "question": "Who was the Greek goddess of wisdom, craft, and warfare?",
+        "options": ["Athena", "Hera", "Artemis", "Persephone"],
+        "correct_answer": "Athena"
+      },
+      {
+        "question": "What was the name of the famous Greek battle in which the Athenians defeated the Persians?",
+        "options": ["Battle of Thermopylae", "Battle of Marathon", "Battle of Salamis", "Battle of Plataea"],
+        "correct_answer": "Battle of Marathon"
+      },
+      {
+        "question": "Who was the Greek god of the sun, music, poetry, and prophecy?",
+        "options": ["Zeus", "Apollo", "Hermes", "Dionysus"],
+        "correct_answer": "Apollo"
+      },
+      {
+        "question": "Which Greek philosopher was the student of Socrates and the teacher of Aristotle?",
+        "options": ["Plato", "Aristotle", "Pythagoras", "Democritus"],
+        "correct_answer": "Plato"
+      },
+      {
+        "question": "What was the name of the famous temple dedicated to Hera in Olympia?",
+        "options": ["Parthenon", "Temple of Artemis", "Acropolis", "Temple of Hera"],
+        "correct_answer": "Temple of Hera"
+      },
+      {
+        "question": "Who was the goddess of love, beauty, and desire?",
+        "options": ["Hestia", "Athena", "Hera", "Aphrodite"],
         "correct_answer": "Aphrodite"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "Which Greek hero was known for his slaying of the Gorgon Medusa?",
+        "options": ["Heracles", "Perseus", "Achilles", "Theseus"],
+        "correct_answer": "Perseus"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous school of philosophy founded by Aristotle?",
+        "options": ["Epicureanism", "Stoicism", "Cynicism", "Lyceum"],
+        "correct_answer": "Lyceum"
       },
       {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
+        "question": "Who was the famous Greek playwright known for his tragedies such as 'Oedipus Rex'?",
+        "options": ["Sophocles", "Euripides", "Aeschylus", "Aristophanes"],
+        "correct_answer": "Sophocles"
       },
       {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
-        "correct_answer": "Demeter"
-      },
-      {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
-      },
-      {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
-        "correct_answer": "Dionysus"
-      },
-      {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
-        "correct_answer": "Hephaestus"
-      },
-      {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
-      },
-      {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous battle in which the Greeks defeated the Persians?",
+        "options": ["Battle of Thermopylae", "Battle of Marathon", "Battle of Salamis", "Battle of Plataea"],
+        "correct_answer": "Battle of Marathon"
       }
     ]
   },
@@ -828,54 +828,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 16,
     "questions": [
       {
-        "question": "Who is the goddess of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
-        "correct_answer": "Aphrodite"
+        "question": "Who was the famous Greek historian known for his detailed account of the Peloponnesian War?",
+        "options": ["Herodotus", "Thucydides", "Xenophon", "Polybius"],
+        "correct_answer": "Thucydides"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "What was the name of the famous temple dedicated to Athena in Athens?",
+        "options": ["Parthenon", "Pantheon", "Acropolis", "Temple of Zeus"],
+        "correct_answer": "Parthenon"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
+        "question": "Who was the god of the sea and earthquakes?",
+        "options": ["Zeus", "Poseidon", "Hades", "Apollo"],
         "correct_answer": "Poseidon"
       },
       {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
+        "question": "Which Greek city-state was known for its military prowess and discipline?",
+        "options": ["Athens", "Sparta", "Corinth", "Thebes"],
+        "correct_answer": "Sparta"
       },
       {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
-        "correct_answer": "Demeter"
+        "question": "What was the name of the famous school of philosophy founded by Plato?",
+        "options": ["Epicureanism", "Stoicism", "Cynicism", "Academy"],
+        "correct_answer": "Academy"
       },
       {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
+        "question": "Who was the famous Greek sculptor known for his statue of 'Athena Parthenos'?",
+        "options": ["Phidias", "Praxiteles", "Polykleitos", "Lysippos"],
+        "correct_answer": "Phidias"
       },
       {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
-        "correct_answer": "Dionysus"
+        "question": "Which Greek goddess was known as the protector of women and marriage?",
+        "options": ["Athena", "Hera", "Artemis", "Demeter"],
+        "correct_answer": "Hera"
       },
       {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
+        "question": "What was the name of the famous Greek battle in which the outnumbered Spartans held off the Persian army?",
+        "options": ["Battle of Thermopylae", "Battle of Marathon", "Battle of Salamis", "Battle of Plataea"],
+        "correct_answer": "Battle of Thermopylae"
+      },
+      {
+        "question": "Who was the Greek god of fire, metalworking, and craftsmanship?",
+        "options": ["Apollo", "Dionysus", "Hephaestus", "Hermes"],
         "correct_answer": "Hephaestus"
       },
       {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
-      },
-      {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous Greek mathematician known for his work on geometry?",
+        "options": ["Euclid", "Archimedes", "Eudoxus", "Pythagoras"],
+        "correct_answer": "Euclid"
       }
     ]
   },
@@ -883,54 +883,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 17,
     "questions": [
       {
-        "question": "Who is the god of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
-        "correct_answer": "Aphrodite"
+        "question": "Who was the famous Greek philosopher known for his dialogues and the Socratic method?",
+        "options": ["Plato", "Aristotle", "Pythagoras", "Socrates"],
+        "correct_answer": "Socrates"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "Which Greek playwright wrote the tragedies 'Medea' and 'The Trojan Women'?",
+        "options": ["Sophocles", "Aeschylus", "Euripides", "Aristophanes"],
+        "correct_answer": "Euripides"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous Greek physician known for his work on anatomy?",
+        "options": ["Hippocrates", "Galen", "Herophilus", "Aristotle"],
+        "correct_answer": "Herophilus"
       },
       {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
+        "question": "Which Greek mathematician calculated the value of pi and invented the screw pump?",
+        "options": ["Euclid", "Archimedes", "Pythagoras", "Eudoxus"],
+        "correct_answer": "Archimedes"
+      },
+      {
+        "question": "Who was the hero of the 'Iliad', known for his invulnerability?",
+        "options": ["Heracles", "Perseus", "Achilles", "Theseus"],
+        "correct_answer": "Achilles"
+      },
+      {
+        "question": "Which Greek philosopher founded the Academy in Athens?",
+        "options": ["Socrates", "Plato", "Aristotle", "Pythagoras"],
+        "correct_answer": "Plato"
+      },
+      {
+        "question": "Who was the god of the sky and thunder?",
+        "options": ["Poseidon", "Hades", "Zeus", "Apollo"],
         "correct_answer": "Zeus"
       },
       {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
-        "correct_answer": "Demeter"
+        "question": "What was the name of the famous temple dedicated to Apollo at Delphi?",
+        "options": ["Parthenon", "Temple of Artemis", "Acropolis", "Temple of Apollo"],
+        "correct_answer": "Temple of Apollo"
       },
       {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
-      },
-      {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
-        "correct_answer": "Dionysus"
-      },
-      {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
-        "correct_answer": "Hephaestus"
-      },
-      {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
+        "question": "Who was the Greek goddess of wisdom, craft, and warfare?",
+        "options": ["Athena", "Hera", "Artemis", "Persephone"],
         "correct_answer": "Athena"
       },
       {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the sacred oracle of Apollo in Ancient Greece?",
+        "options": ["Delphi", "Olympia", "Athens", "Sparta"],
+        "correct_answer": "Delphi"
       }
     ]
   },
@@ -938,54 +938,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 18,
     "questions": [
       {
-        "question": "Who is the god of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
-        "correct_answer": "Aphrodite"
+        "question": "Who was the Greek philosopher known for his theory of forms and his allegory of the cave?",
+        "options": ["Socrates", "Plato", "Aristotle", "Pythagoras"],
+        "correct_answer": "Plato"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "Which Greek city-state was known for its democratic government and naval power?",
+        "options": ["Athens", "Sparta", "Corinth", "Thebes"],
+        "correct_answer": "Athens"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous temple dedicated to Artemis in Ephesus?",
+        "options": ["Parthenon", "Temple of Artemis", "Acropolis", "Temple of Hera"],
+        "correct_answer": "Temple of Artemis"
       },
       {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
+        "question": "Who was the goddess of the moon, hunting, and childbirth?",
+        "options": ["Hestia", "Athena", "Artemis", "Aphrodite"],
+        "correct_answer": "Artemis"
       },
       {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
-        "correct_answer": "Demeter"
+        "question": "Which Greek hero undertook the Twelve Labors as punishment for killing his family?",
+        "options": ["Heracles", "Perseus", "Achilles", "Theseus"],
+        "correct_answer": "Heracles"
       },
       {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
+        "question": "What was the name of the famous school of philosophy founded by Zeno of Citium?",
+        "options": ["Epicureanism", "Stoicism", "Cynicism", "Academy"],
+        "correct_answer": "Stoicism"
       },
       {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
+        "question": "Who was the famous Greek playwright known for his satirical comedies?",
+        "options": ["Sophocles", "Euripides", "Aeschylus", "Aristophanes"],
+        "correct_answer": "Aristophanes"
+      },
+      {
+        "question": "What was the name of the famous battle in which the Greeks defeated the Persian fleet?",
+        "options": ["Battle of Thermopylae", "Battle of Marathon", "Battle of Salamis", "Battle of Plataea"],
+        "correct_answer": "Battle of Salamis"
+      },
+      {
+        "question": "Who was the Greek god of wine, fertility, and theater?",
+        "options": ["Apollo", "Dionysus", "Hermes", "Hephaestus"],
         "correct_answer": "Dionysus"
       },
       {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
-        "correct_answer": "Hephaestus"
-      },
-      {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
-      },
-      {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous Greek mathematician known for his work on number theory and geometry?",
+        "options": ["Euclid", "Archimedes", "Eudoxus", "Pythagoras"],
+        "correct_answer": "Pythagoras"
       }
     ]
   },
@@ -993,54 +993,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 19,
     "questions": [
       {
-        "question": "Who is the god of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
-        "correct_answer": "Aphrodite"
+        "question": "Who was the famous Greek historian known as the 'Father of History'?",
+        "options": ["Herodotus", "Thucydides", "Xenophon", "Polybius"],
+        "correct_answer": "Herodotus"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "What was the name of the famous temple dedicated to Zeus in Olympia?",
+        "options": ["Parthenon", "Temple of Artemis", "Acropolis", "Temple of Zeus"],
+        "correct_answer": "Temple of Zeus"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
+        "question": "Who was the goddess of the hearth, home, and family?",
+        "options": ["Hestia", "Demeter", "Athena", "Aphrodite"],
+        "correct_answer": "Hestia"
       },
       {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
+        "question": "Which Greek hero was known for his journey to the underworld to rescue his wife, Eurydice?",
+        "options": ["Orpheus", "Perseus", "Heracles", "Jason"],
+        "correct_answer": "Orpheus"
       },
       {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
-        "correct_answer": "Demeter"
+        "question": "What was the name of the famous school of philosophy founded by Epicurus?",
+        "options": ["Epicureanism", "Stoicism", "Cynicism", "Academy"],
+        "correct_answer": "Epicureanism"
       },
       {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
+        "question": "Who was the famous Greek sculptor known for his statue of 'Aphrodite of Knidos'?",
+        "options": ["Phidias", "Praxiteles", "Polykleitos", "Lysippos"],
+        "correct_answer": "Praxiteles"
       },
       {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
-        "correct_answer": "Dionysus"
+        "question": "Which Greek goddess was known as the virgin huntress?",
+        "options": ["Athena", "Hera", "Artemis", "Demeter"],
+        "correct_answer": "Artemis"
       },
       {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
-        "correct_answer": "Hephaestus"
+        "question": "What was the name of the famous battle in which the Greeks decisively defeated the Persians?",
+        "options": ["Battle of Thermopylae", "Battle of Marathon", "Battle of Salamis", "Battle of Plataea"],
+        "correct_answer": "Battle of Plataea"
       },
       {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
+        "question": "Who was the Greek god of messages, trade, and thieves?",
+        "options": ["Zeus", "Hermes", "Poseidon", "Apollo"],
+        "correct_answer": "Hermes"
       },
       {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous Greek mathematician known for his work on conic sections?",
+        "options": ["Euclid", "Archimedes", "Eudoxus", "Apollonius"],
+        "correct_answer": "Apollonius"
       }
     ]
   },
@@ -1048,54 +1048,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 20,
     "questions": [
       {
-        "question": "Who is the god of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
-        "correct_answer": "Aphrodite"
+        "question": "Who was the famous Greek philosopher known for his concept of atomism?",
+        "options": ["Socrates", "Aristotle", "Pythagoras", "Democritus"],
+        "correct_answer": "Democritus"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "What was the name of the famous Greek physician known for his work on anatomy?",
+        "options": ["Hippocrates", "Galen", "Herophilus", "Aristotle"],
+        "correct_answer": "Herophilus"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
-      },
-      {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
-      },
-      {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
-        "correct_answer": "Demeter"
-      },
-      {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
-      },
-      {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
+        "question": "Who was the god of wine, fertility, and theater?",
+        "options": ["Apollo", "Dionysus", "Hermes", "Hephaestus"],
         "correct_answer": "Dionysus"
       },
       {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
-        "correct_answer": "Hephaestus"
+        "question": "What was the name of the famous temple dedicated to Athena on the Acropolis of Athens?",
+        "options": ["Parthenon", "Pantheon", "Acropolis", "Temple of Zeus"],
+        "correct_answer": "Parthenon"
       },
       {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
+        "question": "Who was the goddess of the hearth, home, and family?",
+        "options": ["Hestia", "Demeter", "Athena", "Aphrodite"],
+        "correct_answer": "Hestia"
       },
       {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
+        "question": "Which Greek historian chronicled the history of the Peloponnesian War?",
+        "options": ["Herodotus", "Thucydides", "Xenophon", "Polybius"],
+        "correct_answer": "Thucydides"
+      },
+      {
+        "question": "Who was the famous Greek philosopher known as the 'Father of Western Philosophy'?",
+        "options": ["Socrates", "Aristotle", "Pythagoras", "Plato"],
+        "correct_answer": "Socrates"
+      },
+      {
+        "question": "What was the name of the famous Greek poet known for his epic poems 'The Iliad' and 'The Odyssey'?",
+        "options": ["Homer", "Hesiod", "Aesop", "Pindar"],
+        "correct_answer": "Homer"
+      },
+      {
+        "question": "Which Greek city-state was known for its powerful navy?",
+        "options": ["Athens", "Sparta", "Corinth", "Thebes"],
+        "correct_answer": "Athens"
+      },
+      {
+        "question": "Who was the famous Greek playwright known for his comedies such as 'Lysistrata' and 'The Clouds'?",
+        "options": ["Sophocles", "Euripides", "Aeschylus", "Aristophanes"],
+        "correct_answer": "Aristophanes"
       }
     ]
   },
@@ -1103,54 +1103,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 21,
     "questions": [
       {
-        "question": "Who is the god of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
+        "question": "Who was the famous Greek philosopher known for his work on ethics and virtue?",
+        "options": ["Socrates", "Aristotle", "Plato", "Pythagoras"],
+        "correct_answer": "Aristotle"
+      },
+      {
+        "question": "What was the name of the famous temple dedicated to Hera in Olympia?",
+        "options": ["Parthenon", "Temple of Artemis", "Acropolis", "Temple of Hera"],
+        "correct_answer": "Temple of Hera"
+      },
+      {
+        "question": "Who was the goddess of love, beauty, and desire?",
+        "options": ["Hestia", "Athena", "Hera", "Aphrodite"],
         "correct_answer": "Aphrodite"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "Which Greek hero was known for his slaying of the Gorgon Medusa?",
+        "options": ["Heracles", "Perseus", "Achilles", "Theseus"],
+        "correct_answer": "Perseus"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous school of philosophy founded by Aristotle?",
+        "options": ["Epicureanism", "Stoicism", "Cynicism", "Lyceum"],
+        "correct_answer": "Lyceum"
       },
       {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
+        "question": "Who was the famous Greek playwright known for his tragedies such as 'Oedipus Rex'?",
+        "options": ["Sophocles", "Euripides", "Aeschylus", "Aristophanes"],
+        "correct_answer": "Sophocles"
       },
       {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
+        "question": "What was the name of the famous battle in which the Greeks defeated the Persians?",
+        "options": ["Battle of Thermopylae", "Battle of Marathon", "Battle of Salamis", "Battle of Plataea"],
+        "correct_answer": "Battle of Marathon"
+      },
+      {
+        "question": "Who was the god of the underworld and the ruler of the dead?",
+        "options": ["Zeus", "Hades", "Poseidon", "Apollo"],
+        "correct_answer": "Hades"
+      },
+      {
+        "question": "Which Greek mathematician calculated the value of pi and invented the screw pump?",
+        "options": ["Euclid", "Archimedes", "Pythagoras", "Eudoxus"],
+        "correct_answer": "Archimedes"
+      },
+      {
+        "question": "Who was the goddess of agriculture, fertility, and the harvest?",
+        "options": ["Aphrodite", "Hera", "Artemis", "Demeter"],
         "correct_answer": "Demeter"
-      },
-      {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
-      },
-      {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
-        "correct_answer": "Dionysus"
-      },
-      {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
-        "correct_answer": "Hephaestus"
-      },
-      {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
-      },
-      {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
       }
     ]
   },
@@ -1158,54 +1158,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 22,
     "questions": [
       {
-        "question": "Who is the god of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
-        "correct_answer": "Aphrodite"
+        "question": "Who was the famous Greek philosopher known for his concept of atomism?",
+        "options": ["Socrates", "Aristotle", "Pythagoras", "Democritus"],
+        "correct_answer": "Democritus"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "What was the name of the famous temple dedicated to Zeus in Olympia?",
+        "options": ["Parthenon", "Temple of Artemis", "Acropolis", "Temple of Zeus"],
+        "correct_answer": "Temple of Zeus"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
+        "question": "Who was the goddess of the hearth, home, and family?",
+        "options": ["Hestia", "Demeter", "Athena", "Aphrodite"],
+        "correct_answer": "Hestia"
       },
       {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
+        "question": "Which Greek hero was known for his journey to the underworld to rescue his wife, Eurydice?",
+        "options": ["Orpheus", "Perseus", "Heracles", "Jason"],
+        "correct_answer": "Orpheus"
       },
       {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
-        "correct_answer": "Demeter"
+        "question": "What was the name of the famous school of philosophy founded by Epicurus?",
+        "options": ["Epicureanism", "Stoicism", "Cynicism", "Academy"],
+        "correct_answer": "Epicureanism"
       },
       {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
+        "question": "Who was the famous Greek sculptor known for his statue of 'Aphrodite of Knidos'?",
+        "options": ["Phidias", "Praxiteles", "Polykleitos", "Lysippos"],
+        "correct_answer": "Praxiteles"
       },
       {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
+        "question": "Which Greek goddess was known as the virgin huntress?",
+        "options": ["Athena", "Hera", "Artemis", "Demeter"],
+        "correct_answer": "Artemis"
+      },
+      {
+        "question": "What was the name of the famous battle in which the Greeks decisively defeated the Persians?",
+        "options": ["Battle of Thermopylae", "Battle of Marathon", "Battle of Salamis", "Battle of Plataea"],
+        "correct_answer": "Battle of Plataea"
+      },
+      {
+        "question": "Who was the Greek god of wine, fertility, and theater?",
+        "options": ["Apollo", "Dionysus", "Hermes", "Hephaestus"],
         "correct_answer": "Dionysus"
       },
       {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
-        "correct_answer": "Hephaestus"
-      },
-      {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
-      },
-      {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous Greek mathematician known for his work on number theory and geometry?",
+        "options": ["Euclid", "Archimedes", "Eudoxus", "Pythagoras"],
+        "correct_answer": "Pythagoras"
       }
     ]
   },
@@ -1213,54 +1213,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 23,
     "questions": [
       {
-        "question": "Who is the god of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
-        "correct_answer": "Aphrodite"
+        "question": "Who was the famous Greek historian known as the 'Father of History'?",
+        "options": ["Herodotus", "Thucydides", "Xenophon", "Polybius"],
+        "correct_answer": "Herodotus"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "What was the name of the famous temple dedicated to Zeus in Olympia?",
+        "options": ["Parthenon", "Temple of Artemis", "Acropolis", "Temple of Zeus"],
+        "correct_answer": "Temple of Zeus"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
+        "question": "Who was the goddess of the hearth, home, and family?",
+        "options": ["Hestia", "Demeter", "Athena", "Aphrodite"],
+        "correct_answer": "Hestia"
       },
       {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
+        "question": "Which Greek hero was known for his journey to the underworld to rescue his wife, Eurydice?",
+        "options": ["Orpheus", "Perseus", "Heracles", "Jason"],
+        "correct_answer": "Orpheus"
       },
       {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
-        "correct_answer": "Demeter"
+        "question": "What was the name of the famous school of philosophy founded by Epicurus?",
+        "options": ["Epicureanism", "Stoicism", "Cynicism", "Academy"],
+        "correct_answer": "Epicureanism"
       },
       {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
+        "question": "Who was the famous Greek sculptor known for his statue of 'Aphrodite of Knidos'?",
+        "options": ["Phidias", "Praxiteles", "Polykleitos", "Lysippos"],
+        "correct_answer": "Praxiteles"
       },
       {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
+        "question": "Which Greek goddess was known as the virgin huntress?",
+        "options": ["Athena", "Hera", "Artemis", "Demeter"],
+        "correct_answer": "Artemis"
+      },
+      {
+        "question": "What was the name of the famous battle in which the Greeks decisively defeated the Persians?",
+        "options": ["Battle of Thermopylae", "Battle of Marathon", "Battle of Salamis", "Battle of Plataea"],
+        "correct_answer": "Battle of Plataea"
+      },
+      {
+        "question": "Who was the Greek god of wine, fertility, and theater?",
+        "options": ["Apollo", "Dionysus", "Hermes", "Hephaestus"],
         "correct_answer": "Dionysus"
       },
       {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
-        "correct_answer": "Hephaestus"
-      },
-      {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
-      },
-      {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous Greek mathematician known for his work on number theory and geometry?",
+        "options": ["Euclid", "Archimedes", "Eudoxus", "Pythagoras"],
+        "correct_answer": "Pythagoras"
       }
     ]
   },
@@ -1268,54 +1268,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 24,
     "questions": [
       {
-        "question": "Who is the god of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
+        "question": "Who was the famous Greek philosopher known for his work on ethics and virtue?",
+        "options": ["Socrates", "Aristotle", "Plato", "Pythagoras"],
+        "correct_answer": "Aristotle"
+      },
+      {
+        "question": "What was the name of the famous temple dedicated to Hera in Olympia?",
+        "options": ["Parthenon", "Temple of Artemis", "Acropolis", "Temple of Hera"],
+        "correct_answer": "Temple of Hera"
+      },
+      {
+        "question": "Who was the goddess of love, beauty, and desire?",
+        "options": ["Hestia", "Athena", "Hera", "Aphrodite"],
         "correct_answer": "Aphrodite"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "Which Greek hero was known for his slaying of the Gorgon Medusa?",
+        "options": ["Heracles", "Perseus", "Achilles", "Theseus"],
+        "correct_answer": "Perseus"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous school of philosophy founded by Aristotle?",
+        "options": ["Epicureanism", "Stoicism", "Cynicism", "Lyceum"],
+        "correct_answer": "Lyceum"
       },
       {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
+        "question": "Who was the famous Greek playwright known for his tragedies such as 'Oedipus Rex'?",
+        "options": ["Sophocles", "Euripides", "Aeschylus", "Aristophanes"],
+        "correct_answer": "Sophocles"
       },
       {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
+        "question": "What was the name of the famous battle in which the Greeks defeated the Persians?",
+        "options": ["Battle of Thermopylae", "Battle of Marathon", "Battle of Salamis", "Battle of Plataea"],
+        "correct_answer": "Battle of Marathon"
+      },
+      {
+        "question": "Who was the god of the underworld and the ruler of the dead?",
+        "options": ["Zeus", "Hades", "Poseidon", "Apollo"],
+        "correct_answer": "Hades"
+      },
+      {
+        "question": "Which Greek mathematician calculated the value of pi and invented the screw pump?",
+        "options": ["Euclid", "Archimedes", "Pythagoras", "Eudoxus"],
+        "correct_answer": "Archimedes"
+      },
+      {
+        "question": "Who was the goddess of agriculture, fertility, and the harvest?",
+        "options": ["Aphrodite", "Hera", "Artemis", "Demeter"],
         "correct_answer": "Demeter"
-      },
-      {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
-      },
-      {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
-        "correct_answer": "Dionysus"
-      },
-      {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
-        "correct_answer": "Hephaestus"
-      },
-      {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
-      },
-      {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
       }
     ]
   },
@@ -1323,54 +1323,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 25,
     "questions": [
       {
-        "question": "Who is the god of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
-        "correct_answer": "Aphrodite"
+        "question": "Who was the Greek philosopher known for his theory of forms and his allegory of the cave?",
+        "options": ["Socrates", "Plato", "Aristotle", "Pythagoras"],
+        "correct_answer": "Plato"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "Which Greek city-state was known for its democratic government and naval power?",
+        "options": ["Athens", "Sparta", "Corinth", "Thebes"],
+        "correct_answer": "Athens"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous temple dedicated to Artemis in Ephesus?",
+        "options": ["Parthenon", "Temple of Artemis", "Acropolis", "Temple of Hera"],
+        "correct_answer": "Temple of Artemis"
       },
       {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
+        "question": "Who was the goddess of the moon, hunting, and childbirth?",
+        "options": ["Hestia", "Athena", "Artemis", "Aphrodite"],
+        "correct_answer": "Artemis"
       },
       {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
-        "correct_answer": "Demeter"
+        "question": "Which Greek hero undertook the Twelve Labors as punishment for killing his family?",
+        "options": ["Heracles", "Perseus", "Achilles", "Theseus"],
+        "correct_answer": "Heracles"
       },
       {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
+        "question": "What was the name of the famous school of philosophy founded by Zeno of Citium?",
+        "options": ["Epicureanism", "Stoicism", "Cynicism", "Academy"],
+        "correct_answer": "Stoicism"
       },
       {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
+        "question": "Who was the famous Greek playwright known for his satirical comedies?",
+        "options": ["Sophocles", "Euripides", "Aeschylus", "Aristophanes"],
+        "correct_answer": "Aristophanes"
+      },
+      {
+        "question": "What was the name of the famous battle in which the Greeks defeated the Persian fleet?",
+        "options": ["Battle of Thermopylae", "Battle of Marathon", "Battle of Salamis", "Battle of Plataea"],
+        "correct_answer": "Battle of Salamis"
+      },
+      {
+        "question": "Who was the Greek god of wine, fertility, and theater?",
+        "options": ["Apollo", "Dionysus", "Hermes", "Hephaestus"],
         "correct_answer": "Dionysus"
       },
       {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
-        "correct_answer": "Hephaestus"
-      },
-      {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
-      },
-      {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous Greek mathematician known for his work on number theory and geometry?",
+        "options": ["Euclid", "Archimedes", "Eudoxus", "Pythagoras"],
+        "correct_answer": "Pythagoras"
       }
     ]
   },
@@ -1378,54 +1378,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 26,
     "questions": [
       {
-        "question": "Who is the god of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
+        "question": "Who was the famous Greek philosopher known for his work on ethics and virtue?",
+        "options": ["Socrates", "Aristotle", "Plato", "Pythagoras"],
+        "correct_answer": "Aristotle"
+      },
+      {
+        "question": "What was the name of the famous temple dedicated to Hera in Olympia?",
+        "options": ["Parthenon", "Temple of Artemis", "Acropolis", "Temple of Hera"],
+        "correct_answer": "Temple of Hera"
+      },
+      {
+        "question": "Who was the goddess of love, beauty, and desire?",
+        "options": ["Hestia", "Athena", "Hera", "Aphrodite"],
         "correct_answer": "Aphrodite"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "Which Greek hero was known for his slaying of the Gorgon Medusa?",
+        "options": ["Heracles", "Perseus", "Achilles", "Theseus"],
+        "correct_answer": "Perseus"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous school of philosophy founded by Aristotle?",
+        "options": ["Epicureanism", "Stoicism", "Cynicism", "Lyceum"],
+        "correct_answer": "Lyceum"
       },
       {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
+        "question": "Who was the famous Greek playwright known for his tragedies such as 'Oedipus Rex'?",
+        "options": ["Sophocles", "Euripides", "Aeschylus", "Aristophanes"],
+        "correct_answer": "Sophocles"
       },
       {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
+        "question": "What was the name of the famous battle in which the Greeks defeated the Persians?",
+        "options": ["Battle of Thermopylae", "Battle of Marathon", "Battle of Salamis", "Battle of Plataea"],
+        "correct_answer": "Battle of Marathon"
+      },
+      {
+        "question": "Who was the god of the underworld and the ruler of the dead?",
+        "options": ["Zeus", "Hades", "Poseidon", "Apollo"],
+        "correct_answer": "Hades"
+      },
+      {
+        "question": "Which Greek mathematician calculated the value of pi and invented the screw pump?",
+        "options": ["Euclid", "Archimedes", "Pythagoras", "Eudoxus"],
+        "correct_answer": "Archimedes"
+      },
+      {
+        "question": "Who was the goddess of agriculture, fertility, and the harvest?",
+        "options": ["Aphrodite", "Hera", "Artemis", "Demeter"],
         "correct_answer": "Demeter"
-      },
-      {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
-      },
-      {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
-        "correct_answer": "Dionysus"
-      },
-      {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
-        "correct_answer": "Hephaestus"
-      },
-      {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
-      },
-      {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
       }
     ]
   },
@@ -1433,54 +1433,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 27,
     "questions": [
       {
-        "question": "Who is the god of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
-        "correct_answer": "Aphrodite"
+        "question": "Who was the famous Greek philosopher known for his theory of forms and his allegory of the cave?",
+        "options": ["Socrates", "Plato", "Aristotle", "Pythagoras"],
+        "correct_answer": "Plato"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "Which Greek city-state was known for its democratic government and naval power?",
+        "options": ["Athens", "Sparta", "Corinth", "Thebes"],
+        "correct_answer": "Athens"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous temple dedicated to Artemis in Ephesus?",
+        "options": ["Parthenon", "Temple of Artemis", "Acropolis", "Temple of Hera"],
+        "correct_answer": "Temple of Artemis"
       },
       {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
+        "question": "Who was the goddess of the moon, hunting, and childbirth?",
+        "options": ["Hestia", "Athena", "Artemis", "Aphrodite"],
+        "correct_answer": "Artemis"
       },
       {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
-        "correct_answer": "Demeter"
+        "question": "Which Greek hero undertook the Twelve Labors as punishment for killing his family?",
+        "options": ["Heracles", "Perseus", "Achilles", "Theseus"],
+        "correct_answer": "Heracles"
       },
       {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
+        "question": "What was the name of the famous school of philosophy founded by Zeno of Citium?",
+        "options": ["Epicureanism", "Stoicism", "Cynicism", "Academy"],
+        "correct_answer": "Stoicism"
       },
       {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
+        "question": "Who was the famous Greek playwright known for his satirical comedies?",
+        "options": ["Sophocles", "Euripides", "Aeschylus", "Aristophanes"],
+        "correct_answer": "Aristophanes"
+      },
+      {
+        "question": "What was the name of the famous battle in which the Greeks defeated the Persian fleet?",
+        "options": ["Battle of Thermopylae", "Battle of Marathon", "Battle of Salamis", "Battle of Plataea"],
+        "correct_answer": "Battle of Salamis"
+      },
+      {
+        "question": "Who was the Greek god of wine, fertility, and theater?",
+        "options": ["Apollo", "Dionysus", "Hermes", "Hephaestus"],
         "correct_answer": "Dionysus"
       },
       {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
-        "correct_answer": "Hephaestus"
-      },
-      {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
-      },
-      {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous Greek mathematician known for his work on number theory and geometry?",
+        "options": ["Euclid", "Archimedes", "Eudoxus", "Pythagoras"],
+        "correct_answer": "Pythagoras"
       }
     ]
   },
@@ -1488,54 +1488,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 28,
     "questions": [
       {
-        "question": "Who is the god of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
+        "question": "Who was the famous Greek philosopher known for his work on ethics and virtue?",
+        "options": ["Socrates", "Aristotle", "Plato", "Pythagoras"],
+        "correct_answer": "Aristotle"
+      },
+      {
+        "question": "What was the name of the famous temple dedicated to Hera in Olympia?",
+        "options": ["Parthenon", "Temple of Artemis", "Acropolis", "Temple of Hera"],
+        "correct_answer": "Temple of Hera"
+      },
+      {
+        "question": "Who was the goddess of love, beauty, and desire?",
+        "options": ["Hestia", "Athena", "Hera", "Aphrodite"],
         "correct_answer": "Aphrodite"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "Which Greek hero was known for his slaying of the Gorgon Medusa?",
+        "options": ["Heracles", "Perseus", "Achilles", "Theseus"],
+        "correct_answer": "Perseus"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous school of philosophy founded by Aristotle?",
+        "options": ["Epicureanism", "Stoicism", "Cynicism", "Lyceum"],
+        "correct_answer": "Lyceum"
       },
       {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
+        "question": "Who was the famous Greek playwright known for his tragedies such as 'Oedipus Rex'?",
+        "options": ["Sophocles", "Euripides", "Aeschylus", "Aristophanes"],
+        "correct_answer": "Sophocles"
       },
       {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
+        "question": "What was the name of the famous battle in which the Greeks defeated the Persians?",
+        "options": ["Battle of Thermopylae", "Battle of Marathon", "Battle of Salamis", "Battle of Plataea"],
+        "correct_answer": "Battle of Marathon"
+      },
+      {
+        "question": "Who was the god of the underworld and the ruler of the dead?",
+        "options": ["Zeus", "Hades", "Poseidon", "Apollo"],
+        "correct_answer": "Hades"
+      },
+      {
+        "question": "Which Greek mathematician calculated the value of pi and invented the screw pump?",
+        "options": ["Euclid", "Archimedes", "Pythagoras", "Eudoxus"],
+        "correct_answer": "Archimedes"
+      },
+      {
+        "question": "Who was the goddess of agriculture, fertility, and the harvest?",
+        "options": ["Aphrodite", "Hera", "Artemis", "Demeter"],
         "correct_answer": "Demeter"
-      },
-      {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
-      },
-      {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
-        "correct_answer": "Dionysus"
-      },
-      {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
-        "correct_answer": "Hephaestus"
-      },
-      {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
-      },
-      {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
       }
     ]
   },
@@ -1543,54 +1543,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 29,
     "questions": [
       {
-        "question": "Who is the god of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
-        "correct_answer": "Aphrodite"
+        "question": "Who was the Greek philosopher known for his theory of forms and his allegory of the cave?",
+        "options": ["Socrates", "Plato", "Aristotle", "Pythagoras"],
+        "correct_answer": "Plato"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "Which Greek city-state was known for its democratic government and naval power?",
+        "options": ["Athens", "Sparta", "Corinth", "Thebes"],
+        "correct_answer": "Athens"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous temple dedicated to Artemis in Ephesus?",
+        "options": ["Parthenon", "Temple of Artemis", "Acropolis", "Temple of Hera"],
+        "correct_answer": "Temple of Artemis"
       },
       {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
+        "question": "Who was the goddess of the moon, hunting, and childbirth?",
+        "options": ["Hestia", "Athena", "Artemis", "Aphrodite"],
+        "correct_answer": "Artemis"
       },
       {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
-        "correct_answer": "Demeter"
+        "question": "Which Greek hero undertook the Twelve Labors as punishment for killing his family?",
+        "options": ["Heracles", "Perseus", "Achilles", "Theseus"],
+        "correct_answer": "Heracles"
       },
       {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
+        "question": "What was the name of the famous school of philosophy founded by Zeno of Citium?",
+        "options": ["Epicureanism", "Stoicism", "Cynicism", "Academy"],
+        "correct_answer": "Stoicism"
       },
       {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
+        "question": "Who was the famous Greek playwright known for his satirical comedies?",
+        "options": ["Sophocles", "Euripides", "Aeschylus", "Aristophanes"],
+        "correct_answer": "Aristophanes"
+      },
+      {
+        "question": "What was the name of the famous battle in which the Greeks defeated the Persian fleet?",
+        "options": ["Battle of Thermopylae", "Battle of Marathon", "Battle of Salamis", "Battle of Plataea"],
+        "correct_answer": "Battle of Salamis"
+      },
+      {
+        "question": "Who was the Greek god of wine, fertility, and theater?",
+        "options": ["Apollo", "Dionysus", "Hermes", "Hephaestus"],
         "correct_answer": "Dionysus"
       },
       {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
-        "correct_answer": "Hephaestus"
-      },
-      {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
-      },
-      {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous Greek mathematician known for his work on number theory and geometry?",
+        "options": ["Euclid", "Archimedes", "Eudoxus", "Pythagoras"],
+        "correct_answer": "Pythagoras"
       }
     ]
   },
@@ -1598,54 +1598,54 @@ List<Map<String, dynamic>> quiz = [
     'level': 30,
     "questions": [
       {
-        "question": "Who is the god of love and beauty?",
-        "options": ["Demeter", "Athena", "Hera", "Aphrodite"],
+        "question": "Who was the Greek philosopher known for his work on ethics and virtue?",
+        "options": ["Socrates", "Aristotle", "Plato", "Pythagoras"],
+        "correct_answer": "Aristotle"
+      },
+      {
+        "question": "What was the name of the famous temple dedicated to Hera in Olympia?",
+        "options": ["Parthenon", "Temple of Artemis", "Acropolis", "Temple of Hera"],
+        "correct_answer": "Temple of Hera"
+      },
+      {
+        "question": "Who was the goddess of love, beauty, and desire?",
+        "options": ["Hestia", "Athena", "Hera", "Aphrodite"],
         "correct_answer": "Aphrodite"
       },
       {
-        "question": "Who is associated with wisdom, strategic warfare, and arts?",
-        "options": ["Ares", "Dionysus", "Hephaestus", "Athena"],
-        "correct_answer": "Athena"
+        "question": "Which Greek hero was known for his slaying of the Gorgon Medusa?",
+        "options": ["Heracles", "Perseus", "Achilles", "Theseus"],
+        "correct_answer": "Perseus"
       },
       {
-        "question": "Who is the god of the sea and earthquakes?",
-        "options": ["Poseidon", "Hades", "Apollo", "Zeus"],
-        "correct_answer": "Poseidon"
+        "question": "What was the name of the famous school of philosophy founded by Aristotle?",
+        "options": ["Epicureanism", "Stoicism", "Cynicism", "Lyceum"],
+        "correct_answer": "Lyceum"
       },
       {
-        "question": "Who is the god of thunder and lightning?",
-        "options": ["Poseidon", "Hephaestus", "Zeus", "Dionysus"],
-        "correct_answer": "Zeus"
+        "question": "Who was the famous Greek playwright known for his tragedies such as 'Oedipus Rex'?",
+        "options": ["Sophocles", "Euripides", "Aeschylus", "Aristophanes"],
+        "correct_answer": "Sophocles"
       },
       {
-        "question": "Who is the goddess of agriculture and harvest?",
-        "options": ["Dionysus", "Demeter", "Aphrodite", "Hades"],
+        "question": "What was the name of the famous battle in which the Greeks defeated the Persians?",
+        "options": ["Battle of Thermopylae", "Battle of Marathon", "Battle of Salamis", "Battle of Plataea"],
+        "correct_answer": "Battle of Marathon"
+      },
+      {
+        "question": "Who was the god of the underworld and the ruler of the dead?",
+        "options": ["Zeus", "Hades", "Poseidon", "Apollo"],
+        "correct_answer": "Hades"
+      },
+      {
+        "question": "Which Greek mathematician calculated the value of pi and invented the screw pump?",
+        "options": ["Euclid", "Archimedes", "Pythagoras", "Eudoxus"],
+        "correct_answer": "Archimedes"
+      },
+      {
+        "question": "Who was the goddess of agriculture, fertility, and the harvest?",
+        "options": ["Aphrodite", "Hera", "Artemis", "Demeter"],
         "correct_answer": "Demeter"
-      },
-      {
-        "question": "Who is the god of war?",
-        "options": ["Athena", "Aphrodite", "Apollo", "Ares"],
-        "correct_answer": "Ares"
-      },
-      {
-        "question": "Who is the god of wine, fertility, and ecstasy?",
-        "options": ["Zeus", "Dionysus", "Poseidon", "Hades"],
-        "correct_answer": "Dionysus"
-      },
-      {
-        "question": "Who is the god of fire and craftsmanship?",
-        "options": ["Hades", "Apollo", "Ares", "Hephaestus"],
-        "correct_answer": "Hephaestus"
-      },
-      {
-        "question": "Who is associated with wisdom, strategy, and arts?",
-        "options": ["Hera", "Athena", "Demeter", "Artemis"],
-        "correct_answer": "Athena"
-      },
-      {
-        "question": "Who is the god of the sea and water?",
-        "options": ["Hephaestus", "Poseidon", "Hades", "Apollo"],
-        "correct_answer": "Poseidon"
       }
     ]
   },

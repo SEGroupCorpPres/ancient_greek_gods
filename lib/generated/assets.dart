@@ -8,6 +8,7 @@ class Assets {
   static const String assetsIconsNavbarGame = 'assets/icons/navbar_game.svg';
   static const String assetsIconsNavbarSettings = 'assets/icons/navbar_settings.svg';
   static const String assetsIconsNavbarShop = 'assets/icons/navbar_shop.svg';
+  static const String assetsImagesSplashBg = 'assets/images/splash_bg.jpeg';
   static const String assetsLogo = 'assets/logo.png';
   static const String fontsMarkSimonsonProximaNovaBlack = 'assets/fonts/Mark_Simonson_Proxima_Nova_Black.otf';
   static const String fontsMarkSimonsonProximaNovaBlackItalic = 'assets/fonts/Mark_Simonson_Proxima_Nova_Black_Italic.otf';
@@ -46,6 +47,7 @@ class Assets {
   static const String images3FactsScreenBg = 'assets/images/3_facts_screen_bg.png';
   static const String imagesAllLevelLine = 'assets/images/all_level_line.png';
   static const String imagesGameLevelBg = 'assets/images/game_level_bg.png';
+  static const String imagesGameLvlBg = 'assets/images/game_lvl_bg.jpeg';
   static const String imagesLevelLine = 'assets/images/level_line.png';
   static const String imagesLoginBg = 'assets/images/login_bg.png';
   static const String imagesSeparator = 'assets/images/separator.png';

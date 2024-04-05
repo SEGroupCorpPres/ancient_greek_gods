@@ -19,6 +19,8 @@ class LvlBtn extends StatelessWidget {
     return CupertinoButton(
       pressedOpacity: 1,
       onPressed: onPressed,
+      minSize: 40.r,
+      padding: EdgeInsets.zero,
       child: Stack(
         alignment: Alignment.center,
         children: [

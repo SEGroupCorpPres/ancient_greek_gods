@@ -45,39 +45,66 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.sizeOf(context);
+    MediaQueryData mediaQueryData = MediaQuery.of(context);
+    double homeIndicatorSize = mediaQueryData.padding.bottom;
+    double top = MediaQuery.of(context).padding.top;
+    bool isHomeIndicator = homeIndicatorSize != 0 ? true : false;
     return CupertinoPageScaffold(
       child: SizedBox(
         width: size.width,
         height: size.height,
-        child: Column(
+        child: Stack(
           children: [
-            SizedBox(
-              width: size.width,
-              child: Image.asset(
-                Assets.imagesSplashBg,
-                fit: BoxFit.cover,
-              ),
-            ),
             Column(
               children: [
-                Text(
-                  'Loading'.toUpperCase(),
-                  style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontSize: 18.sp),
-                ),
                 SizedBox(
-                  height: 10.h,
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 115.w, vertical: 10.h),
-                  child: LinearProgressIndicator(
-                    value: _animationController.value,
-                    color: AppColors.primaryColor,
-                    borderRadius: BorderRadius.circular(14.r),
-                    minHeight: 5.h,
-                    backgroundColor: AppColors.secondaryBtnBgColor,
+                  width: size.width,
+                  height: size.height * .85,
+                  child: Image.asset(
+                    Assets.assetsImagesSplashBg,
+                    fit: BoxFit.fitHeight,
                   ),
                 ),
               ],
+            ),
+            Positioned(
+              bottom: size.height -  size.height * .85,
+              child: Container(
+                width: size.width,
+                height: 110.h,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.bottomCenter,
+                    end: Alignment.topCenter,
+                    colors: [AppColors.mainBgColor, AppColors.mainBgColor.withOpacity(.0)],
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              bottom: 40.h,
+              child: SizedBox(
+                width: size.width,
+                child: Column(
+                  children: [
+                    Text(
+                      'Loading'.toUpperCase(),
+                      style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontSize: 18.sp),
+                    ),
+                    SizedBox(height: 10.h),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 115.w, vertical: 10.h),
+                      child: LinearProgressIndicator(
+                        value: _animationController.value,
+                        color: AppColors.primaryColor,
+                        borderRadius: BorderRadius.circular(14.r),
+                        minHeight: 5.h,
+                        backgroundColor: AppColors.secondaryBtnBgColor,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             )
           ],
         ),

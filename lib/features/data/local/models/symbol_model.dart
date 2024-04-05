@@ -10,7 +10,7 @@ class SymbolModel {
 
   factory SymbolModel.fromJson(Map<String, dynamic> json) {
     return SymbolModel(
-      id: json['id'],
+      id: json['id'].toString(),
       name: json['name'],
       image: json['image'],
     );

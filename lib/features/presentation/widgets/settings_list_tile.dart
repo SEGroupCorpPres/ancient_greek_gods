@@ -19,6 +19,7 @@ class SettingsListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.min,
       children: [
         CupertinoListTile(
           backgroundColor: AppColors.mainBgColor,
@@ -41,7 +42,7 @@ class SettingsListTile extends StatelessWidget {
           children: [
             Container(
               width: size.width - 10.w,
-              margin: EdgeInsets.symmetric(vertical: 7.h),
+              margin: EdgeInsets.symmetric(vertical: 5.h),
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

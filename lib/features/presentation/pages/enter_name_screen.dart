@@ -17,6 +17,8 @@ class EnterNameScreen extends StatefulWidget {
 class _EnterNameScreenState extends State<EnterNameScreen> {
   final TextEditingController _nameController = TextEditingController();
   final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
+  final FocusNode _nameFocus = FocusNode();
+  bool isKeyboard = false;
 
   Future<void> _saveUserName(String name, BuildContext context) async {
     final SharedPreferences preferences = await _prefs;
@@ -35,6 +37,19 @@ class _EnterNameScreenState extends State<EnterNameScreen> {
   }
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    _nameFocus.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.sizeOf(context);
     return CupertinoPageScaffold(
@@ -43,22 +58,26 @@ class _EnterNameScreenState extends State<EnterNameScreen> {
           SizedBox(
             width: size.width,
             height: size.height,
-            child: Column(
-              children: [
-                SizedBox(
-                  width: size.width,
-                  child: Image.asset(
-                    Assets.imagesLoginBg,
-                    fit: BoxFit.cover,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  SizedBox(
+                    width: size.width,
+                    child: Image.asset(
+                      Assets.imagesLoginBg,
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
-          Positioned(
-            bottom: 40,
+          AnimatedPositioned(
+            duration: Duration(milliseconds: 200),
+            bottom:  50.h,
             right: 0,
             left: 0,
+            // top: 0,
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 10.w),
               child: Column(
@@ -73,14 +92,14 @@ class _EnterNameScreenState extends State<EnterNameScreen> {
                     style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontSize: 45.sp),
                   ),
                   CupertinoFormSection(
-                    backgroundColor: AppColors.mainBgColor,
+                    backgroundColor: AppColors.mainBgColor.withOpacity(.0),
                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.r)),
                     margin: EdgeInsets.only(bottom: 10.h),
                     footer: MainButton(title: 'Continue', onPressed: () => _saveUserName(_nameController.text, context)),
                     children: [
                       Container(
                         height: 45.h,
-                        padding: EdgeInsets.symmetric(horizontal: 15.w),
+                        padding: EdgeInsets.symmetric(horizontal: 17.w),
                         child: CupertinoTextField(
                           textCapitalization: TextCapitalization.characters,
                           textAlign: TextAlign.center,
@@ -91,6 +110,21 @@ class _EnterNameScreenState extends State<EnterNameScreen> {
                             // Yozuvni katta harflarga o'tkazish
                             value = value.toUpperCase();
                           },
+                          onTap: () {
+                            setState(() {
+                              isKeyboard = !isKeyboard;
+                            });
+                          },
+                          onTapOutside: (event) {
+                            setState(() {
+                              isKeyboard = !isKeyboard;
+                              _nameFocus.unfocus();
+                            });
+                          },
+                          focusNode: _nameFocus,
+                          expands: true,
+                          maxLines: null,
+                          minLines: null,
                           placeholder: 'Hero Name',
                           style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(),
                           controller: _nameController,
