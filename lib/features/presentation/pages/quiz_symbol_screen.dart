@@ -2,7 +2,6 @@ import 'dart:math';
 
 import 'package:ancient_greek_gods/features/data/local/data_sources/list_of_symbols.dart';
 import 'package:ancient_greek_gods/features/data/local/models/symbol_model.dart';
-import 'package:ancient_greek_gods/features/presentation/pages/home_page.dart';
 import 'package:ancient_greek_gods/features/presentation/widgets/main_button.dart';
 import 'package:ancient_greek_gods/generated/assets.dart';
 import 'package:flutter/cupertino.dart';
@@ -19,6 +18,7 @@ class QuizSymbolScreen extends StatefulWidget {
 class _QuizSymbolScreenState extends State<QuizSymbolScreen> {
   int random = Random().nextInt(9);
   int newRandom = Random().nextInt(9);
+  int correctInt = 0;
   List<SymbolModel> symbolList = [];
 
   @override
@@ -30,8 +30,8 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> {
   }
 
   void checkOldRandom() {
-    newRandom = random;
-    if (newRandom == random) {
+    if (newRandom == random || newRandom == correctInt || random == correctInt) {
+      random = Random().nextInt(9);
       newRandom = Random().nextInt(9);
       checkOldRandom();
     }
@@ -44,12 +44,21 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> {
     }
   }
 
+  void _buildCongratulationWindow(){
+    showCupertinoModalPopup(
+      context: context,
+      builder: (context) {
+        return CupertinoActionSheet(
+          title: Text('You Win'.toUpperCase()),
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.sizeOf(context);
 
-    print(listOfSymbols);
-    print(symbolList);
     return CupertinoPageScaffold(
       child: Stack(
         alignment: Alignment.bottomCenter,
@@ -123,13 +132,10 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> {
                     ),
                     SizedBox(height: 20.h),
                     MainButton(
-                      title: 'I Agree',
-                      onPressed: () => Navigator.push(
-                        context,
-                        CupertinoPageRoute(
-                          builder: (context) => HomePage(),
-                        ),
-                      ),
+                      title: 'continue',
+                      onPressed: () {
+
+                      },
                     ),
                   ],
                 ),

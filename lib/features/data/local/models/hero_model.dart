@@ -1,13 +1,18 @@
-class GodModel {
+class HeroModel {
   final String name;
   final String image;
   final String price;
   final bool isEquip;
 
-  GodModel({required this.name, required this.image, required this.price, required this.isEquip});
+  HeroModel({
+    required this.name,
+    required this.image,
+    required this.price,
+    required this.isEquip,
+  });
 
-  factory GodModel.fromJson(Map<String, dynamic> json) {
-    return GodModel(
+  factory HeroModel.fromJson(Map<String, dynamic> json) {
+    return HeroModel(
       name: json['name'],
       image: json['image'],
       price: json['price'],

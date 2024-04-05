@@ -2,7 +2,9 @@ import 'package:ancient_greek_gods/features/presentation/pages/home_page.dart';
 import 'package:ancient_greek_gods/features/presentation/widgets/main_button.dart';
 import 'package:ancient_greek_gods/generated/assets.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class StartGameScreen extends StatefulWidget {
   const StartGameScreen({super.key});
@@ -12,6 +14,29 @@ class StartGameScreen extends StatefulWidget {
 }
 
 class _StartGameScreenState extends State<StartGameScreen> {
+  final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
+  String? userName;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _checkUserName();
+  }
+
+  Future<void> _checkUserName() async {
+    final SharedPreferences preferences = await _prefs;
+    try {
+      userName = preferences.getString('user_name')!;
+      setState(() {});
+      if (!context.mounted) return;
+    } catch (e) {
+      if (kDebugMode) {
+        print(e.toString());
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.sizeOf(context);

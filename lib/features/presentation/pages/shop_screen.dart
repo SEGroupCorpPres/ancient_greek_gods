@@ -1,6 +1,6 @@
 import 'package:ancient_greek_gods/core/constants/colors.dart';
 import 'package:ancient_greek_gods/features/presentation/widgets/buy_lvl_button.dart';
-import 'package:ancient_greek_gods/features/presentation/widgets/gods_list.dart';
+import 'package:ancient_greek_gods/features/presentation/widgets/hero_list.dart';
 import 'package:ancient_greek_gods/generated/assets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -100,7 +100,7 @@ class _ShopScreenState extends State<ShopScreen> {
                   ),
                 ),
                 SizedBox(height: 10.h),
-                GodsList(size: size),
+                HeroList(size: size),
                 SizedBox(height: 30.h),
               ],
             ),

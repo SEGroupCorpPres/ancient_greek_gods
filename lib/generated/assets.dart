@@ -23,12 +23,12 @@ class Assets {
   static const String fontsMarkSimonsonProximaNovaSemiboldItalic = 'assets/fonts/Mark_Simonson_Proxima_Nova_Semibold_Italic.otf';
   static const String fontsMarkSimonsonProximaNovaThin = 'assets/fonts/Mark_Simonson_Proxima_Nova_Thin.otf';
   static const String fontsMarkSimonsonProximaNovaThinItalic = 'assets/fonts/Mark_Simonson_Proxima_Nova_Thin_Italic.otf';
-  static const String godsAfrodita = 'assets/images/gods/afrodita.png';
+  static const String godsAphrodite = 'assets/images/gods/aphrodite.png';
   static const String godsApollo = 'assets/images/gods/apollo.png';
   static const String godsAres = 'assets/images/gods/ares.png';
   static const String godsAthena = 'assets/images/gods/athena.png';
   static const String godsDemeter = 'assets/images/gods/demeter.png';
-  static const String godsDionis = 'assets/images/gods/dionis.png';
+  static const String godsDionysus = 'assets/images/gods/dionysus.png';
   static const String godsHades = 'assets/images/gods/hades.png';
   static const String godsHephaestus = 'assets/images/gods/hephaestus.png';
   static const String godsPoseidon = 'assets/images/gods/poseidon.png';
@@ -51,14 +51,15 @@ class Assets {
   static const String imagesSeparator = 'assets/images/separator.png';
   static const String imagesSplashBg = 'assets/images/splash_bg.png';
   static const String imagesStartPageBg = 'assets/images/start_page_bg.png';
-  static const String symbolSymbolAfrodita = 'assets/icons/symbol/symbol_afrodita.png';
+  static const String symbolSymbolAphrodite = 'assets/icons/symbol/symbol_aphrodite.png';
   static const String symbolSymbolApollo = 'assets/icons/symbol/symbol_apollo.png';
   static const String symbolSymbolAres = 'assets/icons/symbol/symbol_ares.png';
   static const String symbolSymbolAthena = 'assets/icons/symbol/symbol_athena.png';
   static const String symbolSymbolDemeter = 'assets/icons/symbol/symbol_demeter.png';
-  static const String symbolSymbolDionis = 'assets/icons/symbol/symbol_dionis.png';
+  static const String symbolSymbolDionysus = 'assets/icons/symbol/symbol_dionysus.png';
   static const String symbolSymbolHades = 'assets/icons/symbol/symbol_hades.png';
   static const String symbolSymbolHephaestus = 'assets/icons/symbol/symbol_hephaestus.png';
   static const String symbolSymbolPoseidon = 'assets/icons/symbol/symbol_poseidon.png';
   static const String symbolSymbolZeus = 'assets/icons/symbol/symbol_zeus.png';
+
 }

@@ -1,15 +1,15 @@
 import 'package:ancient_greek_gods/core/constants/colors.dart';
-import 'package:ancient_greek_gods/features/data/local/models/god_model.dart';
+import 'package:ancient_greek_gods/features/data/local/models/hero_model.dart';
 import 'package:ancient_greek_gods/features/presentation/widgets/buy_button.dart';
 import 'package:ancient_greek_gods/generated/assets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class GodItem extends StatelessWidget {
-  final GodModel god;
+class HeroItem extends StatelessWidget {
+  final HeroModel hero;
   final Size size;
 
-  const GodItem({super.key, required this.god, required this.size});
+  const HeroItem({super.key, required this.hero, required this.size});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class GodItem extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10.r),
                 color: AppColors.selectedBtnColor,
                 image: DecorationImage(
-                  image: AssetImage(god.image),
+                  image: AssetImage(hero.image),
                   fit: BoxFit.cover,
                   alignment: Alignment.topCenter,
                 ),
@@ -41,7 +41,7 @@ class GodItem extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              god.isEquip
+              hero.isEquip
                   ? Text(
                       'bouth'.toUpperCase(),
                       style: CupertinoTheme.of(context).textTheme.actionTextStyle.copyWith(color: CupertinoColors.white.withOpacity(.6), fontWeight: FontWeight.w900),
@@ -53,7 +53,7 @@ class GodItem extends StatelessWidget {
                           width: 20.w,
                         ),
                         Text(
-                          god.price.toUpperCase(),
+                          hero.price.toUpperCase(),
                           style: CupertinoTheme.of(context).textTheme.navTitleTextStyle.copyWith(color: AppColors.primaryColor),
                         ),
                       ],
@@ -61,7 +61,7 @@ class GodItem extends StatelessWidget {
               SizedBox(
                 height: 20.h,
                 width: 60.w,
-                child: BuyButton(title: god.isEquip ? 'equip' : 'buy', onPressed: () {}),
+                child: BuyButton(title: hero.isEquip ? 'equip' : 'buy', onPressed: () {}),
               ),
             ],
           )

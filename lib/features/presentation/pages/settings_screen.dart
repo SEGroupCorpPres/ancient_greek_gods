@@ -40,7 +40,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   borderRadius: BorderRadius.circular(14.r),
                   color: AppColors.selectedBtnColor,
                   image: const DecorationImage(
-                    image: AssetImage(Assets.godsDionis),
+                    image: AssetImage(Assets.godsDionysus),
                     fit: BoxFit.cover,
                     alignment: Alignment.topCenter,
                   ),
