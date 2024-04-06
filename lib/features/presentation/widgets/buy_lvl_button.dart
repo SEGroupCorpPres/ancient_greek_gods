@@ -4,11 +4,17 @@ import 'package:ancient_greek_gods/generated/assets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class BuyLvlBtn extends StatelessWidget {
+class BuyLvlBtn extends StatefulWidget {
   final String title;
+  final VoidCallback onPressed;
 
-  const BuyLvlBtn({super.key, required this.title});
+  const BuyLvlBtn({super.key, required this.title, required this.onPressed});
 
+  @override
+  State<BuyLvlBtn> createState() => _BuyLvlBtnState();
+}
+
+class _BuyLvlBtnState extends State<BuyLvlBtn> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,7 +30,7 @@ class BuyLvlBtn extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                title.toUpperCase(),
+                widget.title.toUpperCase(),
                 style: CupertinoTheme.of(context).textTheme.navTitleTextStyle,
               ),
               SizedBox(
@@ -48,7 +54,7 @@ class BuyLvlBtn extends StatelessWidget {
           SizedBox(
             width: 100.w,
             height: 50.h,
-            child: BuyButton(title: 'buy', onPressed: () {}),
+            child: BuyButton(title: 'buy', onPressed: widget.onPressed),
           ),
         ],
       ),

@@ -1,4 +1,6 @@
 import 'package:ancient_greek_gods/core/constants/colors.dart';
+import 'package:ancient_greek_gods/core/helpers/database_helper.dart';
+import 'package:ancient_greek_gods/features/data/local/models/user_model.dart';
 import 'package:ancient_greek_gods/features/presentation/widgets/settings_list_tile.dart';
 import 'package:ancient_greek_gods/generated/assets.dart';
 import 'package:flutter/cupertino.dart';
@@ -12,7 +14,23 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
-  bool isSwitched = false;
+  bool isSwitchedNotify = false;
+  bool isSwitchedMusic = false;
+  DatabaseHelper dbHelper = DatabaseHelper();
+  String userName = '';
+
+  Future<void> _getUserName() async {
+    List<UserModel> users = await dbHelper.getUser();
+    userName = users.first.name;
+    setState(() {});
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    _getUserName();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +82,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 onPressed: () {},
                 child: Center(
                   child: Text(
-                    'Starscream'.toUpperCase(),
+                    userName.toUpperCase(),
                     style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontSize: 16.sp),
                   ),
                 ),
@@ -86,15 +104,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(35.r),
                       border: Border.all(
-                        color: CupertinoColors.white.withOpacity(isSwitched ? .0 : 1),
+                        color: CupertinoColors.white.withOpacity(isSwitchedNotify ? .0 : 1),
                       ),
                     ),
                     child: CupertinoSwitch(
                       activeColor: AppColors.primaryColor,
-                      value: isSwitched,
+                      value: isSwitchedNotify,
                       onChanged: (value) {
                         setState(() {
-                          isSwitched = value;
+                          isSwitchedNotify = value;
                         });
                       },
                     ),
@@ -110,15 +128,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(35.r),
                       border: Border.all(
-                        color: CupertinoColors.white.withOpacity(isSwitched ? .0 : 1),
+                        color: CupertinoColors.white.withOpacity(isSwitchedMusic ? .0 : 1),
                       ),
                     ),
                     child: CupertinoSwitch(
                       activeColor: AppColors.primaryColor,
-                      value: isSwitched,
+                      value: isSwitchedMusic,
                       onChanged: (value) {
                         setState(() {
-                          isSwitched = value;
+                          isSwitchedMusic = value;
                         });
                       },
                     ),

@@ -14,6 +14,7 @@ class BuildHomeScreen extends StatefulWidget {
 class _BuildHomeScreenState extends State<BuildHomeScreen> {
   NavigatorState navigatorState(context) => Navigator.of(context, rootNavigator: true);
 
+
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.sizeOf(context);
@@ -55,6 +56,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
                     retryCount: 3,
+                    level: 1,
                   ),
                 ),
               ),
@@ -71,6 +73,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
                     retryCount: 3,
+                    level: 2,
                   ),
                 ),
               ),
@@ -87,6 +90,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
                     retryCount: 3,
+                    level: 3,
                   ),
                 ),
               ),
@@ -103,6 +107,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
                     retryCount: 3,
+                    level: 4,
                   ),
                 ),
               ),
@@ -119,6 +124,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
                     retryCount: 3,
+                    level: 5,
                   ),
                 ),
               ),
@@ -135,6 +141,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
                     retryCount: 3,
+                    level: 7,
                   ),
                 ),
               ),
@@ -151,6 +158,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
                     retryCount: 3,
+                    level: 8,
                   ),
                 ),
               ),
@@ -167,6 +175,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
                     retryCount: 3,
+                    level: 8,
                   ),
                 ),
               ),
@@ -183,6 +192,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
                     retryCount: 3,
+                    level: 9,
                   ),
                 ),
               ),
@@ -199,6 +209,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
                     retryCount: 3,
+                    level: 10,
                   ),
                 ),
               ),
@@ -215,6 +226,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
                     retryCount: 3,
+                    level: 11,
                   ),
                 ),
               ),
@@ -231,6 +243,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
                     retryCount: 3,
+                    level: 12,
                   ),
                 ),
               ),
@@ -247,6 +260,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
                     retryCount: 3,
+                    level: 13,
                   ),
                 ),
               ),
@@ -263,6 +277,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
                     retryCount: 3,
+                    level: 14,
                   ),
                 ),
               ),
@@ -279,6 +294,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
                     retryCount: 3,
+                    level: 15,
                   ),
                 ),
               ),
@@ -295,6 +311,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
                     retryCount: 3,
+                    level: 16,
                   ),
                 ),
               ),
@@ -311,6 +328,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
                     retryCount: 3,
+                    level: 17,
                   ),
                 ),
               ),
@@ -327,6 +345,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
                     retryCount: 3,
+                    level: 18,
                   ),
                 ),
               ),
@@ -343,6 +362,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
                     retryCount: 3,
+                    level: 19,
                   ),
                 ),
               ),
@@ -359,6 +379,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
                     retryCount: 3,
+                    level: 20,
                   ),
                 ),
               ),
@@ -375,6 +396,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
                     retryCount: 3,
+                      level: 21,
                   ),
                 ),
               ),
@@ -391,6 +413,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
                     retryCount: 3,
+                    level: 22,
+
                   ),
                 ),
               ),
@@ -407,6 +431,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
                     retryCount: 3,
+                    level: 23,
                   ),
                 ),
               ),
@@ -423,6 +448,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
                     retryCount: 3,
+                    level: 24,
                   ),
                 ),
               ),
@@ -438,7 +464,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                 CupertinoPageRoute(
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
-                    retryCount: 3,
+                    retryCount: 3, level: 25,
                   ),
                 ),
               ),
@@ -454,7 +480,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                 CupertinoPageRoute(
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
-                    retryCount: 3,
+                    retryCount: 3, level: 26,
                   ),
                 ),
               ),
@@ -470,7 +496,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                 CupertinoPageRoute(
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
-                    retryCount: 3,
+                    retryCount: 3, level: 27,
                   ),
                 ),
               ),
@@ -486,7 +512,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                 CupertinoPageRoute(
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
-                    retryCount: 3,
+                    retryCount: 3, level: 28,
                   ),
                 ),
               ),
@@ -502,7 +528,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                 CupertinoPageRoute(
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
-                    retryCount: 3,
+                    retryCount: 3, level: 29,
                   ),
                 ),
               ),
@@ -517,7 +543,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                 CupertinoPageRoute(
                   builder: (context) => const FactsScreen(
                     isWrongAnswer: false,
-                    retryCount: 3,
+                    retryCount: 3, level: 30,
                   ),
                 ),
               ),

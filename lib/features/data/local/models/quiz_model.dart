@@ -7,9 +7,15 @@ class QuizModel {
   QuizModel({required this.level, required this.questions});
 
   factory QuizModel.fromJson(Map<String, dynamic> json) {
+    List<Map<String, dynamic>> data = json['questions'];
+    List<QuestionModel> questionList = [];
+    for (var value in data) {
+      dynamic map = QuestionModel.fromJson(value);
+      questionList.add(map);
+    }
     return QuizModel(
       level: json['level'],
-      questions: json['questions'],
+      questions: questionList
     );
   }
 

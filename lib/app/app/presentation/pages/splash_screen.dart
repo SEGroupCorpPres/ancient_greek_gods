@@ -1,12 +1,18 @@
 import 'package:ancient_greek_gods/core/constants/colors.dart';
+import 'package:ancient_greek_gods/core/helpers/database_helper.dart';
+import 'package:ancient_greek_gods/features/data/local/models/user_model.dart';
 import 'package:ancient_greek_gods/features/presentation/pages/enter_name_screen.dart';
+import 'package:ancient_greek_gods/features/presentation/pages/home_page.dart';
 import 'package:ancient_greek_gods/generated/assets.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+  const SplashScreen({
+    super.key,
+  });
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -14,25 +20,54 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMixin {
   late AnimationController _animationController;
+  bool userExist = false;
+  DatabaseHelper dbHelper = DatabaseHelper();
+  String _userName = '';
+
+  Future<void> _getUserName() async {
+    List<UserModel> users = await dbHelper.getUser();
+    if (users.isNotEmpty) {
+      _userName = users.first.name;
+    }
+    setState(() {});
+  }
+
+  Future<void> _checkUserName() async {
+    try {
+      if (_userName.isNotEmpty) {
+        userExist = true;
+        setState(() {});
+      } else {
+        userExist = false;
+        setState(() {});
+      }
+    } catch (e) {
+      if (kDebugMode) {
+        print(e.toString());
+      }
+    }
+  }
 
   @override
   void initState() {
     // TODO: implement initState
+    _getUserName();
+    _checkUserName();
     _animationController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 2),
     )..addListener(() {
         setState(() {});
       });
+    super.initState();
     _animationController.animateTo(1).whenComplete(
           () => Navigator.pushAndRemoveUntil(
               context,
               CupertinoPageRoute(
-                builder: (_) => const EnterNameScreen(),
+                builder: (_) => _userName.isNotEmpty ? const HomePage() : const EnterNameScreen(),
               ),
               (route) => false),
         );
-    super.initState();
   }
 
   @override
@@ -68,7 +103,7 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
               ],
             ),
             Positioned(
-              bottom: size.height -  size.height * .85,
+              bottom: size.height - size.height * .85,
               child: Container(
                 width: size.width,
                 height: 110.h,
@@ -105,7 +140,7 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

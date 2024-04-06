@@ -8,7 +8,7 @@ class QuestionModel {
   factory QuestionModel.fromJson(Map<String, dynamic> json) {
     return QuestionModel(
       question: json['question'],
-      options: json['options'].cast<String>(),
+      options: json['options'] != null ? List<String>.from(json['options'] as Iterable<dynamic>) : [],
       correctAnswer: json['correct_answer'],
     );
   }

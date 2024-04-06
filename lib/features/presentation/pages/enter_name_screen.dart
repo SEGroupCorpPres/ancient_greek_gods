@@ -1,4 +1,6 @@
 import 'package:ancient_greek_gods/core/constants/colors.dart';
+import 'package:ancient_greek_gods/core/helpers/database_helper.dart';
+import 'package:ancient_greek_gods/features/data/local/models/user_model.dart';
 import 'package:ancient_greek_gods/features/presentation/pages/start_game_screen.dart';
 import 'package:ancient_greek_gods/features/presentation/widgets/main_button.dart';
 import 'package:ancient_greek_gods/generated/assets.dart';
@@ -17,13 +19,20 @@ class EnterNameScreen extends StatefulWidget {
 class _EnterNameScreenState extends State<EnterNameScreen> {
   final TextEditingController _nameController = TextEditingController();
   final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
+  final DatabaseHelper _databaseHelper = DatabaseHelper();
   final FocusNode _nameFocus = FocusNode();
   bool isKeyboard = false;
 
   Future<void> _saveUserName(String name, BuildContext context) async {
     final SharedPreferences preferences = await _prefs;
+    UserModel userModel = UserModel(
+      name: name,
+      coin: 0,
+      chance: 0,
+      currentLevel: 0,
+    );
     try {
-      await preferences.setString('user_name', name.toUpperCase());
+      await _databaseHelper.insertUser(userModel);
       if (!context.mounted) return;
       Navigator.of(context).pushAndRemoveUntil(
         CupertinoPageRoute(builder: (_) => const StartGameScreen()),
@@ -74,7 +83,7 @@ class _EnterNameScreenState extends State<EnterNameScreen> {
           ),
           AnimatedPositioned(
             duration: Duration(milliseconds: 200),
-            bottom:  50.h,
+            bottom: 50.h,
             right: 0,
             left: 0,
             // top: 0,

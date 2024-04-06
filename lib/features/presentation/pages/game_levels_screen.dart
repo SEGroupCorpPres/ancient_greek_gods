@@ -1,12 +1,6 @@
-import 'dart:io';
-
 import 'package:ancient_greek_gods/features/presentation/widgets/build_home_screen.dart';
 import 'package:ancient_greek_gods/features/presentation/widgets/build_home_without_home_indicator.dart';
-import 'package:ancient_greek_gods/features/presentation/widgets/lvl_btn.dart';
-import 'package:ancient_greek_gods/features/presentation/pages/facts_screen.dart';
-import 'package:ancient_greek_gods/generated/assets.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class GameLevelsScreen extends StatefulWidget {
   const GameLevelsScreen({super.key});
@@ -24,15 +18,13 @@ class _GameLevelsScreenState extends State<GameLevelsScreen> {
   // Size(430.0, 932.0) 14 pro max
   @override
   Widget build(BuildContext context) {
-    print(MediaQuery.sizeOf(context));
     MediaQueryData mediaQueryData = MediaQuery.of(context);
     double homeIndicatorSize = mediaQueryData.padding.bottom;
-    print(homeIndicatorSize);
     final Size size = MediaQuery.sizeOf(context);
     if (homeIndicatorSize != 0) {
-      return BuildHomeScreen();
+      return const BuildHomeScreen();
     } else {
-      return BuildHomeWithoutHomeIndicator();
+      return const BuildHomeWithoutHomeIndicator();
     }
   }
 }

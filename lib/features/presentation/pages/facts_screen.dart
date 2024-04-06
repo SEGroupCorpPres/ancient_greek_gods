@@ -1,3 +1,6 @@
+import 'dart:math';
+
+import 'package:ancient_greek_gods/features/data/local/data_sources/hero_about_list.dart';
 import 'package:ancient_greek_gods/features/presentation/pages/not_found_facts_screen.dart';
 import 'package:ancient_greek_gods/features/presentation/pages/quiz_screen.dart';
 import 'package:ancient_greek_gods/features/presentation/widgets/main_button.dart';
@@ -7,28 +10,45 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class FactsScreen extends StatefulWidget {
+  final int level;
   final bool isWrongAnswer;
   final int retryCount;
 
-  const FactsScreen({super.key, required this.isWrongAnswer, required this.retryCount});
+  const FactsScreen({super.key, required this.isWrongAnswer, required this.retryCount, required this.level});
 
   @override
   State<FactsScreen> createState() => _FactsScreenState();
 }
 
 class _FactsScreenState extends State<FactsScreen> {
+  final int _random = Random().nextInt(9);
+  int randomFact1 = Random().nextInt(19);
+  int randomFact2 = Random().nextInt(19);
+  int randomFact3 = Random().nextInt(19);
+
+  void checkOldRandom() {
+    if (randomFact1 == randomFact2 || randomFact2 == randomFact3 || randomFact3 == randomFact1) {
+      randomFact1 = Random().nextInt(19);
+      randomFact2 = Random().nextInt(19);
+      randomFact3 = Random().nextInt(19);
+      checkOldRandom();
+    }
+  }
+
   @override
   void initState() {
     // TODO: implement initState
+    checkOldRandom();
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
+    int random = _random;
     final Size size = MediaQuery.sizeOf(context);
     MediaQueryData mediaQueryData = MediaQuery.of(context);
     double homeIndicatorSize = mediaQueryData.padding.bottom;
-    double top= MediaQuery.of(context).padding.top;
+    double top = MediaQuery.of(context).padding.top;
     bool isHomeIndicator = homeIndicatorSize != 0 ? true : false;
     return CupertinoPageScaffold(
       child: Stack(
@@ -38,7 +58,7 @@ class _FactsScreenState extends State<FactsScreen> {
             children: [
               Image.asset(
                 width: size.width,
-                height: isHomeIndicator ?  370.h : 440.h,
+                height: isHomeIndicator ? 370.h : 440.h,
                 Assets.images3FactsScreenBg,
                 fit: BoxFit.fill,
               ),
@@ -99,8 +119,26 @@ class _FactsScreenState extends State<FactsScreen> {
                         ),
                         SizedBox(height: 10.h),
                         Text(
+                          heroAboutList[random]['name'].toString().toUpperCase(),
                           softWrap: true,
-                          'asd; lfhb pwreg fhwe jglh ;vero gewn fiowehr',
+                          style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontSize: 16.sp, fontWeight: FontWeight.w500),
+                        ),
+                        SizedBox(height: 10.h),
+                        Text(
+                          heroAboutList[random]['abouts'][randomFact1],
+                          softWrap: true,
+                          style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontSize: 16.sp, fontWeight: FontWeight.w500),
+                        ),
+                        SizedBox(height: 10.h),
+                        Text(
+                          heroAboutList[random]['abouts'][randomFact2],
+                          softWrap: true,
+                          style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontSize: 16.sp, fontWeight: FontWeight.w500),
+                        ),
+                        SizedBox(height: 10.h),
+                        Text(
+                          heroAboutList[random]['abouts'][randomFact3],
+                          softWrap: true,
                           style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontSize: 16.sp, fontWeight: FontWeight.w500),
                         ),
                       ],
@@ -111,7 +149,7 @@ class _FactsScreenState extends State<FactsScreen> {
                       onPressed: () => Navigator.push(
                         context,
                         CupertinoPageRoute(
-                          builder: (context) => !widget.isWrongAnswer ? QuizScreen() : NotFoundFactsScreen(),
+                          builder: (context) => !widget.isWrongAnswer ? QuizScreen(level: widget.level,) : NotFoundFactsScreen(),
                         ),
                       ),
                     ),

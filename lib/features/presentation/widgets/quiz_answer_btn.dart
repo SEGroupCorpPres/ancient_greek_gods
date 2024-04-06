@@ -25,6 +25,7 @@ class QuizAnswerBtn extends StatelessWidget {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),
       width: size.width * .4,
+      height: 55.h,
       decoration: BoxDecoration(
         border: Border.all(color: CupertinoColors.white.withOpacity(isSelected! ? 1 : .0)),
         borderRadius: BorderRadius.circular(8),
@@ -32,19 +33,20 @@ class QuizAnswerBtn extends StatelessWidget {
       child: CupertinoButton(
         padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 13.h),
         onPressed: onPressed,
-        color: isCorrect! ? AppColors.primaryColor : bgColor,
+        color: !isSelected!
+            ? bgColor
+            : isCorrect!
+                ? AppColors.primaryColor
+                : CupertinoColors.destructiveRed,
         child: Text(
           title.toUpperCase(),
-          style: CupertinoTheme
-              .of(context)
-              .textTheme
-              .textStyle
-              .copyWith(
-            fontSize: 18.sp,
-            color: CupertinoColors.white.withOpacity(
-              isSelected! ? .5 : 1,
-            ),
-          ),
+          textAlign: TextAlign.center,
+          style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(
+                fontSize: 12.sp,
+                color: CupertinoColors.white.withOpacity(
+                  isSelected! ? .5 : 1,
+                ),
+              ),
         ),
       ),
     );
