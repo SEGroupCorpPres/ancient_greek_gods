@@ -3,10 +3,12 @@ import 'dart:math';
 import 'package:ancient_greek_gods/core/constants/colors.dart';
 import 'package:ancient_greek_gods/features/data/local/data_sources/list_of_symbols.dart';
 import 'package:ancient_greek_gods/features/data/local/models/symbol_model.dart';
+import 'package:ancient_greek_gods/features/presentation/pages/home_page.dart';
 import 'package:ancient_greek_gods/features/presentation/widgets/main_button.dart';
 import 'package:ancient_greek_gods/generated/assets.dart';
 import 'package:flick_video_player/flick_video_player.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:video_player/video_player.dart';
@@ -39,7 +41,22 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> with TickerProvider
     // TODO: implement initState
     addSymbolToList();
     checkOldRandom();
+    flickManager = FlickManager(
+      videoPlayerController: VideoPlayerController.asset(Assets.videoCallOfDutyMobileOfficialLaunchTrailer),
+      onVideoEnd: () {
+        SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+        Future.delayed(Duration(seconds: 1),(){
+          Navigator.pushAndRemoveUntil(
+            context,
+            CupertinoPageRoute(
+              builder: (_) => const HomePage(),
+            ),
+                (route) => false,
+          );
+        });
 
+      },
+    );
     super.initState();
   }
 
@@ -85,7 +102,7 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> with TickerProvider
 
   AnimatedContainer _buildCongratulationWidget(Size size) {
     return AnimatedContainer(
-      duration: const Duration(milliseconds: 100),
+      duration: Duration.zero,
       width: size.width,
       height: !_isContinue
           ? 0
@@ -219,7 +236,7 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> with TickerProvider
         MainButton(
           title: 'see ads to claim reward',
           onPressed: () {
-            flickManager = FlickManager(videoPlayerController: VideoPlayerController.networkUrl(Uri.parse("https://mazwai.com/video/rio-from-above/455099")));
+            // flickManager = FlickManager(videoPlayerController: VideoPlayerController.networkUrl(Uri.parse("https://mazwai.com/video/rio-from-above/455099")));
             _isSeeAds = true;
             setState(() {});
           },
@@ -343,7 +360,13 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> with TickerProvider
             bottom: 10,
             child: _buildCorrectAnswerWindow(size),
           ),
-          !_isSeeAds ? Container() : FlickVideoPlayer(flickManager: flickManager)
+          !_isSeeAds
+              ? Container()
+              : FlickVideoPlayer(
+                  flickManager: flickManager,
+                  preferredDeviceOrientation: [DeviceOrientation.landscapeRight],
+                  preferredDeviceOrientationFullscreen: [DeviceOrientation.landscapeRight],
+                )
         ],
       ),
     );

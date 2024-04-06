@@ -7,7 +7,9 @@ import 'package:ancient_greek_gods/generated/assets.dart';
 import 'package:flutter/cupertino.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  const HomePage({
+    super.key,
+  });
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -26,16 +28,16 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _onItemTapped(int index) {
-    setState(() {
       _selectedIndex = index;
+    setState(() {
     });
   }
 
-  final List<Widget> _pages = [
-    const GameLevelsScreen(),
-    const ShopScreen(),
-    const SettingsScreen(),
-  ];
+  List<Widget> _pages() => [
+        const GameLevelsScreen(),
+        const ShopScreen(),
+        const SettingsScreen(),
+      ];
 
   @override
   void dispose() {
@@ -62,7 +64,7 @@ class _HomePageState extends State<HomePage> {
               controller: _pageController,
               scrollDirection: Axis.horizontal,
               physics: const ClampingScrollPhysics(),
-              children: _pages,
+              children: _pages(),
             ),
           ),
           Positioned(

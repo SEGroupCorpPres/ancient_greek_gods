@@ -23,7 +23,6 @@ List<Map<String, dynamic>> heroAboutList = [
       "Zeus Ktesios, god of the household",
       "Father of Athena, born from his head",
       "Zeus Herkeios, protector of boundaries",
-      "Feared and respected by other gods"
     ],
   },
   {

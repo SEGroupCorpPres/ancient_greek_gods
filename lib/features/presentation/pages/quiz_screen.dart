@@ -190,6 +190,7 @@ class _QuizScreenState extends State<QuizScreen> {
                               onPressed: () {
                                 setState(() {
                                   selectedAnswerIndex = 0;
+                                  isSelected = true;
                                   answer1 = true;
                                   answer2 = false;
                                   answer3 = false;
@@ -205,6 +206,8 @@ class _QuizScreenState extends State<QuizScreen> {
                               onPressed: () {
                                 setState(() {
                                   selectedAnswerIndex = 1;
+                                  isSelected = true;
+
                                   answer1 = false;
                                   answer2 = true;
                                   answer3 = false;
@@ -220,6 +223,8 @@ class _QuizScreenState extends State<QuizScreen> {
                               onPressed: () {
                                 setState(() {
                                   selectedAnswerIndex = 2;
+                                  isSelected = true;
+
                                   answer1 = false;
                                   answer2 = false;
                                   answer3 = true;
@@ -235,6 +240,8 @@ class _QuizScreenState extends State<QuizScreen> {
                               onPressed: () {
                                 setState(() {
                                   selectedAnswerIndex = 3;
+                                  isSelected = true;
+
                                   answer1 = false;
                                   answer2 = false;
                                   answer3 = false;
@@ -253,71 +260,74 @@ class _QuizScreenState extends State<QuizScreen> {
                   MainButton(
                     title: 'Continue',
                     onPressed: () {
-                      if (questionModel.options[3] == questionModel.correctAnswer) {
-                        correctAnswerIndex = 3;
-                        answerCorrect1 = false;
-                        answerCorrect2 = false;
-                        answerCorrect3 = false;
-                        answerCorrect4 = true;
-                      } else if (questionModel.options[2] == questionModel.correctAnswer) {
-                        correctAnswerIndex = 2;
-
-                        answerCorrect1 = false;
-                        answerCorrect2 = false;
-                        answerCorrect3 = true;
-                        answerCorrect4 = false;
-                      } else if (questionModel.options[1] == questionModel.correctAnswer) {
-                        correctAnswerIndex = 1;
-
-                        answerCorrect1 = false;
-                        answerCorrect2 = true;
-                        answerCorrect3 = false;
-                        answerCorrect4 = false;
-                      } else if (questionModel.options[0] == questionModel.correctAnswer) {
-                        correctAnswerIndex = 0;
-
-                        answerCorrect1 = true;
-                        answerCorrect2 = false;
-                        answerCorrect3 = false;
-                        answerCorrect4 = false;
-                      }
-                      if (selectedAnswerIndex != correctAnswerIndex) {
-                        incorrectCount++;
-                      }
-                      if (incorrectCount > 5) {
-                        Navigator.pushAndRemoveUntil(
-                            context,
-                            CupertinoPageRoute(
-                              builder: (_) => FactsScreen(
-                                isWrongAnswer: true,
-                                level: widget.level,
-                                retryCount: 1,
-                              ),
-                            ),
-                            (route) => false);
-                      }
-                      if (question == quizModel.questions.length -1) {
-                        question = 0;
-                        Navigator.pushAndRemoveUntil(
-                            context,
-                            CupertinoPageRoute(
-                              builder: (_) => const QuizSymbolScreen(),
-                            ),
-                            (route) => false);
+                      if (!isSelected) {
                       } else {
-                        question++;
+                        if (questionModel.options[3] == questionModel.correctAnswer) {
+                          correctAnswerIndex = 3;
+                          answerCorrect1 = false;
+                          answerCorrect2 = false;
+                          answerCorrect3 = false;
+                          answerCorrect4 = true;
+                        } else if (questionModel.options[2] == questionModel.correctAnswer) {
+                          correctAnswerIndex = 2;
+
+                          answerCorrect1 = false;
+                          answerCorrect2 = false;
+                          answerCorrect3 = true;
+                          answerCorrect4 = false;
+                        } else if (questionModel.options[1] == questionModel.correctAnswer) {
+                          correctAnswerIndex = 1;
+
+                          answerCorrect1 = false;
+                          answerCorrect2 = true;
+                          answerCorrect3 = false;
+                          answerCorrect4 = false;
+                        } else if (questionModel.options[0] == questionModel.correctAnswer) {
+                          correctAnswerIndex = 0;
+
+                          answerCorrect1 = true;
+                          answerCorrect2 = false;
+                          answerCorrect3 = false;
+                          answerCorrect4 = false;
+                        }
+                        if (selectedAnswerIndex != correctAnswerIndex) {
+                          incorrectCount++;
+                        }
+                        if (incorrectCount > 5) {
+                          Navigator.pushAndRemoveUntil(
+                              context,
+                              CupertinoPageRoute(
+                                builder: (_) => FactsScreen(
+                                  isWrongAnswer: true,
+                                  level: widget.level,
+                                  retryCount: 1,
+                                ),
+                              ),
+                              (route) => false);
+                        }
+                        if (question == quizModel.questions.length - 1) {
+                          question = 0;
+                          Navigator.pushAndRemoveUntil(
+                              context,
+                              CupertinoPageRoute(
+                                builder: (_) => const QuizSymbolScreen(),
+                              ),
+                              (route) => false);
+                        } else {
+                          question++;
+                        }
+                        setState(() {
+                          answer1 = false;
+                          answer2 = false;
+                          answer3 = false;
+                          answer4 = false;
+                          answerCorrect1 = false;
+                          answerCorrect2 = false;
+                          answerCorrect3 = false;
+                          answerCorrect4 = false;
+                        });
+                        print(incorrectCount);
                       }
-                      setState(() {
-                        answer1 = false;
-                        answer2 = false;
-                        answer3 = false;
-                        answer4 = false;
-                        answerCorrect1 = false;
-                        answerCorrect2 = false;
-                        answerCorrect3 = false;
-                        answerCorrect4 = false;
-                      });
-                      print(incorrectCount);
                     },
                   ),
                 ],

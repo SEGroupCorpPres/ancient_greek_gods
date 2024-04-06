@@ -24,6 +24,16 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
   DatabaseHelper dbHelper = DatabaseHelper();
   String _userName = '';
 
+  Future<void> _insertLevelToDb() async {
+    List levelList = await dbHelper.getLevel();
+    if (levelList.isEmpty) {
+      for (int i = 1; i <= 30; i++) {
+        await dbHelper.insertLevel(i, 0);
+      }
+    }
+    setState(() {});
+  }
+
   Future<void> _getUserName() async {
     List<UserModel> users = await dbHelper.getUser();
     if (users.isNotEmpty) {
@@ -53,6 +63,7 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
     // TODO: implement initState
     _getUserName();
     _checkUserName();
+    _insertLevelToDb();
     _animationController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 2),

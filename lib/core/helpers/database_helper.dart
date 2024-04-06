@@ -1,3 +1,4 @@
+import 'package:ancient_greek_gods/features/data/local/models/level_model.dart';
 import 'package:ancient_greek_gods/features/data/local/models/user_model.dart';
 import 'package:flutter/foundation.dart';
 import 'package:path/path.dart';
@@ -38,8 +39,9 @@ class DatabaseHelper {
           )
         ''');
           await db.execute('''
-          CREATE TABLE completed_level(
-            level INTEGER
+          CREATE TABLE level(
+            level INTEGER,
+            is_completed INTEGER
           )
         ''');
 
@@ -93,8 +95,8 @@ class DatabaseHelper {
   Future<List<UserModel>> getUser() async {
     Database? dbClient = await db;
     List<UserModel> userList = [];
-    List<Map<String, dynamic>> user = await dbClient!.query('user');
     try {
+      List<Map<String, dynamic>> user = await dbClient!.query('user');
       for (var element in user) {
         UserModel userModel = UserModel.fromJson(element);
         userList.add(userModel);
@@ -111,21 +113,27 @@ class DatabaseHelper {
     return userList;
   }
 
-  Future<List<Map<String, dynamic>>> getCompletedLevel() async {
+  Future<List<LevelModel>> getLevel() async {
     Database? dbClient = await db;
+    List<LevelModel> levelList = [];
 
     try {
-      return await dbClient!.query('completed_level');
+      List<Map<String, dynamic>> levels = await dbClient!.query('level');
+      for (var element in levels) {
+        LevelModel levelModel = LevelModel.fromJson(element);
+        levelList.add(levelModel);
+      }
+      return levelList;
     } on DatabaseException catch (e) {
       if (kDebugMode) {
         print(e.result.toString());
       }
-      return [];
+      return levelList;
     } catch (e) {
       if (kDebugMode) {
         print(e.toString());
       }
-      return [];
+      return levelList;
     }
   }
 
@@ -183,14 +191,15 @@ class DatabaseHelper {
     }
   }
 
-  Future<int> insertLevel(int lvl) async {
+  Future<int> insertLevel(int lvl, int isCompleted) async {
     Database? dbClient = await db;
 
     try {
       return await dbClient!.insert(
-        'completed_level',
+        'level',
         {
           'level': lvl,
+          'is_completed': isCompleted,
         },
         conflictAlgorithm: ConflictAlgorithm.replace,
       );
