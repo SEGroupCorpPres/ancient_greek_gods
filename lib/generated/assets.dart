@@ -63,5 +63,6 @@ class Assets {
   static const String symbolSymbolHephaestus = 'assets/icons/symbol/symbol_hephaestus.png';
   static const String symbolSymbolPoseidon = 'assets/icons/symbol/symbol_poseidon.png';
   static const String symbolSymbolZeus = 'assets/icons/symbol/symbol_zeus.png';
+  static const String videoCallOfDutyMobileOfficialLaunchTrailer = 'assets/ads/video/CallOfDuty_Mobile_OfficialLaunchTrailer.mp4';
 
 }

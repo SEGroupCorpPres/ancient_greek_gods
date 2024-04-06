@@ -19,6 +19,7 @@ class MainButton extends StatelessWidget {
     return CupertinoButton(
       color: bgColor,
       pressedOpacity: .8,
+      padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 0),
       alignment: Alignment.center,
       onPressed: onPressed,
       child: Center(

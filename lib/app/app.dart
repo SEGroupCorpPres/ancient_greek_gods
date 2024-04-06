@@ -83,11 +83,11 @@ class _MyAppState extends State<MyApp> {
       // child: SplashScreen(),
       // child: EnterNameScreen(),
       // child: StartGameScreen(),
-      // child: HomePage(),
+      child: HomePage(),
       // child: QuizScreen(),
       // child: FactsScreen(isWrongAnswer: true, retryCount: 3),
       // child: NotFoundFactsScreen(),
-      child: QuizSymbolScreen(),
+      // child: QuizSymbolScreen(),
       // child: SettingsScreen(),
     );
   }

@@ -5,9 +5,11 @@ import 'package:ancient_greek_gods/features/data/local/data_sources/list_of_symb
 import 'package:ancient_greek_gods/features/data/local/models/symbol_model.dart';
 import 'package:ancient_greek_gods/features/presentation/widgets/main_button.dart';
 import 'package:ancient_greek_gods/generated/assets.dart';
+import 'package:flick_video_player/flick_video_player.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:video_player/video_player.dart';
 
 class QuizSymbolScreen extends StatefulWidget {
   const QuizSymbolScreen({super.key});
@@ -16,15 +18,20 @@ class QuizSymbolScreen extends StatefulWidget {
   State<QuizSymbolScreen> createState() => _QuizSymbolScreenState();
 }
 
-class _QuizSymbolScreenState extends State<QuizSymbolScreen> with SingleTickerProviderStateMixin {
+class _QuizSymbolScreenState extends State<QuizSymbolScreen> with TickerProviderStateMixin {
   late AnimationController _animationController;
+  late VideoPlayerController _videoPlayerController;
   bool isExpanded = true;
-
+  late FlickManager flickManager;
   int random = Random().nextInt(9);
   int newRandom = Random().nextInt(9);
   int correctInt = 0;
-  int _selectedIndex = 0;
+  int? _selectedIndex;
   bool _isContinue = false;
+  bool _isCorrectSymbol = false;
+  bool _isCorrectSymbolSelected = false;
+  bool _isSeeAds = false;
+
   List<SymbolModel> symbolList = [];
 
   @override
@@ -32,11 +39,15 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> with SingleTickerPr
     // TODO: implement initState
     addSymbolToList();
     checkOldRandom();
-    _animationController = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 2),
-    );
+
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    flickManager.dispose();
+    super.dispose();
   }
 
   void checkOldRandom() {
@@ -54,15 +65,168 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> with SingleTickerPr
     }
   }
 
-  void _selectedSymbol(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
+  void _selectedSymbol(int index, int correctIndex) {
+    _selectedIndex = index;
+    if (_selectedIndex == correctIndex) {
+      _isCorrectSymbolSelected = true;
+    } else {
+      _isCorrectSymbolSelected = false;
+    }
+    setState(() {});
   }
 
-  // AnimatedContainer _buildCongratulationWindow(Size size) {
-  //   return ;
-  // }
+  AnimatedContainer _buildCongratulationWindow(Size size) {
+    return _buildCongratulationWidget(size);
+  }
+
+  AnimatedContainer _buildCorrectAnswerWindow(Size size) {
+    return _buildCongratulationWidget(size);
+  }
+
+  AnimatedContainer _buildCongratulationWidget(Size size) {
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 100),
+      width: size.width,
+      height: !_isContinue
+          ? 0
+          : !_isCorrectSymbol
+              ? size.width
+              : size.width * 1.2,
+      decoration: BoxDecoration(
+        color: AppColors.mainBgColor,
+        borderRadius: BorderRadius.vertical(
+          top: Radius.circular(10.r),
+        ),
+      ),
+      child: Padding(
+        padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),
+        child: AnimatedCrossFade(
+          alignment: Alignment.bottomCenter,
+          firstChild: Container(),
+          secondChild: _rewardScreen(size),
+          crossFadeState: !_isContinue ? CrossFadeState.showFirst : CrossFadeState.showSecond,
+          duration: const Duration(seconds: 2),
+          reverseDuration: const Duration(seconds: 2),
+          sizeCurve: Curves.ease,
+        ),
+      ),
+    );
+  }
+
+  Widget _rewardScreen(Size size) {
+    return !_isCorrectSymbol ? _buildRewardWindow(size) : _buildCorrectSymbolWindow(size);
+  }
+
+  Widget _buildRewardWindow(Size size) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          'You win!'.toUpperCase(),
+          style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontWeight: FontWeight.w800),
+        ),
+        Column(
+          children: [
+            Image.asset(
+              Assets.iconsTreasure,
+              width: size.width * .3,
+            ),
+            SizedBox(height: 40.h),
+            Text(
+              'Your reward '.toUpperCase(),
+              style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontWeight: FontWeight.w800),
+            ),
+            SizedBox(
+              width: size.width * .5,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    Assets.iconsCoin,
+                    width: 50.w,
+                  ),
+                  Text(
+                    '1500'.toUpperCase(),
+                    style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(color: AppColors.primaryColor, fontWeight: FontWeight.w800),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+        MainButton(
+          title: 'continue',
+          onPressed: () {
+            setState(() {
+              _isCorrectSymbol = !_isCorrectSymbol;
+            });
+          },
+        ),
+      ],
+    );
+  }
+
+  Widget _buildCorrectSymbolWindow(Size size) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          !_isCorrectSymbolSelected ? 'You guessed wrong!'.toUpperCase() : 'You win!'.toUpperCase(),
+          style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontWeight: FontWeight.w800),
+        ),
+        Column(
+          children: [
+            !_isCorrectSymbolSelected
+                ? Column(
+                    children: [
+                      Text('Correct answer'),
+                      Image.asset(
+                        Assets.symbolSymbolApollo,
+                        width: size.width * .3,
+                        color: AppColors.primaryColor,
+                      ),
+                    ],
+                  )
+                : Image.asset(
+                    Assets.iconsTreasure,
+                    width: size.width * .3,
+                  ),
+            // SizedBox(height: 40.h),
+            Text(
+              'Your reward '.toUpperCase(),
+              style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontWeight: FontWeight.w800),
+            ),
+            SizedBox(
+              width: size.width * .5,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    Assets.iconsCoin,
+                    width: 50.w,
+                  ),
+                  Text(
+                    !_isCorrectSymbolSelected ? '1500'.toUpperCase() : '3000'.toUpperCase(),
+                    style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(color: AppColors.primaryColor, fontWeight: FontWeight.w800),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+        MainButton(
+          title: 'see ads to claim reward',
+          onPressed: () {
+            flickManager = FlickManager(videoPlayerController: VideoPlayerController.networkUrl(Uri.parse("https://mazwai.com/video/rio-from-above/455099")));
+            _isSeeAds = true;
+            setState(() {});
+          },
+        ),
+      ],
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -116,10 +280,10 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> with SingleTickerPr
                 height: size.height * .55,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         SizedBox(
                           width: size.width * .8,
@@ -132,27 +296,27 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> with SingleTickerPr
                     ),
                     SizedBox(height: 20.h),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         GestureDetector(
-                          onTap: () => _selectedSymbol(0),
+                          onTap: () => _selectedSymbol(0, 0),
                           child: Image.asset(
                             symbolList[0].image,
-                            color: _selectedIndex == 0 ? CupertinoColors.white : AppColors.secondaryBtnBgColor,
+                            color: !((_selectedIndex != null) && _selectedIndex! == 0) ? AppColors.secondaryBtnBgColor : CupertinoColors.white,
                           ),
                         ),
                         GestureDetector(
-                          onTap: () => _selectedSymbol(1),
+                          onTap: () => _selectedSymbol(1, 0),
                           child: Image.asset(
                             symbolList[random].image,
-                            color: _selectedIndex == 1 ? CupertinoColors.white : AppColors.secondaryBtnBgColor,
+                            color: !((_selectedIndex != null) && _selectedIndex! == 1) ? AppColors.secondaryBtnBgColor : CupertinoColors.white,
                           ),
                         ),
                         GestureDetector(
-                          onTap: () => _selectedSymbol(2),
+                          onTap: () => _selectedSymbol(2, 0),
                           child: Image.asset(
                             symbolList[newRandom].image,
-                            color: _selectedIndex == 2 ? CupertinoColors.white : AppColors.secondaryBtnBgColor,
+                            color: !((_selectedIndex != null) && _selectedIndex! == 2) ? AppColors.secondaryBtnBgColor : CupertinoColors.white,
                           ),
                         ),
                       ],
@@ -164,7 +328,6 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> with SingleTickerPr
                         setState(() {
                           _isContinue = !_isContinue;
                         });
-                        print(_isContinue);
                       },
                     ),
                   ],
@@ -174,321 +337,15 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> with SingleTickerPr
           ),
           Positioned(
             bottom: 10,
-            child: AnimatedContainer(
-              duration: const Duration(milliseconds: 200),
-              width: size.width,
-              height: !_isContinue ? 0 : size.height * .6,
-              decoration: BoxDecoration(
-                color: AppColors.mainBgColor,
-                borderRadius: BorderRadius.vertical(
-                  top: Radius.circular(10.r),
-                ),
-              ),
-              child: Padding(
-                padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),
-                // child: AnimatedCrossFade(
-                //   firstChild: Container(),
-                //   secondChild: Column(
-                //     crossAxisAlignment: CrossAxisAlignment.center,
-                //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                //     children: [
-                //       // SizedBox(height: 20.h),
-                //       Text(
-                //         'You win!'.toUpperCase(),
-                //         style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontWeight: FontWeight.w800),
-                //       ),
-                //
-                //       // SizedBox(height: 40.h),
-                //       Column(
-                //         children: [
-                //           Image.asset(
-                //             Assets.iconsTreasure,
-                //             width: size.width * .3,
-                //           ),
-                //       SizedBox(height: 40.h),
-                //           Text(
-                //             'Your reward '.toUpperCase(),
-                //             style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontWeight: FontWeight.w800),
-                //           ),
-                //           SizedBox(
-                //             width: size.width * .5,
-                //             child: Row(
-                //               mainAxisAlignment: MainAxisAlignment.center,
-                //               children: [
-                //                 Image.asset(
-                //                   Assets.iconsCoin,
-                //                   width: 50.w,
-                //                 ),
-                //                 Text(
-                //                   '1500'.toUpperCase(),
-                //                   style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(color: AppColors.primaryColor, fontWeight: FontWeight.w800),
-                //                 ),
-                //               ],
-                //             ),
-                //           ),
-                //         ],
-                //       ),
-                //       // SizedBox(height: 20.h),
-                //       MainButton(
-                //         title: 'continue',
-                //         onPressed: () {
-                //           setState(() {
-                //             _isContinue = !_isContinue;
-                //           });
-                //         },
-                //       ),
-                //     ],
-                //   ),
-                //   crossFadeState: !_isContinue ? CrossFadeState.showFirst : CrossFadeState.showSecond,
-                //   duration: const Duration(seconds: 2),
-                //   reverseDuration: const Duration(seconds: 2),
-                //   sizeCurve: Curves.ease,
-                // ),
-                child: AnimatedBuilder(
-                  animation: _animationController,
-                  builder: (context, child) {
-                    if (!_isContinue) {
-                      return Container();
-                    } else {
-                      return Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          // SizedBox(height: 20.h),
-                          Text(
-                            'You win!'.toUpperCase(),
-                            style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontWeight: FontWeight.w800),
-                          ),
-
-                          // SizedBox(height: 40.h),
-                          Column(
-                            children: [
-                              Image.asset(
-                                Assets.iconsTreasure,
-                                width: size.width * .3,
-                              ),
-                              SizedBox(height: 40.h),
-                              Text(
-                                'Your reward '.toUpperCase(),
-                                style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontWeight: FontWeight.w800),
-                              ),
-                              SizedBox(
-                                width: size.width * .5,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Image.asset(
-                                      Assets.iconsCoin,
-                                      width: 50.w,
-                                    ),
-                                    Text(
-                                      '1500'.toUpperCase(),
-                                      style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(color: AppColors.primaryColor, fontWeight: FontWeight.w800),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                          // SizedBox(height: 20.h),
-                          MainButton(
-                            title: 'continue',
-                            onPressed: () {
-                              setState(() {
-                                _isContinue = !_isContinue;
-                              });
-                            },
-                          ),
-                        ],
-                      );
-                    }
-                  },
-                ),
-              ),
-            ),
+            child: _buildCongratulationWindow(size),
           ),
+          Positioned(
+            bottom: 10,
+            child: _buildCorrectAnswerWindow(size),
+          ),
+          !_isSeeAds ? Container() : FlickVideoPlayer(flickManager: flickManager)
         ],
       ),
     );
   }
 }
-//
-// class MyCustomWidget extends StatefulWidget {
-//   @override
-//   _MyCustomWidgetState createState() => _MyCustomWidgetState();
-// }
-//
-// class _MyCustomWidgetState extends State<MyCustomWidget> {
-//   String TapToExpandIt = 'Tap to Expand it';
-//   String Sentence = 'Widgets that have global keys reparent their subtrees when'
-//       ' they are moved from one location in the tree to another location in the'
-//       ' tree. In order to reparent its subtree, a widget must arrive at its new'
-//       ' location in the tree in the same animation frame in which it was removed'
-//       ' from its old location the tree.'
-//       ' Widgets that have global keys reparent their subtrees when they are moved'
-//       ' from one location in the tree to another location in the tree. In order'
-//       ' to reparent its subtree, a widget must arrive at its new location in the'
-//       ' tree in the same animation frame in which it was removed from its old'
-//       ' location the tree.';
-//   bool isExpanded = true;
-//   bool isExpanded2 = true;
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: ListView(
-//         physics: BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
-//         children: [
-//           InkWell(
-//             highlightColor: Colors.transparent,
-//             splashColor: Colors.transparent,
-//             onTap: () {
-//               setState(() {
-//                 isExpanded = !isExpanded;
-//               });
-//             },
-//             child: AnimatedContainer(
-//               margin: EdgeInsets.symmetric(
-//                 horizontal: isExpanded ? 25 : 0,
-//                 vertical: 20,
-//               ),
-//               padding: EdgeInsets.all(20),
-//               height: isExpanded ? 70 : 330,
-//               curve: Curves.fastLinearToSlowEaseIn,
-//               duration: Duration(milliseconds: 1200),
-//               decoration: BoxDecoration(
-//                 boxShadow: [
-//                   BoxShadow(
-//                     color: Color(0xff6F12E8).withOpacity(0.5),
-//                     blurRadius: 20,
-//                     offset: Offset(5, 10),
-//                   ),
-//                 ],
-//                 color: Color(0xff6F12E8),
-//                 borderRadius: BorderRadius.all(
-//                   Radius.circular(isExpanded ? 20 : 0),
-//                 ),
-//               ),
-//               child: Column(
-//                 children: [
-//                   Row(
-//                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                     children: [
-//                       Text(
-//                         TapToExpandIt,
-//                         style: TextStyle(
-//                           color: Colors.white,
-//                           fontSize: 22,
-//                           fontWeight: FontWeight.w400,
-//                         ),
-//                       ),
-//                       Icon(
-//                         isExpanded ? Icons.keyboard_arrow_down : Icons.keyboard_arrow_up,
-//                         color: Colors.white,
-//                         size: 27,
-//                       ),
-//                     ],
-//                   ),
-//                   isExpanded ? SizedBox() : SizedBox(height: 20),
-//                   AnimatedCrossFade(
-//                     firstChild: Text(
-//                       '',
-//                       style: TextStyle(
-//                         fontSize: 0,
-//                       ),
-//                     ),
-//                     secondChild: Text(
-//                       Sentence,
-//                       style: TextStyle(
-//                         color: Colors.white,
-//                         fontSize: 15.7,
-//                       ),
-//                     ),
-//                     crossFadeState: isExpanded ? CrossFadeState.showFirst : CrossFadeState.showSecond,
-//                     duration: Duration(milliseconds: 1200),
-//                     reverseDuration: Duration.zero,
-//                     sizeCurve: Curves.fastLinearToSlowEaseIn,
-//                   ),
-//                 ],
-//               ),
-//             ),
-//           ),
-//           InkWell(
-//             highlightColor: Colors.transparent,
-//             splashColor: Colors.transparent,
-//             onTap: () {
-//               setState(() {
-//                 isExpanded2 = !isExpanded2;
-//               });
-//             },
-//             child: AnimatedContainer(
-//               margin: EdgeInsets.symmetric(
-//                 horizontal: isExpanded2 ? 25 : 0,
-//                 vertical: 20,
-//               ),
-//               padding: EdgeInsets.all(20),
-//               height: isExpanded2 ? 70 : 330,
-//               curve: Curves.fastLinearToSlowEaseIn,
-//               duration: Duration(milliseconds: 1200),
-//               decoration: BoxDecoration(
-//                 boxShadow: [
-//                   BoxShadow(
-//                     color: Color(0xffFF5050).withOpacity(0.5),
-//                     blurRadius: 20,
-//                     offset: Offset(5, 10),
-//                   ),
-//                 ],
-//                 color: Color(0xffFF5050),
-//                 borderRadius: BorderRadius.all(
-//                   Radius.circular(isExpanded2 ? 20 : 0),
-//                 ),
-//               ),
-//               child: Column(
-//                 children: [
-//                   Row(
-//                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                     children: [
-//                       Text(
-//                         TapToExpandIt,
-//                         style: TextStyle(
-//                           color: Colors.white,
-//                           fontSize: 22,
-//                           fontWeight: FontWeight.w400,
-//                         ),
-//                       ),
-//                       Icon(
-//                         isExpanded2 ? Icons.keyboard_arrow_down : Icons.keyboard_arrow_up,
-//                         color: Colors.white,
-//                         size: 27,
-//                       ),
-//                     ],
-//                   ),
-//                   isExpanded2 ? SizedBox() : SizedBox(height: 20),
-//                   AnimatedCrossFade(
-//                     firstChild: Text(
-//                       '',
-//                       style: TextStyle(
-//                         fontSize: 0,
-//                       ),
-//                     ),
-//                     secondChild: Text(
-//                       Sentence,
-//                       style: TextStyle(
-//                         color: Colors.white,
-//                         fontSize: 15.7,
-//                       ),
-//                     ),
-//                     crossFadeState: isExpanded2 ? CrossFadeState.showFirst : CrossFadeState.showSecond,
-//                     duration: Duration(milliseconds: 1200),
-//                     reverseDuration: Duration.zero,
-//                     sizeCurve: Curves.fastLinearToSlowEaseIn,
-//                   ),
-//                 ],
-//               ),
-//             ),
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
