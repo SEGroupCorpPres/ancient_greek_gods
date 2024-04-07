@@ -151,7 +151,12 @@ class _FactsScreenState extends State<FactsScreen> {
                         onPressed: () => Navigator.push(
                           context,
                           CupertinoPageRoute(
-                            builder: (context) => !widget.isWrongAnswer ? QuizScreen(level: widget.level,) : NotFoundFactsScreen(),
+                            builder: (context) => !widget.isWrongAnswer
+                                ? QuizScreen(
+                                    level: widget.level,
+                                    randomGod: random,
+                                  )
+                                : const NotFoundFactsScreen(),
                           ),
                         ),
                       ),

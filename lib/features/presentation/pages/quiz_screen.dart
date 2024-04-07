@@ -13,8 +13,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class QuizScreen extends StatefulWidget {
   final int level;
+  final int randomGod;
 
-  const QuizScreen({super.key, required this.level});
+  const QuizScreen({super.key, required this.level, required this.randomGod});
 
   @override
   State<QuizScreen> createState() => _QuizScreenState();
@@ -310,7 +311,7 @@ class _QuizScreenState extends State<QuizScreen> {
                           Navigator.pushAndRemoveUntil(
                               context,
                               CupertinoPageRoute(
-                                builder: (_) => const QuizSymbolScreen(),
+                                builder: (_) =>  QuizSymbolScreen(randomGod: widget.randomGod,),
                               ),
                               (route) => false);
                         } else {

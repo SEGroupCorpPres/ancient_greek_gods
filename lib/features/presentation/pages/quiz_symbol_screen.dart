@@ -1,8 +1,10 @@
 import 'dart:math';
 
 import 'package:ancient_greek_gods/core/constants/colors.dart';
+import 'package:ancient_greek_gods/core/helpers/database_helper.dart';
 import 'package:ancient_greek_gods/features/data/local/data_sources/list_of_symbols.dart';
 import 'package:ancient_greek_gods/features/data/local/models/symbol_model.dart';
+import 'package:ancient_greek_gods/features/data/local/models/user_model.dart';
 import 'package:ancient_greek_gods/features/presentation/pages/home_page.dart';
 import 'package:ancient_greek_gods/features/presentation/widgets/main_button.dart';
 import 'package:ancient_greek_gods/generated/assets.dart';
@@ -14,7 +16,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:video_player/video_player.dart';
 
 class QuizSymbolScreen extends StatefulWidget {
-  const QuizSymbolScreen({super.key});
+  const QuizSymbolScreen({super.key, required this.randomGod});
+
+  final int randomGod;
 
   @override
   State<QuizSymbolScreen> createState() => _QuizSymbolScreenState();
@@ -23,38 +27,43 @@ class QuizSymbolScreen extends StatefulWidget {
 class _QuizSymbolScreenState extends State<QuizSymbolScreen> with TickerProviderStateMixin {
   late AnimationController _animationController;
   late VideoPlayerController _videoPlayerController;
+  DatabaseHelper dbHelper = DatabaseHelper();
+
+  late int randomGod;
   bool isExpanded = true;
   late FlickManager flickManager;
   int random = Random().nextInt(9);
   int newRandom = Random().nextInt(9);
+  int randomPosition = Random().nextInt(2);
+  int randomPosition2 = Random().nextInt(2);
+  int randomPosition3 = Random().nextInt(2);
+
   int correctInt = 0;
   int? _selectedIndex;
   bool _isContinue = false;
-  bool _isCorrectSymbol = false;
+  final bool _isCorrectSymbol = false;
   bool _isCorrectSymbolSelected = false;
   bool _isSeeAds = false;
 
   List<SymbolModel> symbolList = [];
+  int userCoin = 0;
 
   @override
   void initState() {
     // TODO: implement initState
     addSymbolToList();
+    randomGod = widget.randomGod;
     checkOldRandom();
+    _getUser();
+    checkOldRandomPosition();
     flickManager = FlickManager(
-      videoPlayerController: VideoPlayerController.asset(Assets.videoCallOfDutyMobileOfficialLaunchTrailer),
-      onVideoEnd: () {
+      videoPlayerController: VideoPlayerController.asset(
+        Assets.videoCallOfDutyMobileOfficialLaunchTrailer,
+      ),
+      onVideoEnd: () async {
         SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-        Future.delayed(Duration(seconds: 1),(){
-          Navigator.pushAndRemoveUntil(
-            context,
-            CupertinoPageRoute(
-              builder: (_) => const HomePage(),
-            ),
-                (route) => false,
-          );
-        });
 
+        await _goHome();
       },
     );
     super.initState();
@@ -72,6 +81,94 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> with TickerProvider
       random = Random().nextInt(9);
       newRandom = Random().nextInt(9);
       checkOldRandom();
+    }
+  }
+
+  Future<void> _goHome() async {
+    await Future.delayed(
+      const Duration(seconds: 2),
+      () {
+        showCupertinoDialog(
+          context: context,
+          builder: (context) {
+            return CupertinoAlertDialog(
+              title: Text('congratulations'.toUpperCase()),
+              content: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    'you won'.toUpperCase(),
+                    style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(
+                          color: AppColors.primaryColor,
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w800,
+                        ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        Assets.iconsCoin,
+                        width: 50.w,
+                      ),
+                      Text(
+                        !_isCorrectSymbolSelected ? '1500'.toUpperCase() : '3000'.toUpperCase(),
+                        style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(color: AppColors.primaryColor, fontWeight: FontWeight.w800),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              actions: [
+                CupertinoButton(
+                  child: Text(
+                    'Go Home'.toUpperCase(),
+                    style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(color: CupertinoColors.link, fontSize: 14.sp),
+                  ),
+                  onPressed: () async {
+                    await _claimCoin(!_isCorrectSymbolSelected ? 1500 : 3000);
+                    if (!context.mounted) return;
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      CupertinoPageRoute(
+                        builder: (_) => const HomePage(),
+                      ),
+                      (route) => false,
+                    );
+                  },
+                ),
+              ],
+            );
+          },
+        );
+      },
+    );
+  }
+
+  Future<void> _getUser() async {
+    List<UserModel> users = await dbHelper.getUser();
+    userCoin = users.first.coin;
+    setState(() {});
+  }
+
+  Future<void> _updateUser(int coin) async {
+    // Foydalanuvchi ma'lumotlarini yangilash
+    await dbHelper.updateUser(null, coin, null, null);
+  }
+
+  Future<void> _claimCoin(int coin) async {
+    setState(() {
+      userCoin += coin;
+    });
+    await _updateUser(userCoin);
+  }
+
+  void checkOldRandomPosition() {
+    if (randomPosition == randomPosition2 || randomPosition2 == randomPosition3 || randomPosition == randomPosition3) {
+      randomPosition = Random().nextInt(3);
+      randomPosition2 = Random().nextInt(3);
+      randomPosition3 = Random().nextInt(3);
+      checkOldRandomPosition();
     }
   }
 
@@ -93,10 +190,6 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> with TickerProvider
   }
 
   AnimatedContainer _buildCongratulationWindow(Size size) {
-    return _buildCongratulationWidget(size);
-  }
-
-  AnimatedContainer _buildCorrectAnswerWindow(Size size) {
     return _buildCongratulationWidget(size);
   }
 
@@ -131,60 +224,10 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> with TickerProvider
   }
 
   Widget _rewardScreen(Size size) {
-    return !_isCorrectSymbol ? _buildRewardWindow(size) : _buildCorrectSymbolWindow(size);
+    return _buildRewardWindow(size);
   }
 
   Widget _buildRewardWindow(Size size) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          'You win!'.toUpperCase(),
-          style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontWeight: FontWeight.w800),
-        ),
-        Column(
-          children: [
-            Image.asset(
-              Assets.iconsTreasure,
-              width: size.width * .3,
-            ),
-            SizedBox(height: 40.h),
-            Text(
-              'Your reward '.toUpperCase(),
-              style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(fontWeight: FontWeight.w800),
-            ),
-            SizedBox(
-              width: size.width * .5,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(
-                    Assets.iconsCoin,
-                    width: 50.w,
-                  ),
-                  Text(
-                    '1500'.toUpperCase(),
-                    style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(color: AppColors.primaryColor, fontWeight: FontWeight.w800),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-        MainButton(
-          title: 'continue',
-          onPressed: () {
-            setState(() {
-              _isCorrectSymbol = !_isCorrectSymbol;
-            });
-          },
-        ),
-      ],
-    );
-  }
-
-  Widget _buildCorrectSymbolWindow(Size size) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -198,9 +241,9 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> with TickerProvider
             !_isCorrectSymbolSelected
                 ? Column(
                     children: [
-                      Text('Correct answer'),
+                      !_isCorrectSymbolSelected ? const Text('Correct answer') : Container(),
                       Image.asset(
-                        Assets.symbolSymbolApollo,
+                        !_isCorrectSymbolSelected ? symbolList[randomGod].image : Assets.iconsTreasure,
                         width: size.width * .3,
                         color: AppColors.primaryColor,
                       ),
@@ -236,7 +279,6 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> with TickerProvider
         MainButton(
           title: 'see ads to claim reward',
           onPressed: () {
-            // flickManager = FlickManager(videoPlayerController: VideoPlayerController.networkUrl(Uri.parse("https://mazwai.com/video/rio-from-above/455099")));
             _isSeeAds = true;
             setState(() {});
           },
@@ -244,6 +286,30 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> with TickerProvider
       ],
     );
   }
+
+  List<Widget> _symbols() => [
+        GestureDetector(
+          onTap: () => _selectedSymbol(0, 0),
+          child: Image.asset(
+            symbolList[randomGod].image,
+            color: !((_selectedIndex != null) && _selectedIndex! == 0) ? AppColors.secondaryBtnBgColor : CupertinoColors.white,
+          ),
+        ),
+        GestureDetector(
+          onTap: () => _selectedSymbol(1, 0),
+          child: Image.asset(
+            symbolList[random].image,
+            color: !((_selectedIndex != null) && _selectedIndex! == 1) ? AppColors.secondaryBtnBgColor : CupertinoColors.white,
+          ),
+        ),
+        GestureDetector(
+          onTap: () => _selectedSymbol(2, 0),
+          child: Image.asset(
+            symbolList[newRandom].image,
+            color: !((_selectedIndex != null) && _selectedIndex! == 2) ? AppColors.secondaryBtnBgColor : CupertinoColors.white,
+          ),
+        ),
+      ];
 
   @override
   Widget build(BuildContext context) {
@@ -312,32 +378,11 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> with TickerProvider
                       ],
                     ),
                     SizedBox(height: 20.h),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        GestureDetector(
-                          onTap: () => _selectedSymbol(0, 0),
-                          child: Image.asset(
-                            symbolList[0].image,
-                            color: !((_selectedIndex != null) && _selectedIndex! == 0) ? AppColors.secondaryBtnBgColor : CupertinoColors.white,
-                          ),
-                        ),
-                        GestureDetector(
-                          onTap: () => _selectedSymbol(1, 0),
-                          child: Image.asset(
-                            symbolList[random].image,
-                            color: !((_selectedIndex != null) && _selectedIndex! == 1) ? AppColors.secondaryBtnBgColor : CupertinoColors.white,
-                          ),
-                        ),
-                        GestureDetector(
-                          onTap: () => _selectedSymbol(2, 0),
-                          child: Image.asset(
-                            symbolList[newRandom].image,
-                            color: !((_selectedIndex != null) && _selectedIndex! == 2) ? AppColors.secondaryBtnBgColor : CupertinoColors.white,
-                          ),
-                        ),
-                      ],
-                    ),
+                    Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                      _symbols()[randomPosition],
+                      _symbols()[randomPosition2],
+                      _symbols()[randomPosition3],
+                    ]),
                     SizedBox(height: 20.h),
                     MainButton(
                       title: 'continue',
@@ -356,16 +401,12 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> with TickerProvider
             bottom: 10,
             child: _buildCongratulationWindow(size),
           ),
-          Positioned(
-            bottom: 10,
-            child: _buildCorrectAnswerWindow(size),
-          ),
           !_isSeeAds
               ? Container()
               : FlickVideoPlayer(
                   flickManager: flickManager,
-                  preferredDeviceOrientation: [DeviceOrientation.landscapeRight],
-                  preferredDeviceOrientationFullscreen: [DeviceOrientation.landscapeRight],
+                  preferredDeviceOrientation: const [DeviceOrientation.landscapeRight],
+                  preferredDeviceOrientationFullscreen: const [DeviceOrientation.landscapeRight],
                 )
         ],
       ),

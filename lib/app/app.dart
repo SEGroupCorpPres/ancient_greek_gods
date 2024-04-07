@@ -69,7 +69,7 @@ class _MyAppState extends State<MyApp> {
       // child: QuizScreen(level: 0,),
       // child: FactsScreen(isWrongAnswer: true, retryCount: 3),
       // child: NotFoundFactsScreen(),
-      child: QuizSymbolScreen(),
+      child: QuizSymbolScreen(randomGod: 2,),
       // child: SettingsScreen(),
     );
   }
