@@ -115,6 +115,7 @@ class _EnterNameScreenState extends State<EnterNameScreen> {
                           placeholderStyle: CupertinoTheme.of(context).textTheme.textStyle.copyWith(
                                 color: CupertinoColors.white.withOpacity(.4),
                               ),
+
                           onChanged: (value) {
                             // Yozuvni katta harflarga o'tkazish
                             value = value.toUpperCase();

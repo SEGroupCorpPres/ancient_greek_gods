@@ -53,6 +53,7 @@ class Assets {
   static const String imagesSeparator = 'assets/images/separator.png';
   static const String imagesSplashBg = 'assets/images/splash_bg.png';
   static const String imagesStartPageBg = 'assets/images/start_page_bg.png';
+  static const String soundsLacrimosa = 'assets/sounds/lacrimosa.mp3';
   static const String symbolSymbolAphrodite = 'assets/icons/symbol/symbol_aphrodite.png';
   static const String symbolSymbolApollo = 'assets/icons/symbol/symbol_apollo.png';
   static const String symbolSymbolAres = 'assets/icons/symbol/symbol_ares.png';

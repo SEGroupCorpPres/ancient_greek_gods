@@ -1,3 +1,4 @@
+import 'package:ancient_greek_gods/features/data/local/models/hero_model.dart';
 import 'package:ancient_greek_gods/features/data/local/models/level_model.dart';
 import 'package:ancient_greek_gods/features/data/local/models/user_model.dart';
 import 'package:flutter/foundation.dart';
@@ -47,7 +48,11 @@ class DatabaseHelper {
 
           await db.execute('''
           CREATE TABLE hero_list(
-            name TEXT
+            id BLOB,
+            name TEXT,
+            image TEXT,
+            price INTEGER,
+            is_equip INTEGER
           )
         ''');
         },
@@ -91,6 +96,58 @@ class DatabaseHelper {
       return 0;
     }
   }
+  Future<int> insertLevel(int lvl, int isCompleted) async {
+    Database? dbClient = await db;
+
+    try {
+      return await dbClient!.insert(
+        'level',
+        {
+          'level': lvl,
+          'is_completed': isCompleted,
+        },
+        conflictAlgorithm: ConflictAlgorithm.replace,
+      );
+    } on DatabaseException catch (e) {
+      if (kDebugMode) {
+        print(e.result.toString());
+      }
+      return 0;
+    } catch (e) {
+      if (kDebugMode) {
+        print(e.toString());
+      }
+      return 0;
+    }
+  }
+
+  Future<int> insertHero(HeroModel hero) async {
+    Database? dbClient = await db;
+    try {
+      return await dbClient!.insert(
+        'hero_list',
+        {
+          'id': hero.id,
+          'name': hero.name,
+          'image': hero.image,
+          'price': hero.price,
+          'is_equip': hero.isEquip,
+        },
+        conflictAlgorithm: ConflictAlgorithm.replace,
+      );
+    } on DatabaseException catch (e) {
+      if (kDebugMode) {
+        print(e.result);
+        print(e.result.toString());
+      }
+      return 0;
+    } catch (e) {
+      if (kDebugMode) {
+        print(e.toString());
+      }
+      return 0;
+    }
+  }
 
   Future<List<UserModel>> getUser() async {
     Database? dbClient = await db;
@@ -112,6 +169,8 @@ class DatabaseHelper {
     }
     return userList;
   }
+
+
 
   Future<List<LevelModel>> getLevel() async {
     Database? dbClient = await db;
@@ -137,24 +196,30 @@ class DatabaseHelper {
     }
   }
 
-  Future<List<Map<String, dynamic>>> getHeroList() async {
-    Database? dbClient = await db;
 
+
+  Future<List<HeroModel>> getHeroList() async {
+    Database? dbClient = await db;
+    List<HeroModel> heroList = [];
     try {
-      return await dbClient!.query('hero_list');
+      List<Map<String, dynamic>> hero = await dbClient!.query('hero_list');
+      for (var element in hero) {
+        HeroModel heroModel = HeroModel.fromJson(element);
+        heroList.add(heroModel);
+      }
+      return heroList;
     } on DatabaseException catch (e) {
       if (kDebugMode) {
         print(e.result.toString());
       }
-      return [];
+      return heroList;
     } catch (e) {
       if (kDebugMode) {
         print(e.toString());
       }
-      return [];
+      return heroList;
     }
   }
-
   Future<void> updateUser(String? name, int? coin, int? chance, int? currentLevel) async {
     Database? dbClient = await db;
 
@@ -191,51 +256,45 @@ class DatabaseHelper {
     }
   }
 
-  Future<int> insertLevel(int lvl, int isCompleted) async {
+  Future<void> updateLevel(int level) async {
     Database? dbClient = await db;
 
     try {
-      return await dbClient!.insert(
+      await dbClient!.update(
         'level',
-        {
-          'level': lvl,
-          'is_completed': isCompleted,
-        },
-        conflictAlgorithm: ConflictAlgorithm.replace,
+        {'is_completed': 1},
+        where: 'level = ?',
+        whereArgs: [level],
       );
     } on DatabaseException catch (e) {
       if (kDebugMode) {
         print(e.result.toString());
       }
-      return 0;
     } catch (e) {
       if (kDebugMode) {
         print(e.toString());
       }
-      return 0;
     }
   }
 
-  Future<int> insertHero(String hero) async {
+  Future<void> updateHero(int id) async {
     Database? dbClient = await db;
+
     try {
-      return await dbClient!.insert(
+      await dbClient!.update(
         'hero_list',
-        {
-          'name': hero,
-        },
-        conflictAlgorithm: ConflictAlgorithm.replace,
+        {'is_equip': 1},
+        where: 'id = ?',
+        whereArgs: [id],
       );
     } on DatabaseException catch (e) {
       if (kDebugMode) {
         print(e.result.toString());
       }
-      return 0;
     } catch (e) {
       if (kDebugMode) {
         print(e.toString());
       }
-      return 0;
     }
   }
 }

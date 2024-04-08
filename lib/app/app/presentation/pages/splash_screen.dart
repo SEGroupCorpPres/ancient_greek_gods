@@ -1,5 +1,7 @@
 import 'package:ancient_greek_gods/core/constants/colors.dart';
 import 'package:ancient_greek_gods/core/helpers/database_helper.dart';
+import 'package:ancient_greek_gods/features/data/local/data_sources/list_of_hero.dart';
+import 'package:ancient_greek_gods/features/data/local/models/hero_model.dart';
 import 'package:ancient_greek_gods/features/data/local/models/user_model.dart';
 import 'package:ancient_greek_gods/features/presentation/pages/enter_name_screen.dart';
 import 'package:ancient_greek_gods/features/presentation/pages/home_page.dart';
@@ -8,6 +10,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({
@@ -22,13 +25,40 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
   late AnimationController _animationController;
   bool userExist = false;
   DatabaseHelper dbHelper = DatabaseHelper();
+  final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
+
   String _userName = '';
+
+  Future<void> _equipHero() async {
+    SharedPreferences preferences = await _prefs;
+    await preferences.setString('equippedHero', 'aphrodite');
+    print(preferences.getString('equippedHero'));
+  }
 
   Future<void> _insertLevelToDb() async {
     List levelList = await dbHelper.getLevel();
     if (levelList.isEmpty) {
       for (int i = 1; i <= 30; i++) {
         await dbHelper.insertLevel(i, 0);
+      }
+    }
+    setState(() {});
+  }
+
+  Future<void> _insertHeroToDb() async {
+    List heroList = await dbHelper.getHeroList();
+    List<Map<String, dynamic>> listHero = listOfHero;
+    if (heroList.isEmpty) {
+      for (var item in listHero) {
+        HeroModel hero = HeroModel(
+          id: item['id'],
+          name: item['name'],
+          image: item['image'],
+          price: item['price'],
+          isEquip: item['is_equip'],
+        );
+
+        await dbHelper.insertHero(hero);
       }
     }
     setState(() {});
@@ -58,12 +88,18 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
     }
   }
 
-  @override
-  void initState() {
-    // TODO: implement initState
+  Future<void> _init() async {
     _getUserName();
     _checkUserName();
     _insertLevelToDb();
+    _insertHeroToDb();
+    _equipHero();
+  }
+
+  @override
+  void initState() {
+    _init();
+    // TODO: implement initState
     _animationController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 2),
