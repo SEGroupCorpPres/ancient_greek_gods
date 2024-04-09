@@ -8,6 +8,7 @@ import 'package:ancient_greek_gods/generated/assets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class FactsScreen extends StatefulWidget {
   final int level;
@@ -21,16 +22,24 @@ class FactsScreen extends StatefulWidget {
 }
 
 class _FactsScreenState extends State<FactsScreen> {
-  final int _random = Random().nextInt(9);
-  int randomFact1 = Random().nextInt(18);
-  int randomFact2 = Random().nextInt(18);
-  int randomFact3 = Random().nextInt(18);
+  final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
+
+  Future<String> _getEquippedHero() async {
+    SharedPreferences preferences = await _prefs;
+    String equippedHero = preferences.getString('equippedHero')!;
+    return equippedHero;
+  }
+
+  final int _random = Random().nextInt(10);
+  int randomFact1 = Random().nextInt(19);
+  int randomFact2 = Random().nextInt(19);
+  int randomFact3 = Random().nextInt(19);
 
   void checkOldRandom() {
     if (randomFact1 == randomFact2 || randomFact2 == randomFact3 || randomFact3 == randomFact1) {
-      randomFact1 = Random().nextInt(18);
-      randomFact2 = Random().nextInt(18);
-      randomFact3 = Random().nextInt(18);
+      randomFact1 = Random().nextInt(19);
+      randomFact2 = Random().nextInt(19);
+      randomFact3 = Random().nextInt(19);
       checkOldRandom();
     }
   }
@@ -46,6 +55,7 @@ class _FactsScreenState extends State<FactsScreen> {
   Widget build(BuildContext context) {
     int random = _random;
     final Size size = MediaQuery.sizeOf(context);
+    print(random);
     MediaQueryData mediaQueryData = MediaQuery.of(context);
     double homeIndicatorSize = mediaQueryData.padding.bottom;
     double top = MediaQuery.of(context).padding.top;
@@ -66,13 +76,30 @@ class _FactsScreenState extends State<FactsScreen> {
                 ),
               ],
             ),
-            Positioned(
-              top: top + 120.h,
-              right: -10.w,
-              child: Image.asset(
-                Assets.godsApollo,
-                width: 130.w,
-              ),
+            FutureBuilder(
+              future: _getEquippedHero(),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.done) {
+                  if (snapshot.hasData) {
+                    String equippedHero = snapshot.data!;
+                    return Positioned(
+                      top: top + 120.h,
+                      right: -10.w,
+                      child: Image.asset(
+                        'assets/images/gods/$equippedHero.png',
+                        width: 130.w,
+                      ),
+                    );
+                  } else {
+                    return const Center(
+                      child: CupertinoActivityIndicator(),
+                    );
+                  }
+                }
+                return const Center(
+                  child: CupertinoActivityIndicator(),
+                );
+              },
             ),
             Positioned(
               top: top + 20.h,

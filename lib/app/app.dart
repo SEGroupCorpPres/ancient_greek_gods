@@ -6,6 +6,7 @@ import 'package:just_audio/just_audio.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../features/presentation/pages/home_page.dart';
+import '../features/presentation/pages/quiz_screen.dart';
 import 'app/presentation/pages/splash_screen.dart';
 
 class MyApp extends StatefulWidget {
@@ -85,11 +86,11 @@ class _MyAppState extends State<MyApp> {
       },
       // child: _userName != null ? HomePage() : EnterNameScreen(),
 
-      // child: SplashScreen(),
+      child: SplashScreen(),
       // child: EnterNameScreen(),
       // child: StartGameScreen(),
-      child: HomePage(),
-      // child: QuizScreen(level: 0,),
+      // child: HomePage(),
+      // child: QuizScreen(level: 0, randomGod: 0,),
       // child: FactsScreen(isWrongAnswer: true, retryCount: 3),
       // child: NotFoundFactsScreen(),
       // child: QuizSymbolScreen(randomGod: 2,),

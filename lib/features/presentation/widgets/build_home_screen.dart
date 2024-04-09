@@ -20,13 +20,20 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
   DatabaseHelper dbHelper = DatabaseHelper();
   String userName = '';
   int currentLevel = 0;
+  List<bool> isCurrentLevel = List.filled(30, false);
 
   Future<void> _getUserName() async {
     List<UserModel> users = await dbHelper.getUser();
     userName = users.first.name;
-    setState(() {});
+    currentLevel = users.first.currentLevel;
+    // setState(() {});
   }
 
+  void _checkCurrentLevel() {
+    for (int i = 0; i < currentLevel; i++) {
+      isCurrentLevel[i] = true;
+    }
+  }
 
   Future<List<bool>> _getLevel() async {
     List<LevelModel?> levelList = [];
@@ -48,6 +55,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
   void initState() {
     // TODO: implement initState
     _getUserName();
+    _checkCurrentLevel();
     super.initState();
   }
 
@@ -99,11 +107,12 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           builder: (context) => const FactsScreen(
                             isWrongAnswer: false,
                             retryCount: 3,
-                            level: 1,
+                            level: 0,
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[0] ?? false,
+                      isCompleted: checkLevelList[0],
+                      isCurrent: isCurrentLevel[0],
                     ),
                   ),
                   Positioned(
@@ -120,7 +129,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[1] ?? false,
+                      isCompleted: checkLevelList[1],
+                      isCurrent: isCurrentLevel[1],
                     ),
                   ),
                   Positioned(
@@ -137,7 +147,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[2] ?? false,
+                      isCompleted: checkLevelList[2],
+                      isCurrent: isCurrentLevel[2],
                     ),
                   ),
                   Positioned(
@@ -154,7 +165,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[3] ?? false,
+                      isCompleted: checkLevelList[3],
+                      isCurrent: isCurrentLevel[3],
                     ),
                   ),
                   Positioned(
@@ -171,7 +183,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[4] ?? false,
+                      isCompleted: checkLevelList[4],
+                      isCurrent: isCurrentLevel[4],
                     ),
                   ),
                   Positioned(
@@ -188,7 +201,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[5] ?? false,
+                      isCompleted: checkLevelList[5],
+                      isCurrent: isCurrentLevel[5],
                     ),
                   ),
                   Positioned(
@@ -205,7 +219,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[6] ?? false,
+                      isCompleted: checkLevelList[6],
+                      isCurrent: isCurrentLevel[6],
                     ),
                   ),
                   Positioned(
@@ -222,7 +237,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[7] ?? false,
+                      isCompleted: checkLevelList[7],
+                      isCurrent: isCurrentLevel[7],
                     ),
                   ),
                   Positioned(
@@ -239,7 +255,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[8] ?? false,
+                      isCompleted: checkLevelList[8],
+                      isCurrent: isCurrentLevel[8],
                     ),
                   ),
                   Positioned(
@@ -257,6 +274,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                         ),
                       ),
                       isCompleted: checkLevelList[9],
+                      isCurrent: isCurrentLevel[9],
                     ),
                   ),
                   Positioned(
@@ -274,6 +292,7 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                         ),
                       ),
                       isCompleted: checkLevelList[10],
+                      isCurrent: isCurrentLevel[10],
                     ),
                   ),
                   Positioned(
@@ -290,7 +309,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[11] ?? false,
+                      isCompleted: checkLevelList[11],
+                      isCurrent: isCurrentLevel[11],
                     ),
                   ),
                   Positioned(
@@ -307,7 +327,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[12] ?? false,
+                      isCompleted: checkLevelList[12],
+                      isCurrent: isCurrentLevel[12],
                     ),
                   ),
                   Positioned(
@@ -324,7 +345,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[13] ?? false,
+                      isCompleted: checkLevelList[13],
+                      isCurrent: isCurrentLevel[13],
                     ),
                   ),
                   Positioned(
@@ -341,7 +363,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[14] ?? false,
+                      isCompleted: checkLevelList[14],
+                      isCurrent: isCurrentLevel[15],
                     ),
                   ),
                   Positioned(
@@ -358,7 +381,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[15] ?? false,
+                      isCompleted: checkLevelList[15],
+                      isCurrent: isCurrentLevel[15],
                     ),
                   ),
                   Positioned(
@@ -375,7 +399,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[16] ?? false,
+                      isCompleted: checkLevelList[16],
+                      isCurrent: isCurrentLevel[16],
                     ),
                   ),
                   Positioned(
@@ -392,7 +417,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[17] ?? false,
+                      isCompleted: checkLevelList[17],
+                      isCurrent: isCurrentLevel[17],
                     ),
                   ),
                   Positioned(
@@ -409,7 +435,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[18] ?? false,
+                      isCompleted: checkLevelList[18],
+                      isCurrent: isCurrentLevel[18],
                     ),
                   ),
                   Positioned(
@@ -426,7 +453,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[19] ?? false,
+                      isCompleted: checkLevelList[19],
+                      isCurrent: isCurrentLevel[19],
                     ),
                   ),
                   Positioned(
@@ -443,7 +471,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[20] ?? false,
+                      isCompleted: checkLevelList[20],
+                      isCurrent: isCurrentLevel[20],
                     ),
                   ),
                   Positioned(
@@ -460,7 +489,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[21] ?? false,
+                      isCompleted: checkLevelList[21],
+                      isCurrent: isCurrentLevel[21],
                     ),
                   ),
                   Positioned(
@@ -477,7 +507,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[22] ?? false,
+                      isCompleted: checkLevelList[22],
+                      isCurrent: isCurrentLevel[22],
                     ),
                   ),
                   Positioned(
@@ -494,7 +525,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[23] ?? false,
+                      isCompleted: checkLevelList[23],
+                      isCurrent: isCurrentLevel[23],
                     ),
                   ),
                   Positioned(
@@ -511,7 +543,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[24] ?? false,
+                      isCompleted: checkLevelList[24],
+                      isCurrent: isCurrentLevel[24],
                     ),
                   ),
                   Positioned(
@@ -528,7 +561,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[25] ?? false,
+                      isCompleted: checkLevelList[25],
+                      isCurrent: isCurrentLevel[25],
                     ),
                   ),
                   Positioned(
@@ -545,7 +579,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[26] ?? false,
+                      isCompleted: checkLevelList[26],
+                      isCurrent: isCurrentLevel[26],
                     ),
                   ),
                   Positioned(
@@ -562,7 +597,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[27] ?? false,
+                      isCompleted: checkLevelList[27],
+                      isCurrent: isCurrentLevel[27],
                     ),
                   ),
                   Positioned(
@@ -579,7 +615,8 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[28] ?? false,
+                      isCompleted: checkLevelList[28],
+                      isCurrent: isCurrentLevel[28],
                     ),
                   ),
                   Positioned(
@@ -595,15 +632,14 @@ class _BuildHomeScreenState extends State<BuildHomeScreen> {
                           ),
                         ),
                       ),
-                      isCompleted: checkLevelList[29] ?? false,
+                      isCompleted: checkLevelList[29],
+                      isCurrent: isCurrentLevel[29],
                     ),
                   ),
                 ],
               );
-
             }
             return const Center(child: CircularProgressIndicator());
-
           } else {
             return const Center(
               child: CupertinoActivityIndicator(),

@@ -8,7 +8,6 @@ import 'package:ancient_greek_gods/features/presentation/pages/terms_of_use_scre
 import 'package:ancient_greek_gods/features/presentation/widgets/settings_list_tile.dart';
 import 'package:ancient_greek_gods/generated/assets.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -128,12 +127,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       );
                     } else {
                       return const Center(
-                        child: CircularProgressIndicator(),
+                        child: CupertinoActivityIndicator(),
                       );
                     }
                   }
                   return const Center(
-                    child: CircularProgressIndicator(),
+                    child: CupertinoActivityIndicator(),
                   );
                 },
               ),

@@ -61,7 +61,7 @@ class _ShopScreenState extends State<ShopScreen> {
         userCoin -= heroPrice;
       });
       await dbHelper.updateUser(null, userCoin, null, null);
-    }else {
+    } else {
       int missingCoin = heroPrice - userCoin;
       await _coinAlert(heroPrice, missingCoin);
     }
@@ -170,6 +170,22 @@ class _ShopScreenState extends State<ShopScreen> {
                     BuyLvlBtn(
                       title: 'Next level',
                       onPressed: () => _buyLvlOrChance(true),
+                    ),
+                    SizedBox(height: 10.h),
+                    SizedBox(
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            Assets.iconsCoin,
+                            width: 20.w,
+                          ),
+                          SizedBox(width: 5.w),
+                          Text(
+                            '$chance'.toUpperCase(),
+                            style: CupertinoTheme.of(context).textTheme.navTitleTextStyle.copyWith(color: AppColors.primaryColor),
+                          ),
+                        ],
+                      ),
                     ),
                     SizedBox(height: 10.h),
                     BuyLvlBtn(

@@ -19,10 +19,18 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
   DatabaseHelper dbHelper = DatabaseHelper();
   String userName = '';
   int currentLevel = 0;
+  List<bool> isCurrentLevel = List.filled(30, false);
 
   Future<void> _getUserName() async {
     List<UserModel> users = await dbHelper.getUser();
     userName = users.first.name;
+    currentLevel = users.first.currentLevel;
+  }
+
+  void _checkCurrentLevel() {
+    for (int i = 0; i < currentLevel; i++) {
+      isCurrentLevel[i] = true;
+    }
   }
 
   Future<List<bool>> _getLevel() async {
@@ -40,6 +48,15 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
       print(checkLevelList[i]);
     }
     return checkLevelList;
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    _getUserName();
+    _checkCurrentLevel();
+
+    super.initState();
   }
 
   @override
@@ -99,6 +116,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[0],
+                      isCurrent: isCurrentLevel[0],
                     ),
                   ),
                   Positioned(
@@ -116,6 +134,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[1],
+                      isCurrent: isCurrentLevel[1],
                     ),
                   ),
                   Positioned(
@@ -133,6 +152,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[2],
+                      isCurrent: isCurrentLevel[2],
                     ),
                   ),
                   Positioned(
@@ -150,6 +170,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[3],
+                      isCurrent: isCurrentLevel[3],
                     ),
                   ),
                   Positioned(
@@ -167,6 +188,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[4],
+                      isCurrent: isCurrentLevel[4],
                     ),
                   ),
                   Positioned(
@@ -184,6 +206,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[5],
+                      isCurrent: isCurrentLevel[5],
                     ),
                   ),
                   Positioned(
@@ -201,6 +224,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[6],
+                      isCurrent: isCurrentLevel[6],
                     ),
                   ),
                   Positioned(
@@ -218,6 +242,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[7],
+                      isCurrent: isCurrentLevel[7],
                     ),
                   ),
                   Positioned(
@@ -235,6 +260,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[8],
+                      isCurrent: isCurrentLevel[8],
                     ),
                   ),
                   Positioned(
@@ -252,6 +278,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[9],
+                      isCurrent: isCurrentLevel[9],
                     ),
                   ),
                   Positioned(
@@ -269,6 +296,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[10],
+                      isCurrent: isCurrentLevel[10],
                     ),
                   ),
                   Positioned(
@@ -286,6 +314,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[11],
+                      isCurrent: isCurrentLevel[11],
                     ),
                   ),
                   Positioned(
@@ -303,6 +332,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[12],
+                      isCurrent: isCurrentLevel[12],
                     ),
                   ),
                   Positioned(
@@ -320,6 +350,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[13],
+                      isCurrent: isCurrentLevel[13],
                     ),
                   ),
                   Positioned(
@@ -337,6 +368,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[14],
+                      isCurrent: isCurrentLevel[14],
                     ),
                   ),
                   Positioned(
@@ -354,6 +386,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[15],
+                      isCurrent: isCurrentLevel[15],
                     ),
                   ),
                   Positioned(
@@ -371,6 +404,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[16],
+                      isCurrent: isCurrentLevel[16],
                     ),
                   ),
                   Positioned(
@@ -388,6 +422,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[17],
+                      isCurrent: isCurrentLevel[17],
                     ),
                   ),
                   Positioned(
@@ -405,6 +440,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[18],
+                      isCurrent: isCurrentLevel[18],
                     ),
                   ),
                   Positioned(
@@ -422,6 +458,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[19],
+                      isCurrent: isCurrentLevel[19],
                     ),
                   ),
                   Positioned(
@@ -439,6 +476,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[20],
+                      isCurrent: isCurrentLevel[20],
                     ),
                   ),
                   Positioned(
@@ -456,6 +494,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[21],
+                      isCurrent: isCurrentLevel[21],
                     ),
                   ),
                   Positioned(
@@ -473,6 +512,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[22],
+                      isCurrent: isCurrentLevel[22],
                     ),
                   ),
                   Positioned(
@@ -490,6 +530,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[23],
+                      isCurrent: isCurrentLevel[23],
                     ),
                   ),
                   Positioned(
@@ -507,6 +548,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[24],
+                      isCurrent: isCurrentLevel[24],
                     ),
                   ),
                   Positioned(
@@ -524,6 +566,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[25],
+                      isCurrent: isCurrentLevel[25],
                     ),
                   ),
                   Positioned(
@@ -541,6 +584,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[26],
+                      isCurrent: isCurrentLevel[26],
                     ),
                   ),
                   Positioned(
@@ -558,6 +602,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[27],
+                      isCurrent: isCurrentLevel[27],
                     ),
                   ),
                   Positioned(
@@ -575,6 +620,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[28],
+                      isCurrent: isCurrentLevel[28],
                     ),
                   ),
                   Positioned(
@@ -591,6 +637,7 @@ class _BuildHomeWithoutHomeIndicatorState extends State<BuildHomeWithoutHomeIndi
                         ),
                       ),
                       isCompleted: checkLevelList[29],
+                      isCurrent: isCurrentLevel[29],
                     ),
                   ),
                 ],

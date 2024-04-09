@@ -13,10 +13,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:video_player/video_player.dart';
 
 class QuizSymbolScreen extends StatefulWidget {
-  const QuizSymbolScreen({super.key, required this.randomGod});
+  const QuizSymbolScreen({super.key, required this.randomGod, required this.level});
+
+  final int level;
 
   final int randomGod;
 
@@ -47,6 +50,13 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> with TickerProvider
 
   List<SymbolModel> symbolList = [];
   int userCoin = 0;
+  final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
+
+  Future<String> _getEquippedHero() async {
+    SharedPreferences preferences = await _prefs;
+    String equippedHero = preferences.getString('equippedHero')!;
+    return equippedHero;
+  }
 
   @override
   void initState() {
@@ -127,6 +137,7 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> with TickerProvider
                   ),
                   onPressed: () async {
                     await _claimCoin(!_isCorrectSymbolSelected ? 1500 : 3000);
+                    await _updateLevel();
                     if (!context.mounted) return;
                     Navigator.pushAndRemoveUntil(
                       context,
@@ -154,6 +165,11 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> with TickerProvider
   Future<void> _updateUser(int coin) async {
     // Foydalanuvchi ma'lumotlarini yangilash
     await dbHelper.updateUser(null, coin, null, null);
+  }
+
+  Future<void> _updateLevel() async {
+    // Foydalanuvchi ma'lumotlarini yangilash
+    await dbHelper.updateLevel(widget.level);
   }
 
   Future<void> _claimCoin(int coin) async {
@@ -332,13 +348,30 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> with TickerProvider
               ),
             ],
           ),
-          Positioned(
-            top: top + 120.h,
-            right: -10.w,
-            child: Image.asset(
-              Assets.godsApollo,
-              width: 130.w,
-            ),
+          FutureBuilder(
+            future: _getEquippedHero(),
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.done) {
+                if (snapshot.hasData) {
+                  String equippedHero = snapshot.data!;
+                  return Positioned(
+                    top: top + 100.h,
+                    right: -10.w,
+                    child: Image.asset(
+                      'assets/images/gods/$equippedHero.png',
+                      width: 130.w,
+                    ),
+                  );
+                } else {
+                  return const Center(
+                    child: CupertinoActivityIndicator(),
+                  );
+                }
+              }
+              return const Center(
+                child: CupertinoActivityIndicator(),
+              );
+            },
           ),
           Positioned(
             top: top + 20.h,
@@ -407,7 +440,7 @@ class _QuizSymbolScreenState extends State<QuizSymbolScreen> with TickerProvider
                   flickManager: flickManager,
                   preferredDeviceOrientation: const [DeviceOrientation.landscapeRight],
                   preferredDeviceOrientationFullscreen: const [DeviceOrientation.landscapeRight],
-                )
+                ),
         ],
       ),
     );
